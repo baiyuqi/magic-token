@@ -1,0 +1,447 @@
+{
+  "contractName": "CappedSTOStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "allowBeneficialInvestments",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cap",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "investors",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"rate\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"allowBeneficialInvestments\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"cap\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"investors\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the CappedSTO storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/STO/Capped/CappedSTOStorage.sol\":\"CappedSTOStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/STO/Capped/CappedSTOStorage.sol\":{\"keccak256\":\"0x52f6792dfae4cde32c35dbc75dd96327d1e34dea4e7c5d78f4a739e9ea2d288e\",\"urls\":[\"bzzr://3b4987028652e6ee4e332c53b61cff39c6a4a1cedf71a84ee269ce0629ae128f\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805460ff1916905534801561001a57600080fd5b5060f9806100296000396000f3fe6080604052348015600f57600080fd5b506004361060465760003560e01c80632c4e722e14604b5780632df413e2146063578063355274ea14607d5780636f7bc9be146083575b600080fd5b605160a6565b60408051918252519081900360200190f35b606960ac565b604080519115158252519081900360200190f35b605160b5565b605160048036036020811015609757600080fd5b50356001600160a01b031660bb565b60015481565b60005460ff1681565b60025481565b6003602052600090815260409020548156fea165627a7a72305820293bf6c632b728f135e5cfc39623c9175960384c2cfb34bdfb89013cdd36cd720029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060465760003560e01c80632c4e722e14604b5780632df413e2146063578063355274ea14607d5780636f7bc9be146083575b600080fd5b605160a6565b60408051918252519081900360200190f35b606960ac565b604080519115158252519081900360200190f35b605160b5565b605160048036036020811015609757600080fd5b50356001600160a01b031660bb565b60015481565b60005460ff1681565b60025481565b6003602052600090815260409020548156fea165627a7a72305820293bf6c632b728f135e5cfc39623c9175960384c2cfb34bdfb89013cdd36cd720029",
+  "sourceMap": "103:577:101:-;;;249:5;208:46;;-1:-1:-1;;208:46:101;;;103:577;5:2:-1;;;;30:1;27;20:12;5:2;103:577:101;;;;;;;",
+  "deployedSourceMap": "103:577:101:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;103:577:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;442:19;;;:::i;:::-;;;;;;;;;;;;;;;;208:46;;;:::i;:::-;;;;;;;;;;;;;;;;;;602:18;;;:::i;629:45::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;629:45:101;-1:-1:-1;;;;;629:45:101;;:::i;442:19::-;;;;:::o;208:46::-;;;;;;:::o;602:18::-;;;;:::o;629:45::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the CappedSTO storage\r\n */\r\ncontract CappedSTOStorage {\r\n\r\n    // Determine whether users can invest on behalf of a beneficiary\r\n    bool public allowBeneficialInvestments = false;\r\n    // How many token units a buyer gets (multiplied by 10^18) per wei / base unit of POLY\r\n    // If rate is 10^18, buyer will get 1 token unit for every wei / base unit of poly.\r\n    uint256 public rate;\r\n    //How many token base units this STO will be allowed to sell to investors\r\n    // 1 full token = 10^decimals_of_token base units\r\n    uint256 public cap;\r\n\r\n    mapping (address => uint256) public investors;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\STO\\Capped\\CappedSTOStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/Capped/CappedSTOStorage.sol",
+    "exportedSymbols": {
+      "CappedSTOStorage": [
+        33468
+      ]
+    },
+    "id": 33469,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33456,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:101"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CappedSTO storage\r",
+        "fullyImplemented": true,
+        "id": 33468,
+        "linearizedBaseContracts": [
+          33468
+        ],
+        "name": "CappedSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 33459,
+            "name": "allowBeneficialInvestments",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "208:46:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 33457,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "208:4:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 33458,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "249:5:101",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33461,
+            "name": "rate",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "442:19:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 33460,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "442:7:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33463,
+            "name": "cap",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "602:18:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 33462,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "602:7:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33467,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "629:45:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 33466,
+              "keyType": {
+                "id": 33464,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "638:7:101",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "629:28:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 33465,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "649:7:101",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33469,
+        "src": "103:577:101"
+      }
+    ],
+    "src": "0:682:101"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/Capped/CappedSTOStorage.sol",
+    "exportedSymbols": {
+      "CappedSTOStorage": [
+        33468
+      ]
+    },
+    "id": 33469,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33456,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:101"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CappedSTO storage\r",
+        "fullyImplemented": true,
+        "id": 33468,
+        "linearizedBaseContracts": [
+          33468
+        ],
+        "name": "CappedSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 33459,
+            "name": "allowBeneficialInvestments",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "208:46:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 33457,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "208:4:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 33458,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "249:5:101",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33461,
+            "name": "rate",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "442:19:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 33460,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "442:7:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33463,
+            "name": "cap",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "602:18:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 33462,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "602:7:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 33467,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 33468,
+            "src": "629:45:101",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 33466,
+              "keyType": {
+                "id": 33464,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "638:7:101",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "629:28:101",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 33465,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "649:7:101",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33469,
+        "src": "103:577:101"
+      }
+    ],
+    "src": "0:682:101"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.829Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the CappedSTO storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

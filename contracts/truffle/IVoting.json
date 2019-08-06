@@ -1,0 +1,1579 @@
+{
+  "contractName": "IVoting",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_ballotId",
+          "type": "uint256"
+        },
+        {
+          "name": "_isActive",
+          "type": "bool"
+        }
+      ],
+      "name": "changeBallotStatus",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_ballotId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBallotResults",
+      "outputs": [
+        {
+          "name": "voteWeighting",
+          "type": "uint256[]"
+        },
+        {
+          "name": "tieWith",
+          "type": "uint256[]"
+        },
+        {
+          "name": "winningProposal",
+          "type": "uint256"
+        },
+        {
+          "name": "isVotingSucceed",
+          "type": "bool"
+        },
+        {
+          "name": "totalVoters",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_ballotId",
+          "type": "uint256"
+        },
+        {
+          "name": "_voter",
+          "type": "address"
+        }
+      ],
+      "name": "getSelectedProposal",
+      "outputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_ballotId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBallotDetails",
+      "outputs": [
+        {
+          "name": "quorum",
+          "type": "uint256"
+        },
+        {
+          "name": "totalSupplyAtCheckpoint",
+          "type": "uint256"
+        },
+        {
+          "name": "checkpointId",
+          "type": "uint256"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "endTime",
+          "type": "uint256"
+        },
+        {
+          "name": "totalProposals",
+          "type": "uint256"
+        },
+        {
+          "name": "totalVoters",
+          "type": "uint256"
+        },
+        {
+          "name": "isActive",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_ballotId\",\"type\":\"uint256\"},{\"name\":\"_isActive\",\"type\":\"bool\"}],\"name\":\"changeBallotStatus\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ballotId\",\"type\":\"uint256\"}],\"name\":\"getBallotDetails\",\"outputs\":[{\"name\":\"quorum\",\"type\":\"uint256\"},{\"name\":\"totalSupplyAtCheckpoint\",\"type\":\"uint256\"},{\"name\":\"checkpointId\",\"type\":\"uint256\"},{\"name\":\"startTime\",\"type\":\"uint256\"},{\"name\":\"endTime\",\"type\":\"uint256\"},{\"name\":\"totalProposals\",\"type\":\"uint256\"},{\"name\":\"totalVoters\",\"type\":\"uint256\"},{\"name\":\"isActive\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ballotId\",\"type\":\"uint256\"},{\"name\":\"_voter\",\"type\":\"address\"}],\"name\":\"getSelectedProposal\",\"outputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ballotId\",\"type\":\"uint256\"}],\"name\":\"getBallotResults\",\"outputs\":[{\"name\":\"voteWeighting\",\"type\":\"uint256[]\"},{\"name\":\"tieWith\",\"type\":\"uint256[]\"},{\"name\":\"winningProposal\",\"type\":\"uint256\"},{\"name\":\"isVotingSucceed\",\"type\":\"bool\"},{\"name\":\"totalVoters\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"changeBallotStatus(uint256,bool)\":{\"params\":{\"_ballotId\":\"The index of the target ballot\\r\",\"_isActive\":\"The bool value of the active stats of the ballot\\r\"},\"return\":\"bool success\\r\"},\"getBallotDetails(uint256)\":{\"params\":{\"_ballotId\":\"The index of the target ballot\\r\"},\"return\":\"uint256 quorum\\ruint256 totalSupplyAtCheckpoint\\ruint256 checkpointId\\ruint256 startTime\\ruint256 endTime\\ruint256 totalProposals\\ruint256 totalVoters\\rbool isActive\\r\"},\"getBallotResults(uint256)\":{\"params\":{\"_ballotId\":\"Id of the target ballot\\r\"},\"return\":\"uint256 voteWeighting\\ruint256 tieWith\\ruint256 winningProposal\\rbool isVotingSucceed\\ruint256 totalVoters\\r\"},\"getSelectedProposal(uint256,address)\":{\"params\":{\"_ballotId\":\"Id of the ballot\\r\",\"_voter\":\"Address of the voter\\r\"}}}},\"userdoc\":{\"methods\":{\"changeBallotStatus(uint256,bool)\":{\"notice\":\"Allows the token issuer to set the active stats of a ballot\\r\"},\"getBallotDetails(uint256)\":{\"notice\":\"Get the details of the ballot\\r\"},\"getBallotResults(uint256)\":{\"notice\":\"Queries the result of a given ballot\\r\"},\"getSelectedProposal(uint256,address)\":{\"notice\":\"Get the voted proposal\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/IVoting.sol\":\"IVoting\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/IVoting.sol\":{\"keccak256\":\"0x7b4fc7f0e33b625d007aeac33324088d4b32ceba90d1a98a599d3cbcb0a777ad\",\"urls\":[\"bzzr://26790918078e42b54e64b8c1e5f92819b1511905188e44b25f784ef47e46ecd8\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\ninterface IVoting {\r\n\r\n    /**\r\n     * @notice Allows the token issuer to set the active stats of a ballot\r\n     * @param _ballotId The index of the target ballot\r\n     * @param _isActive The bool value of the active stats of the ballot\r\n     * @return bool success\r\n     */\r\n    function changeBallotStatus(uint256 _ballotId, bool _isActive) external;\r\n\r\n    /**\r\n     * @notice Queries the result of a given ballot\r\n     * @param _ballotId Id of the target ballot\r\n     * @return uint256 voteWeighting\r\n     * @return uint256 tieWith\r\n     * @return uint256 winningProposal\r\n     * @return bool isVotingSucceed\r\n     * @return uint256 totalVoters\r\n     */\r\n    function getBallotResults(uint256 _ballotId) external view returns(\r\n        uint256[] memory voteWeighting,\r\n        uint256[] memory tieWith,\r\n        uint256 winningProposal,\r\n        bool isVotingSucceed,\r\n        uint256 totalVoters\r\n    );\r\n\r\n    /**\r\n     * @notice Get the voted proposal\r\n     * @param _ballotId Id of the ballot\r\n     * @param _voter Address of the voter\r\n     */\r\n    function getSelectedProposal(uint256 _ballotId, address _voter) external view returns(uint256 proposalId);\r\n\r\n    /**\r\n     * @notice Get the details of the ballot\r\n     * @param _ballotId The index of the target ballot\r\n     * @return uint256 quorum\r\n     * @return uint256 totalSupplyAtCheckpoint\r\n     * @return uint256 checkpointId\r\n     * @return uint256 startTime\r\n     * @return uint256 endTime\r\n     * @return uint256 totalProposals\r\n     * @return uint256 totalVoters\r\n     * @return bool isActive\r\n     */\r\n    function getBallotDetails(uint256 _ballotId) external view returns(\r\n        uint256 quorum,\r\n        uint256 totalSupplyAtCheckpoint,\r\n        uint256 checkpointId,\r\n        uint256 startTime,\r\n        uint256 endTime,\r\n        uint256 totalProposals,\r\n        uint256 totalVoters,\r\n        bool isActive\r\n    );\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\IVoting.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IVoting.sol",
+    "exportedSymbols": {
+      "IVoting": [
+        16152
+      ]
+    },
+    "id": 16153,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16097,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 16152,
+        "linearizedBaseContracts": [
+          16152
+        ],
+        "name": "IVoting",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Allows the token issuer to set the active stats of a ballot\r\n@param _ballotId The index of the target ballot\r\n@param _isActive The bool value of the active stats of the ballot\r\n@return bool success\r",
+            "id": 16104,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeBallotStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16102,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16099,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16104,
+                  "src": "334:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16098,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16101,
+                  "name": "_isActive",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16104,
+                  "src": "353:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16100,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:35:30"
+            },
+            "returnParameters": {
+              "id": 16103,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:30"
+            },
+            "scope": 16152,
+            "src": "306:72:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Queries the result of a given ballot\r\n@param _ballotId Id of the target ballot\r\n@return uint256 voteWeighting\r\n@return uint256 tieWith\r\n@return uint256 winningProposal\r\n@return bool isVotingSucceed\r\n@return uint256 totalVoters\r",
+            "id": 16121,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBallotResults",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16106,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "715:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16105,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "714:19:30"
+            },
+            "returnParameters": {
+              "id": 16120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16110,
+                  "name": "voteWeighting",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "766:30:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 16108,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "766:7:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 16109,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "766:9:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16113,
+                  "name": "tieWith",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "807:24:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 16111,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "807:7:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 16112,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "807:9:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16115,
+                  "name": "winningProposal",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "842:23:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16114,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "842:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16117,
+                  "name": "isVotingSucceed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "876:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16116,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "876:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16119,
+                  "name": "totalVoters",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "907:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16118,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "755:178:30"
+            },
+            "scope": 16152,
+            "src": "689:245:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the voted proposal\r\n@param _ballotId Id of the ballot\r\n@param _voter Address of the voter\r",
+            "id": 16130,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSelectedProposal",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16123,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1113:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16125,
+                  "name": "_voter",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1132:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 16124,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1132:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:35:30"
+            },
+            "returnParameters": {
+              "id": 16129,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16128,
+                  "name": "proposalId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1170:18:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16127,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1170:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1169:20:30"
+            },
+            "scope": 16152,
+            "src": "1084:106:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the details of the ballot\r\n@param _ballotId The index of the target ballot\r\n@return uint256 quorum\r\n@return uint256 totalSupplyAtCheckpoint\r\n@return uint256 checkpointId\r\n@return uint256 startTime\r\n@return uint256 endTime\r\n@return uint256 totalProposals\r\n@return uint256 totalVoters\r\n@return bool isActive\r",
+            "id": 16151,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBallotDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16133,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16132,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1631:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16131,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1631:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1630:19:30"
+            },
+            "returnParameters": {
+              "id": 16150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16135,
+                  "name": "quorum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1682:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16134,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1682:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16137,
+                  "name": "totalSupplyAtCheckpoint",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1707:31:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1707:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16139,
+                  "name": "checkpointId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1749:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16138,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1749:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16141,
+                  "name": "startTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1780:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16140,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1780:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16143,
+                  "name": "endTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1808:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1808:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16145,
+                  "name": "totalProposals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1834:22:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16144,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1834:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16147,
+                  "name": "totalVoters",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1867:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16146,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1867:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16149,
+                  "name": "isActive",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1897:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16148,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1897:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1671:246:30"
+            },
+            "scope": 16152,
+            "src": "1605:313:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16153,
+        "src": "26:1897:30"
+      }
+    ],
+    "src": "0:1925:30"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IVoting.sol",
+    "exportedSymbols": {
+      "IVoting": [
+        16152
+      ]
+    },
+    "id": 16153,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16097,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 16152,
+        "linearizedBaseContracts": [
+          16152
+        ],
+        "name": "IVoting",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Allows the token issuer to set the active stats of a ballot\r\n@param _ballotId The index of the target ballot\r\n@param _isActive The bool value of the active stats of the ballot\r\n@return bool success\r",
+            "id": 16104,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeBallotStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16102,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16099,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16104,
+                  "src": "334:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16098,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16101,
+                  "name": "_isActive",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16104,
+                  "src": "353:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16100,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:35:30"
+            },
+            "returnParameters": {
+              "id": 16103,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:30"
+            },
+            "scope": 16152,
+            "src": "306:72:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Queries the result of a given ballot\r\n@param _ballotId Id of the target ballot\r\n@return uint256 voteWeighting\r\n@return uint256 tieWith\r\n@return uint256 winningProposal\r\n@return bool isVotingSucceed\r\n@return uint256 totalVoters\r",
+            "id": 16121,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBallotResults",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16106,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "715:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16105,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "714:19:30"
+            },
+            "returnParameters": {
+              "id": 16120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16110,
+                  "name": "voteWeighting",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "766:30:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 16108,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "766:7:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 16109,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "766:9:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16113,
+                  "name": "tieWith",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "807:24:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 16111,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "807:7:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 16112,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "807:9:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16115,
+                  "name": "winningProposal",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "842:23:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16114,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "842:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16117,
+                  "name": "isVotingSucceed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "876:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16116,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "876:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16119,
+                  "name": "totalVoters",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16121,
+                  "src": "907:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16118,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "755:178:30"
+            },
+            "scope": 16152,
+            "src": "689:245:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the voted proposal\r\n@param _ballotId Id of the ballot\r\n@param _voter Address of the voter\r",
+            "id": 16130,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSelectedProposal",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16123,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1113:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16125,
+                  "name": "_voter",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1132:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 16124,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1132:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:35:30"
+            },
+            "returnParameters": {
+              "id": 16129,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16128,
+                  "name": "proposalId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16130,
+                  "src": "1170:18:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16127,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1170:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1169:20:30"
+            },
+            "scope": 16152,
+            "src": "1084:106:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the details of the ballot\r\n@param _ballotId The index of the target ballot\r\n@return uint256 quorum\r\n@return uint256 totalSupplyAtCheckpoint\r\n@return uint256 checkpointId\r\n@return uint256 startTime\r\n@return uint256 endTime\r\n@return uint256 totalProposals\r\n@return uint256 totalVoters\r\n@return bool isActive\r",
+            "id": 16151,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBallotDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16133,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16132,
+                  "name": "_ballotId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1631:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16131,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1631:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1630:19:30"
+            },
+            "returnParameters": {
+              "id": 16150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16135,
+                  "name": "quorum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1682:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16134,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1682:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16137,
+                  "name": "totalSupplyAtCheckpoint",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1707:31:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1707:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16139,
+                  "name": "checkpointId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1749:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16138,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1749:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16141,
+                  "name": "startTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1780:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16140,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1780:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16143,
+                  "name": "endTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1808:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1808:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16145,
+                  "name": "totalProposals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1834:22:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16144,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1834:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16147,
+                  "name": "totalVoters",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1867:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 16146,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1867:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16149,
+                  "name": "isActive",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16151,
+                  "src": "1897:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 16148,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1897:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1671:246:30"
+            },
+            "scope": 16152,
+            "src": "1605:313:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16153,
+        "src": "26:1897:30"
+      }
+    ],
+    "src": "0:1925:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.608Z",
+  "devdoc": {
+    "methods": {
+      "changeBallotStatus(uint256,bool)": {
+        "params": {
+          "_ballotId": "The index of the target ballot\r",
+          "_isActive": "The bool value of the active stats of the ballot\r"
+        },
+        "return": "bool success\r"
+      },
+      "getBallotDetails(uint256)": {
+        "params": {
+          "_ballotId": "The index of the target ballot\r"
+        },
+        "return": "uint256 quorum\ruint256 totalSupplyAtCheckpoint\ruint256 checkpointId\ruint256 startTime\ruint256 endTime\ruint256 totalProposals\ruint256 totalVoters\rbool isActive\r"
+      },
+      "getBallotResults(uint256)": {
+        "params": {
+          "_ballotId": "Id of the target ballot\r"
+        },
+        "return": "uint256 voteWeighting\ruint256 tieWith\ruint256 winningProposal\rbool isVotingSucceed\ruint256 totalVoters\r"
+      },
+      "getSelectedProposal(uint256,address)": {
+        "params": {
+          "_ballotId": "Id of the ballot\r",
+          "_voter": "Address of the voter\r"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "changeBallotStatus(uint256,bool)": {
+        "notice": "Allows the token issuer to set the active stats of a ballot\r"
+      },
+      "getBallotDetails(uint256)": {
+        "notice": "Get the details of the ballot\r"
+      },
+      "getBallotResults(uint256)": {
+        "notice": "Queries the result of a given ballot\r"
+      },
+      "getSelectedProposal(uint256,address)": {
+        "notice": "Get the voted proposal\r"
+      }
+    }
+  }
+}

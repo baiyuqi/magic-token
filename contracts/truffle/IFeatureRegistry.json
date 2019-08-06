@@ -1,0 +1,641 @@
+{
+  "contractName": "IFeatureRegistry",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_nameKey",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "_newStatus",
+          "type": "bool"
+        }
+      ],
+      "name": "ChangeFeatureStatus",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_nameKey",
+          "type": "string"
+        },
+        {
+          "name": "_newStatus",
+          "type": "bool"
+        }
+      ],
+      "name": "setFeatureStatus",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_nameKey",
+          "type": "string"
+        }
+      ],
+      "name": "getFeatureStatus",
+      "outputs": [
+        {
+          "name": "hasFeature",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_nameKey\",\"type\":\"string\"}],\"name\":\"getFeatureStatus\",\"outputs\":[{\"name\":\"hasFeature\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_nameKey\",\"type\":\"string\"},{\"name\":\"_newStatus\",\"type\":\"bool\"}],\"name\":\"setFeatureStatus\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_nameKey\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_newStatus\",\"type\":\"bool\"}],\"name\":\"ChangeFeatureStatus\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"getFeatureStatus(string)\":{\"params\":{\"_nameKey\":\"is the key for the feature status mapping\\r\"},\"return\":\"bool\\r\"},\"setFeatureStatus(string,bool)\":{\"details\":\"feature status is set to false by default\\r\",\"params\":{\"_nameKey\":\"is the key for the feature status mapping\\r\",\"_newStatus\":\"is the new feature status\\r\"}}},\"title\":\"Interface for managing polymath feature switches\\r\"},\"userdoc\":{\"methods\":{\"getFeatureStatus(string)\":{\"notice\":\"Get the status of a feature\\r\"},\"setFeatureStatus(string,bool)\":{\"notice\":\"change a feature status\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/IFeatureRegistry.sol\":\"IFeatureRegistry\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/IFeatureRegistry.sol\":{\"keccak256\":\"0xfa0c92c2a6f988d6ca8384b09ef6555ebce3229985aa542680f13f21cfbd63bd\",\"urls\":[\"bzzr://d43d5c6a4109c867caa03b0dfa09a0e5b0a33d625a382c5a8763cb302c626eca\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Interface for managing polymath feature switches\r\n */\r\ninterface IFeatureRegistry {\r\n\r\n    event ChangeFeatureStatus(string _nameKey, bool _newStatus);\r\n\r\n    /**\r\n     * @notice change a feature status\r\n     * @dev feature status is set to false by default\r\n     * @param _nameKey is the key for the feature status mapping\r\n     * @param _newStatus is the new feature status\r\n     */\r\n    function setFeatureStatus(string calldata _nameKey, bool _newStatus) external;\r\n\r\n    /**\r\n     * @notice Get the status of a feature\r\n     * @param _nameKey is the key for the feature status mapping\r\n     * @return bool\r\n     */\r\n    function getFeatureStatus(string calldata _nameKey) external view returns(bool hasFeature);\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\IFeatureRegistry.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IFeatureRegistry.sol",
+    "exportedSymbols": {
+      "IFeatureRegistry": [
+        13952
+      ]
+    },
+    "id": 13953,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13931,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface for managing polymath feature switches\r",
+        "fullyImplemented": false,
+        "id": 13952,
+        "linearizedBaseContracts": [
+          13952
+        ],
+        "name": "IFeatureRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13937,
+            "name": "ChangeFeatureStatus",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13936,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13933,
+                  "indexed": false,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13937,
+                  "src": "158:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13932,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "158:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13935,
+                  "indexed": false,
+                  "name": "_newStatus",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13937,
+                  "src": "175:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13934,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "175:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "157:34:16"
+            },
+            "src": "132:60:16"
+          },
+          {
+            "body": null,
+            "documentation": "@notice change a feature status\r\n@dev feature status is set to false by default\r\n@param _nameKey is the key for the feature status mapping\r\n@param _newStatus is the new feature status\r",
+            "id": 13944,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFeatureStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13939,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13944,
+                  "src": "457:24:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13938,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "457:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13941,
+                  "name": "_newStatus",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13944,
+                  "src": "483:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13940,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "456:43:16"
+            },
+            "returnParameters": {
+              "id": 13943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "508:0:16"
+            },
+            "scope": 13952,
+            "src": "431:78:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the status of a feature\r\n@param _nameKey is the key for the feature status mapping\r\n@return bool\r",
+            "id": 13951,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeatureStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13947,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13946,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13951,
+                  "src": "692:24:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13945,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "692:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "691:26:16"
+            },
+            "returnParameters": {
+              "id": 13950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13949,
+                  "name": "hasFeature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13951,
+                  "src": "740:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13948,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "740:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "739:17:16"
+            },
+            "scope": 13952,
+            "src": "666:91:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13953,
+        "src": "96:666:16"
+      }
+    ],
+    "src": "0:764:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IFeatureRegistry.sol",
+    "exportedSymbols": {
+      "IFeatureRegistry": [
+        13952
+      ]
+    },
+    "id": 13953,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13931,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface for managing polymath feature switches\r",
+        "fullyImplemented": false,
+        "id": 13952,
+        "linearizedBaseContracts": [
+          13952
+        ],
+        "name": "IFeatureRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 13937,
+            "name": "ChangeFeatureStatus",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13936,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13933,
+                  "indexed": false,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13937,
+                  "src": "158:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13932,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "158:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13935,
+                  "indexed": false,
+                  "name": "_newStatus",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13937,
+                  "src": "175:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13934,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "175:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "157:34:16"
+            },
+            "src": "132:60:16"
+          },
+          {
+            "body": null,
+            "documentation": "@notice change a feature status\r\n@dev feature status is set to false by default\r\n@param _nameKey is the key for the feature status mapping\r\n@param _newStatus is the new feature status\r",
+            "id": 13944,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFeatureStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13939,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13944,
+                  "src": "457:24:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13938,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "457:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13941,
+                  "name": "_newStatus",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13944,
+                  "src": "483:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13940,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "456:43:16"
+            },
+            "returnParameters": {
+              "id": 13943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "508:0:16"
+            },
+            "scope": 13952,
+            "src": "431:78:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the status of a feature\r\n@param _nameKey is the key for the feature status mapping\r\n@return bool\r",
+            "id": 13951,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeatureStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13947,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13946,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13951,
+                  "src": "692:24:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13945,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "692:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "691:26:16"
+            },
+            "returnParameters": {
+              "id": 13950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13949,
+                  "name": "hasFeature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13951,
+                  "src": "740:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13948,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "740:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "739:17:16"
+            },
+            "scope": 13952,
+            "src": "666:91:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13953,
+        "src": "96:666:16"
+      }
+    ],
+    "src": "0:764:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.564Z",
+  "devdoc": {
+    "methods": {
+      "getFeatureStatus(string)": {
+        "params": {
+          "_nameKey": "is the key for the feature status mapping\r"
+        },
+        "return": "bool\r"
+      },
+      "setFeatureStatus(string,bool)": {
+        "details": "feature status is set to false by default\r",
+        "params": {
+          "_nameKey": "is the key for the feature status mapping\r",
+          "_newStatus": "is the new feature status\r"
+        }
+      }
+    },
+    "title": "Interface for managing polymath feature switches\r"
+  },
+  "userdoc": {
+    "methods": {
+      "getFeatureStatus(string)": {
+        "notice": "Get the status of a feature\r"
+      },
+      "setFeatureStatus(string,bool)": {
+        "notice": "change a feature status\r"
+      }
+    }
+  }
+}

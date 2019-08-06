@@ -1,0 +1,2 @@
+
+web3j truffle generate  contracts\truffle\IPolymathRegistry.json -o src\main\java -p com.idhub.magic.token.contract

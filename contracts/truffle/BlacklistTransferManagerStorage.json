@@ -1,0 +1,955 @@
+{
+  "contractName": "BlacklistTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "blacklists",
+      "outputs": [
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "endTime",
+          "type": "uint256"
+        },
+        {
+          "name": "repeatPeriodTime",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"blacklists\",\"outputs\":[{\"name\":\"startTime\",\"type\":\"uint256\"},{\"name\":\"endTime\",\"type\":\"uint256\"},{\"name\":\"repeatPeriodTime\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the CountTransferManager storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/BTM/BlacklistTransferManagerStorage.sol\":\"BlacklistTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/BTM/BlacklistTransferManagerStorage.sol\":{\"keccak256\":\"0x1a43060bbe798740cc8d27f90846a843ee64017139bdc3faa85600fb89096f3e\",\"urls\":[\"bzzr://be75c3eecab1c7141f851b579ff9384af258b78e18b4c7aa900765b916561bc2\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060b28061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80632598fd7114602d575b600080fd5b604760048036036020811015604157600080fd5b50356065565b60408051938452602084019290925282820152519081900360600190f35b6000602081905290815260409020805460018201546002909201549091908356fea165627a7a7230582073f0833b96a22750b057ee265c398278db5668cbb523c054930b928d287eb6b60029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80632598fd7114602d575b600080fd5b604760048036036020811015604157600080fd5b50356065565b60408051938452602084019290925282820152519081900360600190f35b6000602081905290815260409020805460018201546002909201549091908356fea165627a7a7230582073f0833b96a22750b057ee265c398278db5668cbb523c054930b928d287eb6b60029",
+  "sourceMap": "114:901:114:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:901:114;;;;;;;",
+  "deployedSourceMap": "114:901:114:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:901:114;;;;;;;;;;;;;;;;;;;362:55;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;362:55:114;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the CountTransferManager storage\r\n */\r\ncontract BlacklistTransferManagerStorage {\r\n\r\n    struct BlacklistsDetails {\r\n        uint256 startTime;\r\n        uint256 endTime;\r\n        uint256 repeatPeriodTime;\r\n    }\r\n\r\n    //hold the different blacklist details corresponds to its name\r\n    mapping(bytes32 => BlacklistsDetails) public blacklists;\r\n\r\n    //hold the different name of blacklist corresponds to a investor\r\n    mapping(address => bytes32[]) investorToBlacklist;\r\n\r\n    //get list of the addresses for a particular blacklist\r\n    mapping(bytes32 => address[]) blacklistToInvestor;\r\n\r\n    //mapping use to store the indexes for different blacklist types for a investor\r\n    mapping(address => mapping(bytes32 => uint256)) investorToIndex;\r\n\r\n    //mapping use to store the indexes for different investor for a blacklist type\r\n    mapping(bytes32 => mapping(address => uint256)) blacklistToIndex;\r\n\r\n    bytes32[] allBlacklists;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\BTM\\BlacklistTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/BTM/BlacklistTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "BlacklistTransferManagerStorage": [
+        38700
+      ]
+    },
+    "id": 38701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38663,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:114"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CountTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 38700,
+        "linearizedBaseContracts": [
+          38700
+        ],
+        "name": "BlacklistTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "BlacklistTransferManagerStorage.BlacklistsDetails",
+            "id": 38670,
+            "members": [
+              {
+                "constant": false,
+                "id": 38665,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "200:17:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38664,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38667,
+                "name": "endTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "228:15:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38666,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "228:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38669,
+                "name": "repeatPeriodTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "254:24:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38668,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BlacklistsDetails",
+            "nodeType": "StructDefinition",
+            "scope": 38700,
+            "src": "164:122:114",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 38674,
+            "name": "blacklists",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "362:55:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_BlacklistsDetails_$38670_storage_$",
+              "typeString": "mapping(bytes32 => struct BlacklistTransferManagerStorage.BlacklistsDetails)"
+            },
+            "typeName": {
+              "id": 38673,
+              "keyType": {
+                "id": 38671,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "370:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "362:37:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_BlacklistsDetails_$38670_storage_$",
+                "typeString": "mapping(bytes32 => struct BlacklistTransferManagerStorage.BlacklistsDetails)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 38672,
+                "name": "BlacklistsDetails",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 38670,
+                "src": "381:17:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_BlacklistsDetails_$38670_storage_ptr",
+                  "typeString": "struct BlacklistTransferManagerStorage.BlacklistsDetails"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 38679,
+            "name": "investorToBlacklist",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "496:49:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 38678,
+              "keyType": {
+                "id": 38675,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "504:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "496:29:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 38676,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "515:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 38677,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "515:9:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38684,
+            "name": "blacklistToInvestor",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "614:49:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 38683,
+              "keyType": {
+                "id": 38680,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "622:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "614:29:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 38681,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "633:7:114",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 38682,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "633:9:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38690,
+            "name": "investorToIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "757:63:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 38689,
+              "keyType": {
+                "id": 38685,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "765:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "757:47:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 38688,
+                "keyType": {
+                  "id": 38686,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "784:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "776:27:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 38687,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "795:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38696,
+            "name": "blacklistToIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "913:64:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 38695,
+              "keyType": {
+                "id": 38691,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "921:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "913:47:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 38694,
+                "keyType": {
+                  "id": 38692,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "940:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "932:27:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 38693,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "951:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38699,
+            "name": "allBlacklists",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "986:23:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 38697,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "986:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 38698,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "986:9:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 38701,
+        "src": "114:901:114"
+      }
+    ],
+    "src": "0:1017:114"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/BTM/BlacklistTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "BlacklistTransferManagerStorage": [
+        38700
+      ]
+    },
+    "id": 38701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38663,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:114"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CountTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 38700,
+        "linearizedBaseContracts": [
+          38700
+        ],
+        "name": "BlacklistTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "BlacklistTransferManagerStorage.BlacklistsDetails",
+            "id": 38670,
+            "members": [
+              {
+                "constant": false,
+                "id": 38665,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "200:17:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38664,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38667,
+                "name": "endTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "228:15:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38666,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "228:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38669,
+                "name": "repeatPeriodTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 38670,
+                "src": "254:24:114",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38668,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BlacklistsDetails",
+            "nodeType": "StructDefinition",
+            "scope": 38700,
+            "src": "164:122:114",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 38674,
+            "name": "blacklists",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "362:55:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_BlacklistsDetails_$38670_storage_$",
+              "typeString": "mapping(bytes32 => struct BlacklistTransferManagerStorage.BlacklistsDetails)"
+            },
+            "typeName": {
+              "id": 38673,
+              "keyType": {
+                "id": 38671,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "370:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "362:37:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_BlacklistsDetails_$38670_storage_$",
+                "typeString": "mapping(bytes32 => struct BlacklistTransferManagerStorage.BlacklistsDetails)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 38672,
+                "name": "BlacklistsDetails",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 38670,
+                "src": "381:17:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_BlacklistsDetails_$38670_storage_ptr",
+                  "typeString": "struct BlacklistTransferManagerStorage.BlacklistsDetails"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 38679,
+            "name": "investorToBlacklist",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "496:49:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 38678,
+              "keyType": {
+                "id": 38675,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "504:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "496:29:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 38676,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "515:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 38677,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "515:9:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38684,
+            "name": "blacklistToInvestor",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "614:49:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 38683,
+              "keyType": {
+                "id": 38680,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "622:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "614:29:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 38681,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "633:7:114",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 38682,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "633:9:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38690,
+            "name": "investorToIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "757:63:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 38689,
+              "keyType": {
+                "id": 38685,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "765:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "757:47:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 38688,
+                "keyType": {
+                  "id": 38686,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "784:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "776:27:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 38687,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "795:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38696,
+            "name": "blacklistToIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "913:64:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 38695,
+              "keyType": {
+                "id": 38691,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "921:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "913:47:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 38694,
+                "keyType": {
+                  "id": 38692,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "940:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "932:27:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 38693,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "951:7:114",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38699,
+            "name": "allBlacklists",
+            "nodeType": "VariableDeclaration",
+            "scope": 38700,
+            "src": "986:23:114",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 38697,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "986:7:114",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 38698,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "986:9:114",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 38701,
+        "src": "114:901:114"
+      }
+    ],
+    "src": "0:1017:114"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.848Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the CountTransferManager storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

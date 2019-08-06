@@ -1,0 +1,501 @@
+{
+  "contractName": "GeneralPermissionManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "perms",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allDelegates",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "delegateDetails",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"perms\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allDelegates\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"delegateDetails\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the GeneralPermissionManager storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/PermissionManager/GeneralPermissionManagerStorage.sol\":\"GeneralPermissionManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/PermissionManager/GeneralPermissionManagerStorage.sol\":{\"keccak256\":\"0xe1be587c27e7632e769d5ee147bd78e1fd1c9894446eca74157a13fc738813bc\",\"urls\":[\"bzzr://b14205d0238077c5e06627b658aa02e7ffb3321db03a963d8a1263cd8076b836\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061018b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80634e0a479214610046578063947dd6e514610090578063e380d343146100c9575b600080fd5b61007c6004803603606081101561005c57600080fd5b506001600160a01b03813581169160208101359091169060400135610101565b604080519115158252519081900360200190f35b6100ad600480360360208110156100a657600080fd5b5035610126565b604080516001600160a01b039092168252519081900360200190f35b6100ef600480360360208110156100df57600080fd5b50356001600160a01b031661014d565b60408051918252519081900360200190f35b6000602081815293815260408082208552928152828120909352825290205460ff1681565b6002818154811061013357fe5b6000918252602090912001546001600160a01b0316905081565b6001602052600090815260409020548156fea165627a7a72305820cbd397a71f680157738e401290030da5e41f1cc4bf6c875e37e9d6a773a7d0fc0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80634e0a479214610046578063947dd6e514610090578063e380d343146100c9575b600080fd5b61007c6004803603606081101561005c57600080fd5b506001600160a01b03813581169160208101359091169060400135610101565b604080519115158252519081900360200190f35b6100ad600480360360208110156100a657600080fd5b5035610126565b604080516001600160a01b039092168252519081900360200190f35b6100ef600480360360208110156100df57600080fd5b50356001600160a01b031661014d565b60408051918252519081900360200190f35b6000602081815293815260408082208552928152828120909352825290205460ff1681565b6002818154811061013357fe5b6000918252602090912001546001600160a01b0316905081565b6001602052600090815260409020548156fea165627a7a72305820cbd397a71f680157738e401290030da5e41f1cc4bf6c875e37e9d6a773a7d0fc0029",
+  "sourceMap": "118:448:96:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;118:448:96;;;;;;;",
+  "deployedSourceMap": "118:448:96:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;118:448:96;;;;;;;;;;;;;;;;;;;;;;;;;;;;;307:80;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;307:80:96;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;531:29;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;531:29:96;;:::i;:::-;;;;-1:-1:-1;;;;;531:29:96;;;;;;;;;;;;;;436:51;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;436:51:96;-1:-1:-1;;;;;436:51:96;;:::i;:::-;;;;;;;;;;;;;;;;307:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;531:29::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;531:29:96;;-1:-1:-1;531:29:96;:::o;436:51::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the GeneralPermissionManager storage\r\n */\r\ncontract GeneralPermissionManagerStorage {\r\n\r\n    // Mapping used to hold the permissions on the modules provided to delegate, module add => delegate add => permission bytes32 => bool\r\n    mapping (address => mapping (address => mapping (bytes32 => bool))) public perms;\r\n    // Mapping hold the delagate details\r\n    mapping (address => bytes32) public delegateDetails;\r\n    // Array to track all delegates\r\n    address[] public allDelegates;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\PermissionManager\\GeneralPermissionManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/PermissionManager/GeneralPermissionManagerStorage.sol",
+    "exportedSymbols": {
+      "GeneralPermissionManagerStorage": [
+        32481
+      ]
+    },
+    "id": 32482,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 32465,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:96"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the GeneralPermissionManager storage\r",
+        "fullyImplemented": true,
+        "id": 32481,
+        "linearizedBaseContracts": [
+          32481
+        ],
+        "name": "GeneralPermissionManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 32473,
+            "name": "perms",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "307:80:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$_$",
+              "typeString": "mapping(address => mapping(address => mapping(bytes32 => bool)))"
+            },
+            "typeName": {
+              "id": 32472,
+              "keyType": {
+                "id": 32466,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "316:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "307:67:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$_$",
+                "typeString": "mapping(address => mapping(address => mapping(bytes32 => bool)))"
+              },
+              "valueType": {
+                "id": 32471,
+                "keyType": {
+                  "id": 32467,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:7:96",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "327:46:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                  "typeString": "mapping(address => mapping(bytes32 => bool))"
+                },
+                "valueType": {
+                  "id": 32470,
+                  "keyType": {
+                    "id": 32468,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "347:25:96",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                    "typeString": "mapping(bytes32 => bool)"
+                  },
+                  "valueType": {
+                    "id": 32469,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:4:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32477,
+            "name": "delegateDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "436:51:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+              "typeString": "mapping(address => bytes32)"
+            },
+            "typeName": {
+              "id": 32476,
+              "keyType": {
+                "id": 32474,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "445:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "436:28:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+                "typeString": "mapping(address => bytes32)"
+              },
+              "valueType": {
+                "id": 32475,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "456:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32480,
+            "name": "allDelegates",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "531:29:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 32478,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "531:7:96",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 32479,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "531:9:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 32482,
+        "src": "118:448:96"
+      }
+    ],
+    "src": "0:568:96"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/PermissionManager/GeneralPermissionManagerStorage.sol",
+    "exportedSymbols": {
+      "GeneralPermissionManagerStorage": [
+        32481
+      ]
+    },
+    "id": 32482,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 32465,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:96"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the GeneralPermissionManager storage\r",
+        "fullyImplemented": true,
+        "id": 32481,
+        "linearizedBaseContracts": [
+          32481
+        ],
+        "name": "GeneralPermissionManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 32473,
+            "name": "perms",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "307:80:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$_$",
+              "typeString": "mapping(address => mapping(address => mapping(bytes32 => bool)))"
+            },
+            "typeName": {
+              "id": 32472,
+              "keyType": {
+                "id": 32466,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "316:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "307:67:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$_$",
+                "typeString": "mapping(address => mapping(address => mapping(bytes32 => bool)))"
+              },
+              "valueType": {
+                "id": 32471,
+                "keyType": {
+                  "id": 32467,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "336:7:96",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "327:46:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                  "typeString": "mapping(address => mapping(bytes32 => bool))"
+                },
+                "valueType": {
+                  "id": 32470,
+                  "keyType": {
+                    "id": 32468,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "347:25:96",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                    "typeString": "mapping(bytes32 => bool)"
+                  },
+                  "valueType": {
+                    "id": 32469,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:4:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32477,
+            "name": "delegateDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "436:51:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+              "typeString": "mapping(address => bytes32)"
+            },
+            "typeName": {
+              "id": 32476,
+              "keyType": {
+                "id": 32474,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "445:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "436:28:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+                "typeString": "mapping(address => bytes32)"
+              },
+              "valueType": {
+                "id": 32475,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "456:7:96",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32480,
+            "name": "allDelegates",
+            "nodeType": "VariableDeclaration",
+            "scope": 32481,
+            "src": "531:29:96",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 32478,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "531:7:96",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 32479,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "531:9:96",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 32482,
+        "src": "118:448:96"
+      }
+    ],
+    "src": "0:568:96"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.823Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the GeneralPermissionManager storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

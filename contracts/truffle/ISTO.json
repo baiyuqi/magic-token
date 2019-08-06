@@ -1,0 +1,664 @@
+{
+  "contractName": "ISTO",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_fundRaiseTypes",
+          "type": "uint8[]"
+        }
+      ],
+      "name": "SetFundRaiseTypes",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTokensSold",
+      "outputs": [
+        {
+          "name": "soldTokens",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_fundRaiseType",
+          "type": "uint8"
+        }
+      ],
+      "name": "getRaised",
+      "outputs": [
+        {
+          "name": "raisedAmount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_fundRaiseType\",\"type\":\"uint8\"}],\"name\":\"getRaised\",\"outputs\":[{\"name\":\"raisedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getTokensSold\",\"outputs\":[{\"name\":\"soldTokens\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_fundRaiseTypes\",\"type\":\"uint8[]\"}],\"name\":\"SetFundRaiseTypes\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"pause()\":{\"details\":\"Only securityToken owner restriction applied on the super function\\r\"}},\"title\":\"Interface to be implemented by all STO modules\\r\"},\"userdoc\":{\"methods\":{\"getRaised(uint8)\":{\"notice\":\"Returns funds raised by the STO\\r\"},\"getTokensSold()\":{\"notice\":\"Returns the total no. of tokens sold\\r\"},\"pause()\":{\"notice\":\"Pause (overridden function)\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/ISTO.sol\":\"ISTO\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/ISTO.sol\":{\"keccak256\":\"0x5011fe5ee003c7e4fdb105cf1f8b92ebc0fc42cb7a901d3799863da5065efaf3\",\"urls\":[\"bzzr://2b77dab8811ed8bdc30cd7c38a6f9b2a125be00a4b42c7c5aaace2f2db848f32\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Interface to be implemented by all STO modules\r\n */\r\ninterface ISTO {\r\n\r\n    enum FundRaiseType {ETH, POLY, SC}\r\n\r\n    // Event\r\n    event SetFundRaiseTypes(FundRaiseType[] _fundRaiseTypes);\r\n\r\n    /**\r\n     * @notice Returns the total no. of tokens sold\r\n     */\r\n    function getTokensSold() external view returns(uint256 soldTokens);\r\n\r\n    /**\r\n     * @notice Returns funds raised by the STO\r\n     */\r\n    function getRaised(FundRaiseType _fundRaiseType) external view returns(uint256 raisedAmount);\r\n\r\n    /**\r\n     * @notice Pause (overridden function)\r\n     * @dev Only securityToken owner restriction applied on the super function\r\n     */\r\n    function pause() external;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\ISTO.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISTO.sol",
+    "exportedSymbols": {
+      "ISTO": [
+        14539
+      ]
+    },
+    "id": 14540,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14514,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:25"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by all STO modules\r",
+        "fullyImplemented": false,
+        "id": 14539,
+        "linearizedBaseContracts": [
+          14539
+        ],
+        "name": "ISTO",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ISTO.FundRaiseType",
+            "id": 14518,
+            "members": [
+              {
+                "id": 14515,
+                "name": "ETH",
+                "nodeType": "EnumValue",
+                "src": "138:3:25"
+              },
+              {
+                "id": 14516,
+                "name": "POLY",
+                "nodeType": "EnumValue",
+                "src": "143:4:25"
+              },
+              {
+                "id": 14517,
+                "name": "SC",
+                "nodeType": "EnumValue",
+                "src": "149:2:25"
+              }
+            ],
+            "name": "FundRaiseType",
+            "nodeType": "EnumDefinition",
+            "src": "118:34:25"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14523,
+            "name": "SetFundRaiseTypes",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14522,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14521,
+                  "indexed": false,
+                  "name": "_fundRaiseTypes",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14523,
+                  "src": "198:31:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_enum$_FundRaiseType_$14518_$dyn_memory_ptr",
+                    "typeString": "enum ISTO.FundRaiseType[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 14519,
+                      "name": "FundRaiseType",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 14518,
+                      "src": "198:13:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                        "typeString": "enum ISTO.FundRaiseType"
+                      }
+                    },
+                    "id": 14520,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:15:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_enum$_FundRaiseType_$14518_$dyn_storage_ptr",
+                      "typeString": "enum ISTO.FundRaiseType[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:33:25"
+            },
+            "src": "174:57:25"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the total no. of tokens sold\r",
+            "id": 14528,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokensSold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14524,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "332:2:25"
+            },
+            "returnParameters": {
+              "id": 14527,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14526,
+                  "name": "soldTokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14528,
+                  "src": "357:18:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14525,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:20:25"
+            },
+            "scope": 14539,
+            "src": "310:67:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns funds raised by the STO\r",
+            "id": 14535,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRaised",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14530,
+                  "name": "_fundRaiseType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14535,
+                  "src": "470:28:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                    "typeString": "enum ISTO.FundRaiseType"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 14529,
+                    "name": "FundRaiseType",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14518,
+                    "src": "470:13:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                      "typeString": "enum ISTO.FundRaiseType"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:30:25"
+            },
+            "returnParameters": {
+              "id": 14534,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14533,
+                  "name": "raisedAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14535,
+                  "src": "522:20:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14532,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "521:22:25"
+            },
+            "scope": 14539,
+            "src": "451:93:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Pause (overridden function)\r\n@dev Only securityToken owner restriction applied on the super function\r",
+            "id": 14538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pause",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14536,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "708:2:25"
+            },
+            "returnParameters": {
+              "id": 14537,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "719:0:25"
+            },
+            "scope": 14539,
+            "src": "694:26:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14540,
+        "src": "94:631:25"
+      }
+    ],
+    "src": "0:727:25"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISTO.sol",
+    "exportedSymbols": {
+      "ISTO": [
+        14539
+      ]
+    },
+    "id": 14540,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14514,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:25"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by all STO modules\r",
+        "fullyImplemented": false,
+        "id": 14539,
+        "linearizedBaseContracts": [
+          14539
+        ],
+        "name": "ISTO",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ISTO.FundRaiseType",
+            "id": 14518,
+            "members": [
+              {
+                "id": 14515,
+                "name": "ETH",
+                "nodeType": "EnumValue",
+                "src": "138:3:25"
+              },
+              {
+                "id": 14516,
+                "name": "POLY",
+                "nodeType": "EnumValue",
+                "src": "143:4:25"
+              },
+              {
+                "id": 14517,
+                "name": "SC",
+                "nodeType": "EnumValue",
+                "src": "149:2:25"
+              }
+            ],
+            "name": "FundRaiseType",
+            "nodeType": "EnumDefinition",
+            "src": "118:34:25"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14523,
+            "name": "SetFundRaiseTypes",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14522,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14521,
+                  "indexed": false,
+                  "name": "_fundRaiseTypes",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14523,
+                  "src": "198:31:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_enum$_FundRaiseType_$14518_$dyn_memory_ptr",
+                    "typeString": "enum ISTO.FundRaiseType[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 14519,
+                      "name": "FundRaiseType",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 14518,
+                      "src": "198:13:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                        "typeString": "enum ISTO.FundRaiseType"
+                      }
+                    },
+                    "id": 14520,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:15:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_enum$_FundRaiseType_$14518_$dyn_storage_ptr",
+                      "typeString": "enum ISTO.FundRaiseType[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:33:25"
+            },
+            "src": "174:57:25"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the total no. of tokens sold\r",
+            "id": 14528,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokensSold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14524,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "332:2:25"
+            },
+            "returnParameters": {
+              "id": 14527,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14526,
+                  "name": "soldTokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14528,
+                  "src": "357:18:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14525,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:20:25"
+            },
+            "scope": 14539,
+            "src": "310:67:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns funds raised by the STO\r",
+            "id": 14535,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRaised",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14530,
+                  "name": "_fundRaiseType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14535,
+                  "src": "470:28:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                    "typeString": "enum ISTO.FundRaiseType"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 14529,
+                    "name": "FundRaiseType",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14518,
+                    "src": "470:13:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FundRaiseType_$14518",
+                      "typeString": "enum ISTO.FundRaiseType"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:30:25"
+            },
+            "returnParameters": {
+              "id": 14534,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14533,
+                  "name": "raisedAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14535,
+                  "src": "522:20:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14532,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "521:22:25"
+            },
+            "scope": 14539,
+            "src": "451:93:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Pause (overridden function)\r\n@dev Only securityToken owner restriction applied on the super function\r",
+            "id": 14538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pause",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14536,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "708:2:25"
+            },
+            "returnParameters": {
+              "id": 14537,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "719:0:25"
+            },
+            "scope": 14539,
+            "src": "694:26:25",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14540,
+        "src": "94:631:25"
+      }
+    ],
+    "src": "0:727:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.579Z",
+  "devdoc": {
+    "methods": {
+      "pause()": {
+        "details": "Only securityToken owner restriction applied on the super function\r"
+      }
+    },
+    "title": "Interface to be implemented by all STO modules\r"
+  },
+  "userdoc": {
+    "methods": {
+      "getRaised(uint8)": {
+        "notice": "Returns funds raised by the STO\r"
+      },
+      "getTokensSold()": {
+        "notice": "Returns the total no. of tokens sold\r"
+      },
+      "pause()": {
+        "notice": "Pause (overridden function)\r"
+      }
+    }
+  }
+}

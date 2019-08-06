@@ -1,0 +1,2035 @@
+{
+  "contractName": "ISTFactory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_version",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "_logicContract",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_upgradeData",
+          "type": "bytes"
+        }
+      ],
+      "name": "LogicContractSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_securityToken",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_version",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenUpgraded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_oldTransferManagerFactory",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newTransferManagerFactory",
+          "type": "address"
+        }
+      ],
+      "name": "DefaultTransferManagerUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_oldDataStoreFactory",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newDataStoreFactory",
+          "type": "address"
+        }
+      ],
+      "name": "DefaultDataStoreUpdated",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_symbol",
+          "type": "string"
+        },
+        {
+          "name": "_decimals",
+          "type": "uint8"
+        },
+        {
+          "name": "_tokenDetails",
+          "type": "string"
+        },
+        {
+          "name": "_issuer",
+          "type": "address"
+        },
+        {
+          "name": "_divisible",
+          "type": "bool"
+        },
+        {
+          "name": "_treasuryWallet",
+          "type": "address"
+        }
+      ],
+      "name": "deployToken",
+      "outputs": [
+        {
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_version",
+          "type": "string"
+        },
+        {
+          "name": "_logicContract",
+          "type": "address"
+        },
+        {
+          "name": "_initializationData",
+          "type": "bytes"
+        },
+        {
+          "name": "_upgradeData",
+          "type": "bytes"
+        }
+      ],
+      "name": "setLogicContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_maxModuleType",
+          "type": "uint8"
+        }
+      ],
+      "name": "upgradeToken",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_transferManagerFactory",
+          "type": "address"
+        }
+      ],
+      "name": "updateDefaultTransferManager",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_dataStoreFactory",
+          "type": "address"
+        }
+      ],
+      "name": "updateDefaultDataStore",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_transferManagerFactory\",\"type\":\"address\"}],\"name\":\"updateDefaultTransferManager\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_version\",\"type\":\"string\"},{\"name\":\"_logicContract\",\"type\":\"address\"},{\"name\":\"_initializationData\",\"type\":\"bytes\"},{\"name\":\"_upgradeData\",\"type\":\"bytes\"}],\"name\":\"setLogicContract\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_maxModuleType\",\"type\":\"uint8\"}],\"name\":\"upgradeToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_name\",\"type\":\"string\"},{\"name\":\"_symbol\",\"type\":\"string\"},{\"name\":\"_decimals\",\"type\":\"uint8\"},{\"name\":\"_tokenDetails\",\"type\":\"string\"},{\"name\":\"_issuer\",\"type\":\"address\"},{\"name\":\"_divisible\",\"type\":\"bool\"},{\"name\":\"_treasuryWallet\",\"type\":\"address\"}],\"name\":\"deployToken\",\"outputs\":[{\"name\":\"tokenAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_dataStoreFactory\",\"type\":\"address\"}],\"name\":\"updateDefaultDataStore\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_version\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_logicContract\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_upgradeData\",\"type\":\"bytes\"}],\"name\":\"LogicContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_securityToken\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_version\",\"type\":\"uint256\"}],\"name\":\"TokenUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_oldTransferManagerFactory\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_newTransferManagerFactory\",\"type\":\"address\"}],\"name\":\"DefaultTransferManagerUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_oldDataStoreFactory\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_newDataStoreFactory\",\"type\":\"address\"}],\"name\":\"DefaultDataStoreUpdated\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"deployToken(string,string,uint8,string,address,bool,address)\":{\"params\":{\"_decimals\":\"is the number of decimals of the Security Token\\r\",\"_divisible\":\"whether the token is divisible or not\\r\",\"_issuer\":\"is the owner of the Security Token\\r\",\"_name\":\"is the name of the Security token\\r\",\"_symbol\":\"is the symbol of the Security Token\\r\",\"_tokenDetails\":\"is the off-chain data associated with the Security Token\\r\",\"_treasuryWallet\":\"Ethereum address which will holds the STs.\\r\"}},\"setLogicContract(string,address,bytes,bytes)\":{\"params\":{\"_initializationData\":\"Initialization data that used to intialize value in the securityToken\\r\",\"_logicContract\":\"Address of deployed module logic contract referenced from proxy\\r\",\"_upgradeData\":\"Data to be passed in call to upgradeToAndCall when a token upgrades its module\\r\",\"_version\":\"Version of upgraded module\\r\"}},\"updateDefaultDataStore(address)\":{\"details\":\"Setting this to address(0) means don't deploy a default data store\\r\",\"params\":{\"_dataStoreFactory\":\"Address of new default data store factory\\r\"}},\"updateDefaultTransferManager(address)\":{\"details\":\"Setting this to address(0) means don't deploy a default TM\\r\",\"params\":{\"_transferManagerFactory\":\"Address of new default transfer manager factory\\r\"}},\"upgradeToken(uint8)\":{\"params\":{\"_maxModuleType\":\"maximum module type enumeration\\r\"}}},\"title\":\"Interface for security token proxy deployment\\r\"},\"userdoc\":{\"methods\":{\"deployToken(string,string,uint8,string,address,bool,address)\":{\"notice\":\"Deploys the token and adds default modules like permission manager and transfer manager.\\r Future versions of the proxy can attach different modules or pass some other paramters.\\r\"},\"setLogicContract(string,address,bytes,bytes)\":{\"notice\":\"Used to set a new token logic contract\\r\"},\"updateDefaultDataStore(address)\":{\"notice\":\"Used to set a new default data store\\r\"},\"updateDefaultTransferManager(address)\":{\"notice\":\"Used to set a new default transfer manager\\r\"},\"upgradeToken(uint8)\":{\"notice\":\"Used to upgrade a token\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/ISTFactory.sol\":\"ISTFactory\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/ISTFactory.sol\":{\"keccak256\":\"0x2f30a1337a3270f4db9ba0a0dbf7f835e9dbd9f3b690d1bca6ae4f71ed470fe0\",\"urls\":[\"bzzr://b17e1edf4ceb585f7fdda74fa281596fafb09d06fadf7f4b0ea432be222a4ca4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Interface for security token proxy deployment\r\n */\r\ninterface ISTFactory {\r\n\r\n    event LogicContractSet(string _version, address _logicContract, bytes _upgradeData);\r\n    event TokenUpgraded(\r\n        address indexed _securityToken,\r\n        uint256 indexed _version\r\n    );\r\n    event DefaultTransferManagerUpdated(address indexed _oldTransferManagerFactory, address indexed _newTransferManagerFactory);\r\n    event DefaultDataStoreUpdated(address indexed _oldDataStoreFactory, address indexed _newDataStoreFactory);\r\n\r\n    /**\r\n     * @notice Deploys the token and adds default modules like permission manager and transfer manager.\r\n     * Future versions of the proxy can attach different modules or pass some other paramters.\r\n     * @param _name is the name of the Security token\r\n     * @param _symbol is the symbol of the Security Token\r\n     * @param _decimals is the number of decimals of the Security Token\r\n     * @param _tokenDetails is the off-chain data associated with the Security Token\r\n     * @param _issuer is the owner of the Security Token\r\n     * @param _divisible whether the token is divisible or not\r\n     * @param _treasuryWallet Ethereum address which will holds the STs.\r\n     */\r\n    function deployToken(\r\n        string calldata _name,\r\n        string calldata _symbol,\r\n        uint8 _decimals,\r\n        string calldata _tokenDetails,\r\n        address _issuer,\r\n        bool _divisible,\r\n        address _treasuryWallet //In v2.x this is the Polymath Registry\r\n    )\r\n    external\r\n    returns(address tokenAddress);\r\n\r\n    /**\r\n     * @notice Used to set a new token logic contract\r\n     * @param _version Version of upgraded module\r\n     * @param _logicContract Address of deployed module logic contract referenced from proxy\r\n     * @param _initializationData Initialization data that used to intialize value in the securityToken\r\n     * @param _upgradeData Data to be passed in call to upgradeToAndCall when a token upgrades its module\r\n     */\r\n    function setLogicContract(string calldata _version, address _logicContract, bytes calldata _initializationData, bytes calldata _upgradeData) external;\r\n\r\n    /**\r\n     * @notice Used to upgrade a token\r\n     * @param _maxModuleType maximum module type enumeration\r\n     */\r\n    function upgradeToken(uint8 _maxModuleType) external;\r\n\r\n    /**\r\n     * @notice Used to set a new default transfer manager\r\n     * @dev Setting this to address(0) means don't deploy a default TM\r\n     * @param _transferManagerFactory Address of new default transfer manager factory\r\n     */\r\n    function updateDefaultTransferManager(address _transferManagerFactory) external;\r\n\r\n    /**\r\n     * @notice Used to set a new default data store\r\n     * @dev Setting this to address(0) means don't deploy a default data store\r\n     * @param _dataStoreFactory Address of new default data store factory\r\n     */\r\n    function updateDefaultDataStore(address _dataStoreFactory) external;\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\ISTFactory.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISTFactory.sol",
+    "exportedSymbols": {
+      "ISTFactory": [
+        14512
+      ]
+    },
+    "id": 14513,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14440,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface for security token proxy deployment\r",
+        "fullyImplemented": false,
+        "id": 14512,
+        "linearizedBaseContracts": [
+          14512
+        ],
+        "name": "ISTFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14448,
+            "name": "LogicContractSet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14442,
+                  "indexed": false,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "146:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14441,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14444,
+                  "indexed": false,
+                  "name": "_logicContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "163:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14443,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14446,
+                  "indexed": false,
+                  "name": "_upgradeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "187:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14445,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "145:61:24"
+            },
+            "src": "123:84:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14454,
+            "name": "TokenUpgraded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14453,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14450,
+                  "indexed": true,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14454,
+                  "src": "243:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14449,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14452,
+                  "indexed": true,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14454,
+                  "src": "284:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14451,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:83:24"
+            },
+            "src": "213:103:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14460,
+            "name": "DefaultTransferManagerUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14456,
+                  "indexed": true,
+                  "name": "_oldTransferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14460,
+                  "src": "358:42:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14455,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14458,
+                  "indexed": true,
+                  "name": "_newTransferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14460,
+                  "src": "402:42:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14457,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "402:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "357:88:24"
+            },
+            "src": "322:124:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14466,
+            "name": "DefaultDataStoreUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14462,
+                  "indexed": true,
+                  "name": "_oldDataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14466,
+                  "src": "482:36:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14461,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14464,
+                  "indexed": true,
+                  "name": "_newDataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14466,
+                  "src": "520:36:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14463,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "481:76:24"
+            },
+            "src": "452:106:24"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Deploys the token and adds default modules like permission manager and transfer manager.\r\nFuture versions of the proxy can attach different modules or pass some other paramters.\r\n@param _name is the name of the Security token\r\n@param _symbol is the symbol of the Security Token\r\n@param _decimals is the number of decimals of the Security Token\r\n@param _tokenDetails is the off-chain data associated with the Security Token\r\n@param _issuer is the owner of the Security Token\r\n@param _divisible whether the token is divisible or not\r\n@param _treasuryWallet Ethereum address which will holds the STs.\r",
+            "id": 14485,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deployToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14468,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1285:21:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14467,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1285:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14470,
+                  "name": "_symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1317:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14469,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1317:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14472,
+                  "name": "_decimals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1351:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14471,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1351:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14474,
+                  "name": "_tokenDetails",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1377:29:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14473,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1377:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14476,
+                  "name": "_issuer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1417:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14475,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1417:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14478,
+                  "name": "_divisible",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1443:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 14477,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1443:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14480,
+                  "name": "_treasuryWallet",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1469:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14479,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1469:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:265:24"
+            },
+            "returnParameters": {
+              "id": 14484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14483,
+                  "name": "tokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1567:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1567:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1566:22:24"
+            },
+            "scope": 14512,
+            "src": "1254:335:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new token logic contract\r\n@param _version Version of upgraded module\r\n@param _logicContract Address of deployed module logic contract referenced from proxy\r\n@param _initializationData Initialization data that used to intialize value in the securityToken\r\n@param _upgradeData Data to be passed in call to upgradeToAndCall when a token upgrades its module\r",
+            "id": 14496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLogicContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14487,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2053:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14486,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2053:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14489,
+                  "name": "_logicContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2079:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2079:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14491,
+                  "name": "_initializationData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2103:34:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14490,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2103:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14493,
+                  "name": "_upgradeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2139:27:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14492,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2139:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2052:115:24"
+            },
+            "returnParameters": {
+              "id": 14495,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2176:0:24"
+            },
+            "scope": 14512,
+            "src": "2027:150:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to upgrade a token\r\n@param _maxModuleType maximum module type enumeration\r",
+            "id": 14501,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14499,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14498,
+                  "name": "_maxModuleType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14501,
+                  "src": "2327:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14497,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2327:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2326:22:24"
+            },
+            "returnParameters": {
+              "id": 14500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2357:0:24"
+            },
+            "scope": 14512,
+            "src": "2305:53:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new default transfer manager\r\n@dev Setting this to address(0) means don't deploy a default TM\r\n@param _transferManagerFactory Address of new default transfer manager factory\r",
+            "id": 14506,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateDefaultTransferManager",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14503,
+                  "name": "_transferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14506,
+                  "src": "2640:31:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14502,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2640:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2639:33:24"
+            },
+            "returnParameters": {
+              "id": 14505,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2681:0:24"
+            },
+            "scope": 14512,
+            "src": "2602:80:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new default data store\r\n@dev Setting this to address(0) means don't deploy a default data store\r\n@param _dataStoreFactory Address of new default data store factory\r",
+            "id": 14511,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateDefaultDataStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14508,
+                  "name": "_dataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14511,
+                  "src": "2948:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14507,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2948:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2947:27:24"
+            },
+            "returnParameters": {
+              "id": 14510,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2983:0:24"
+            },
+            "scope": 14512,
+            "src": "2916:68:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14513,
+        "src": "93:2894:24"
+      }
+    ],
+    "src": "0:2989:24"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISTFactory.sol",
+    "exportedSymbols": {
+      "ISTFactory": [
+        14512
+      ]
+    },
+    "id": 14513,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14440,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface for security token proxy deployment\r",
+        "fullyImplemented": false,
+        "id": 14512,
+        "linearizedBaseContracts": [
+          14512
+        ],
+        "name": "ISTFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14448,
+            "name": "LogicContractSet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14442,
+                  "indexed": false,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "146:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14441,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14444,
+                  "indexed": false,
+                  "name": "_logicContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "163:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14443,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14446,
+                  "indexed": false,
+                  "name": "_upgradeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14448,
+                  "src": "187:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14445,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "145:61:24"
+            },
+            "src": "123:84:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14454,
+            "name": "TokenUpgraded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14453,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14450,
+                  "indexed": true,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14454,
+                  "src": "243:30:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14449,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14452,
+                  "indexed": true,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14454,
+                  "src": "284:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14451,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:83:24"
+            },
+            "src": "213:103:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14460,
+            "name": "DefaultTransferManagerUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14456,
+                  "indexed": true,
+                  "name": "_oldTransferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14460,
+                  "src": "358:42:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14455,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14458,
+                  "indexed": true,
+                  "name": "_newTransferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14460,
+                  "src": "402:42:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14457,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "402:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "357:88:24"
+            },
+            "src": "322:124:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14466,
+            "name": "DefaultDataStoreUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14462,
+                  "indexed": true,
+                  "name": "_oldDataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14466,
+                  "src": "482:36:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14461,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14464,
+                  "indexed": true,
+                  "name": "_newDataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14466,
+                  "src": "520:36:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14463,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "481:76:24"
+            },
+            "src": "452:106:24"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Deploys the token and adds default modules like permission manager and transfer manager.\r\nFuture versions of the proxy can attach different modules or pass some other paramters.\r\n@param _name is the name of the Security token\r\n@param _symbol is the symbol of the Security Token\r\n@param _decimals is the number of decimals of the Security Token\r\n@param _tokenDetails is the off-chain data associated with the Security Token\r\n@param _issuer is the owner of the Security Token\r\n@param _divisible whether the token is divisible or not\r\n@param _treasuryWallet Ethereum address which will holds the STs.\r",
+            "id": 14485,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deployToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14468,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1285:21:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14467,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1285:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14470,
+                  "name": "_symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1317:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14469,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1317:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14472,
+                  "name": "_decimals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1351:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14471,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1351:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14474,
+                  "name": "_tokenDetails",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1377:29:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14473,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1377:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14476,
+                  "name": "_issuer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1417:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14475,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1417:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14478,
+                  "name": "_divisible",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1443:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 14477,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1443:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14480,
+                  "name": "_treasuryWallet",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1469:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14479,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1469:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:265:24"
+            },
+            "returnParameters": {
+              "id": 14484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14483,
+                  "name": "tokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1567:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1567:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1566:22:24"
+            },
+            "scope": 14512,
+            "src": "1254:335:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new token logic contract\r\n@param _version Version of upgraded module\r\n@param _logicContract Address of deployed module logic contract referenced from proxy\r\n@param _initializationData Initialization data that used to intialize value in the securityToken\r\n@param _upgradeData Data to be passed in call to upgradeToAndCall when a token upgrades its module\r",
+            "id": 14496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLogicContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14487,
+                  "name": "_version",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2053:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14486,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2053:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14489,
+                  "name": "_logicContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2079:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2079:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14491,
+                  "name": "_initializationData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2103:34:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14490,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2103:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14493,
+                  "name": "_upgradeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14496,
+                  "src": "2139:27:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14492,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2139:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2052:115:24"
+            },
+            "returnParameters": {
+              "id": 14495,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2176:0:24"
+            },
+            "scope": 14512,
+            "src": "2027:150:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to upgrade a token\r\n@param _maxModuleType maximum module type enumeration\r",
+            "id": 14501,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14499,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14498,
+                  "name": "_maxModuleType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14501,
+                  "src": "2327:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14497,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2327:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2326:22:24"
+            },
+            "returnParameters": {
+              "id": 14500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2357:0:24"
+            },
+            "scope": 14512,
+            "src": "2305:53:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new default transfer manager\r\n@dev Setting this to address(0) means don't deploy a default TM\r\n@param _transferManagerFactory Address of new default transfer manager factory\r",
+            "id": 14506,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateDefaultTransferManager",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14503,
+                  "name": "_transferManagerFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14506,
+                  "src": "2640:31:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14502,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2640:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2639:33:24"
+            },
+            "returnParameters": {
+              "id": 14505,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2681:0:24"
+            },
+            "scope": 14512,
+            "src": "2602:80:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Used to set a new default data store\r\n@dev Setting this to address(0) means don't deploy a default data store\r\n@param _dataStoreFactory Address of new default data store factory\r",
+            "id": 14511,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateDefaultDataStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14508,
+                  "name": "_dataStoreFactory",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14511,
+                  "src": "2948:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14507,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2948:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2947:27:24"
+            },
+            "returnParameters": {
+              "id": 14510,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2983:0:24"
+            },
+            "scope": 14512,
+            "src": "2916:68:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14513,
+        "src": "93:2894:24"
+      }
+    ],
+    "src": "0:2989:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.578Z",
+  "devdoc": {
+    "methods": {
+      "deployToken(string,string,uint8,string,address,bool,address)": {
+        "params": {
+          "_decimals": "is the number of decimals of the Security Token\r",
+          "_divisible": "whether the token is divisible or not\r",
+          "_issuer": "is the owner of the Security Token\r",
+          "_name": "is the name of the Security token\r",
+          "_symbol": "is the symbol of the Security Token\r",
+          "_tokenDetails": "is the off-chain data associated with the Security Token\r",
+          "_treasuryWallet": "Ethereum address which will holds the STs.\r"
+        }
+      },
+      "setLogicContract(string,address,bytes,bytes)": {
+        "params": {
+          "_initializationData": "Initialization data that used to intialize value in the securityToken\r",
+          "_logicContract": "Address of deployed module logic contract referenced from proxy\r",
+          "_upgradeData": "Data to be passed in call to upgradeToAndCall when a token upgrades its module\r",
+          "_version": "Version of upgraded module\r"
+        }
+      },
+      "updateDefaultDataStore(address)": {
+        "details": "Setting this to address(0) means don't deploy a default data store\r",
+        "params": {
+          "_dataStoreFactory": "Address of new default data store factory\r"
+        }
+      },
+      "updateDefaultTransferManager(address)": {
+        "details": "Setting this to address(0) means don't deploy a default TM\r",
+        "params": {
+          "_transferManagerFactory": "Address of new default transfer manager factory\r"
+        }
+      },
+      "upgradeToken(uint8)": {
+        "params": {
+          "_maxModuleType": "maximum module type enumeration\r"
+        }
+      }
+    },
+    "title": "Interface for security token proxy deployment\r"
+  },
+  "userdoc": {
+    "methods": {
+      "deployToken(string,string,uint8,string,address,bool,address)": {
+        "notice": "Deploys the token and adds default modules like permission manager and transfer manager.\r Future versions of the proxy can attach different modules or pass some other paramters.\r"
+      },
+      "setLogicContract(string,address,bytes,bytes)": {
+        "notice": "Used to set a new token logic contract\r"
+      },
+      "updateDefaultDataStore(address)": {
+        "notice": "Used to set a new default data store\r"
+      },
+      "updateDefaultTransferManager(address)": {
+        "notice": "Used to set a new default transfer manager\r"
+      },
+      "upgradeToken(uint8)": {
+        "notice": "Used to upgrade a token\r"
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "contractName": "CountTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxHolderCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"maxHolderCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the CountTransferManager storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/CTM/CountTransferManagerStorage.sol\":\"CountTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/CTM/CountTransferManagerStorage.sol\":{\"keccak256\":\"0x73e5a7431d2f76cad2b845a254dd9945dfbcf9eff7357502eb9d5b16f7772b07\",\"urls\":[\"bzzr://3dc1223fdfd9e6855e3b57dd489c18f60d5d13502520c8f095b1cb729f82bb8b\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060778061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ae89a29e14602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea165627a7a723058209c433bad1e5817dac5b2248bf55fd01db07020a76f75705d9a7066fda26564160029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ae89a29e14602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea165627a7a723058209c433bad1e5817dac5b2248bf55fd01db07020a76f75705d9a7066fda26564160029",
+  "sourceMap": "114:136:118:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:136:118;;;;;;;",
+  "deployedSourceMap": "114:136:118:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:136:118;;;;;;;;;;;;;;;;;;;215:29;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the CountTransferManager storage\r\n */\r\ncontract CountTransferManagerStorage {\r\n\r\n    // The maximum number of concurrent token holders\r\n    uint256 public maxHolderCount;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\CTM\\CountTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/CTM/CountTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "CountTransferManagerStorage": [
+        39137
+      ]
+    },
+    "id": 39138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 39134,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:118"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CountTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 39137,
+        "linearizedBaseContracts": [
+          39137
+        ],
+        "name": "CountTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 39136,
+            "name": "maxHolderCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 39137,
+            "src": "215:29:118",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39135,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:118",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 39138,
+        "src": "114:136:118"
+      }
+    ],
+    "src": "0:252:118"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/CTM/CountTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "CountTransferManagerStorage": [
+        39137
+      ]
+    },
+    "id": 39138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 39134,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:118"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the CountTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 39137,
+        "linearizedBaseContracts": [
+          39137
+        ],
+        "name": "CountTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 39136,
+            "name": "maxHolderCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 39137,
+            "src": "215:29:118",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39135,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:118",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 39138,
+        "src": "114:136:118"
+      }
+    ],
+    "src": "0:252:118"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.858Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the CountTransferManager storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

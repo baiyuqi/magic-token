@@ -1,0 +1,416 @@
+{
+  "contractName": "ICheckPermission",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_delegate",
+          "type": "address"
+        },
+        {
+          "name": "_module",
+          "type": "address"
+        },
+        {
+          "name": "_perm",
+          "type": "bytes32"
+        }
+      ],
+      "name": "checkPermission",
+      "outputs": [
+        {
+          "name": "hasPerm",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_delegate\",\"type\":\"address\"},{\"name\":\"_module\",\"type\":\"address\"},{\"name\":\"_perm\",\"type\":\"bytes32\"}],\"name\":\"checkPermission\",\"outputs\":[{\"name\":\"hasPerm\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"checkPermission(address,address,bytes32)\":{\"details\":\"Note that IModule withPerm will allow ST owner all permissions anyway\\rthis allows individual modules to override this logic if needed (to not allow ST owner all permissions)\\r\",\"params\":{\"_delegate\":\"address of delegate\\r\",\"_module\":\"address of PermissionManager module\\r\",\"_perm\":\"the permissions\\r\"},\"return\":\"success\\r\"}}},\"userdoc\":{\"methods\":{\"checkPermission(address,address,bytes32)\":{\"notice\":\"Validate permissions with PermissionManager if it exists, If no Permission return false\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/ICheckPermission.sol\":\"ICheckPermission\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/ICheckPermission.sol\":{\"keccak256\":\"0xda83163f6d68db9b79ef8164d75cee0ceb542b8fdfda16127fc301c4ca9acd69\",\"urls\":[\"bzzr://0332bc3660b0e5059de7f20addfc495c18e3b532ebe2b6f025d0f9d7c35ca5a7\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\ninterface ICheckPermission {\r\n    /**\r\n     * @notice Validate permissions with PermissionManager if it exists, If no Permission return false\r\n     * @dev Note that IModule withPerm will allow ST owner all permissions anyway\r\n     * @dev this allows individual modules to override this logic if needed (to not allow ST owner all permissions)\r\n     * @param _delegate address of delegate\r\n     * @param _module address of PermissionManager module\r\n     * @param _perm the permissions\r\n     * @return success\r\n     */\r\n    function checkPermission(address _delegate, address _module, bytes32 _perm) external view returns(bool hasPerm);\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\ICheckPermission.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ICheckPermission.sol",
+    "exportedSymbols": {
+      "ICheckPermission": [
+        13533
+      ]
+    },
+    "id": 13534,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13521,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 13533,
+        "linearizedBaseContracts": [
+          13533
+        ],
+        "name": "ICheckPermission",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Validate permissions with PermissionManager if it exists, If no Permission return false\r\n@dev Note that IModule withPerm will allow ST owner all permissions anyway\r\n@dev this allows individual modules to override this logic if needed (to not allow ST owner all permissions)\r\n@param _delegate address of delegate\r\n@param _module address of PermissionManager module\r\n@param _perm the permissions\r\n@return success\r",
+            "id": 13532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkPermission",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13523,
+                  "name": "_delegate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "572:17:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13522,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13525,
+                  "name": "_module",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "591:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13527,
+                  "name": "_perm",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "608:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 13526,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:51:14"
+            },
+            "returnParameters": {
+              "id": 13531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13530,
+                  "name": "hasPerm",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "645:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13529,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:14:14"
+            },
+            "scope": 13533,
+            "src": "547:112:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13534,
+        "src": "26:636:14"
+      }
+    ],
+    "src": "0:664:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ICheckPermission.sol",
+    "exportedSymbols": {
+      "ICheckPermission": [
+        13533
+      ]
+    },
+    "id": 13534,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13521,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 13533,
+        "linearizedBaseContracts": [
+          13533
+        ],
+        "name": "ICheckPermission",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Validate permissions with PermissionManager if it exists, If no Permission return false\r\n@dev Note that IModule withPerm will allow ST owner all permissions anyway\r\n@dev this allows individual modules to override this logic if needed (to not allow ST owner all permissions)\r\n@param _delegate address of delegate\r\n@param _module address of PermissionManager module\r\n@param _perm the permissions\r\n@return success\r",
+            "id": 13532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkPermission",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13523,
+                  "name": "_delegate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "572:17:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13522,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13525,
+                  "name": "_module",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "591:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13527,
+                  "name": "_perm",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "608:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 13526,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:51:14"
+            },
+            "returnParameters": {
+              "id": 13531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13530,
+                  "name": "hasPerm",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13532,
+                  "src": "645:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13529,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:14:14"
+            },
+            "scope": 13533,
+            "src": "547:112:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13534,
+        "src": "26:636:14"
+      }
+    ],
+    "src": "0:664:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.557Z",
+  "devdoc": {
+    "methods": {
+      "checkPermission(address,address,bytes32)": {
+        "details": "Note that IModule withPerm will allow ST owner all permissions anyway\rthis allows individual modules to override this logic if needed (to not allow ST owner all permissions)\r",
+        "params": {
+          "_delegate": "address of delegate\r",
+          "_module": "address of PermissionManager module\r",
+          "_perm": "the permissions\r"
+        },
+        "return": "success\r"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "checkPermission(address,address,bytes32)": {
+        "notice": "Validate permissions with PermissionManager if it exists, If no Permission return false\r"
+      }
+    }
+  }
+}

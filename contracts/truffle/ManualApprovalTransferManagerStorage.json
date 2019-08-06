@@ -1,0 +1,654 @@
+{
+  "contractName": "ManualApprovalTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "approvalIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "approvals",
+      "outputs": [
+        {
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "allowance",
+          "type": "uint256"
+        },
+        {
+          "name": "expiryTime",
+          "type": "uint256"
+        },
+        {
+          "name": "description",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"approvalIndex\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"approvals\",\"outputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"allowance\",\"type\":\"uint256\"},{\"name\":\"expiryTime\",\"type\":\"uint256\"},{\"name\":\"description\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the ManualApprovalTransferManager storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/MATM/ManualApprovalTransferManagerStorage.sol\":\"ManualApprovalTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/MATM/ManualApprovalTransferManagerStorage.sol\":{\"keccak256\":\"0x5d1634df5a3c89dc72fcb472952b330df47e3de4f5194d70bfbb589c9366921b\",\"urls\":[\"bzzr://5282bdfb25f71b8b47acaf23860a9777b340bda94abd58207c6a92fed9cfc06e\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061015f806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80635e6ebfc51461003b57806363035f661461007b575b600080fd5b6100696004803603604081101561005157600080fd5b506001600160a01b03813581169160200135166100cf565b60408051918252519081900360200190f35b6100986004803603602081101561009157600080fd5b50356100e9565b604080516001600160a01b039687168152949095166020850152838501929092526060830152608082015290519081900360a00190f35b600060208181529281526040808220909352908152205481565b600181815481106100f657fe5b6000918252602090912060059091020180546001820154600283015460038401546004909401546001600160a01b0393841695509190921692908556fea165627a7a723058206a7a6b96f2d43b7db9fb5cc77ffc556312b6cf967a936c35b033d49e47d24d670029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80635e6ebfc51461003b57806363035f661461007b575b600080fd5b6100696004803603604081101561005157600080fd5b506001600160a01b03813581169160200135166100cf565b60408051918252519081900360200190f35b6100986004803603602081101561009157600080fd5b50356100e9565b604080516001600160a01b039687168152949095166020850152838501929092526060830152608082015290519081900360a00190f35b600060208181529281526040808220909352908152205481565b600181815481106100f657fe5b6000918252602090912060059091020180546001820154600283015460038401546004909401546001600160a01b0393841695509190921692908556fea165627a7a723058206a7a6b96f2d43b7db9fb5cc77ffc556312b6cf967a936c35b033d49e47d24d670029",
+  "sourceMap": "123:718:130:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;123:718:130;;;;;;;",
+  "deployedSourceMap": "123:718:130:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;123:718:130;;;;;;;;;;;;;;;;;;;;;;;;431:70;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;431:70:130;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;802:33;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;802:33:130;;:::i;:::-;;;;-1:-1:-1;;;;;802:33:130;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;431:70;;;;;;;;;;;;;;;;;;;;;;:::o;802:33::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;802:33:130;;;;-1:-1:-1;802:33:130;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the ManualApprovalTransferManager storage\r\n */\r\ncontract ManualApprovalTransferManagerStorage {\r\n\r\n    //Manual approval is an allowance (that has been approved) with an expiry time\r\n    struct ManualApproval {\r\n        address from;\r\n        address to;\r\n        uint256 allowance;\r\n        uint256 expiryTime;\r\n        bytes32 description;\r\n    }\r\n\r\n    mapping (address => mapping (address => uint256)) public approvalIndex;\r\n\r\n    // An array to track all approvals. It is an unbounded array but it's not a problem as\r\n    // it is never looped through in an onchain call. It is defined as an Array instead of mapping\r\n    // just to make it easier for users to fetch list of all approvals through constant functions.\r\n    ManualApproval[] public approvals;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\MATM\\ManualApprovalTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/MATM/ManualApprovalTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "ManualApprovalTransferManagerStorage": [
+        44774
+      ]
+    },
+    "id": 44775,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 44753,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:130"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the ManualApprovalTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 44774,
+        "linearizedBaseContracts": [
+          44774
+        ],
+        "name": "ManualApprovalTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ManualApprovalTransferManagerStorage.ManualApproval",
+            "id": 44764,
+            "members": [
+              {
+                "constant": false,
+                "id": 44755,
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "295:12:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 44754,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "295:7:130",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44757,
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "318:10:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 44756,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "318:7:130",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44759,
+                "name": "allowance",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "339:17:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44758,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "339:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44761,
+                "name": "expiryTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "367:18:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44760,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "367:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44763,
+                "name": "description",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "396:19:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 44762,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ManualApproval",
+            "nodeType": "StructDefinition",
+            "scope": 44774,
+            "src": "262:161:130",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44770,
+            "name": "approvalIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 44774,
+            "src": "431:70:130",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 44769,
+              "keyType": {
+                "id": 44765,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "440:7:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "431:49:130",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 44768,
+                "keyType": {
+                  "id": 44766,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "460:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "451:28:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 44767,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "471:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44773,
+            "name": "approvals",
+            "nodeType": "VariableDeclaration",
+            "scope": 44774,
+            "src": "802:33:130",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_ManualApproval_$44764_storage_$dyn_storage",
+              "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 44771,
+                "name": "ManualApproval",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 44764,
+                "src": "802:14:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ManualApproval_$44764_storage_ptr",
+                  "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval"
+                }
+              },
+              "id": 44772,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "802:16:130",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_ManualApproval_$44764_storage_$dyn_storage_ptr",
+                "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 44775,
+        "src": "123:718:130"
+      }
+    ],
+    "src": "0:843:130"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/MATM/ManualApprovalTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "ManualApprovalTransferManagerStorage": [
+        44774
+      ]
+    },
+    "id": 44775,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 44753,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:130"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the ManualApprovalTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 44774,
+        "linearizedBaseContracts": [
+          44774
+        ],
+        "name": "ManualApprovalTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ManualApprovalTransferManagerStorage.ManualApproval",
+            "id": 44764,
+            "members": [
+              {
+                "constant": false,
+                "id": 44755,
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "295:12:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 44754,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "295:7:130",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44757,
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "318:10:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 44756,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "318:7:130",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44759,
+                "name": "allowance",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "339:17:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44758,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "339:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44761,
+                "name": "expiryTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "367:18:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44760,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "367:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44763,
+                "name": "description",
+                "nodeType": "VariableDeclaration",
+                "scope": 44764,
+                "src": "396:19:130",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 44762,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ManualApproval",
+            "nodeType": "StructDefinition",
+            "scope": 44774,
+            "src": "262:161:130",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44770,
+            "name": "approvalIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 44774,
+            "src": "431:70:130",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 44769,
+              "keyType": {
+                "id": 44765,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "440:7:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "431:49:130",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 44768,
+                "keyType": {
+                  "id": 44766,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "460:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "451:28:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 44767,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "471:7:130",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44773,
+            "name": "approvals",
+            "nodeType": "VariableDeclaration",
+            "scope": 44774,
+            "src": "802:33:130",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_ManualApproval_$44764_storage_$dyn_storage",
+              "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 44771,
+                "name": "ManualApproval",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 44764,
+                "src": "802:14:130",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ManualApproval_$44764_storage_ptr",
+                  "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval"
+                }
+              },
+              "id": 44772,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "802:16:130",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_ManualApproval_$44764_storage_$dyn_storage_ptr",
+                "typeString": "struct ManualApprovalTransferManagerStorage.ManualApproval[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 44775,
+        "src": "123:718:130"
+      }
+    ],
+    "src": "0:843:130"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.902Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the ManualApprovalTransferManager storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

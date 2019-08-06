@@ -1,0 +1,706 @@
+{
+  "contractName": "IPolymathRegistry",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_nameKey",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "name": "_oldAddress",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "ChangeAddress",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_nameKey",
+          "type": "string"
+        }
+      ],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "name": "registryAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_nameKey",
+          "type": "string"
+        },
+        {
+          "name": "_newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_nameKey\",\"type\":\"string\"},{\"name\":\"_newAddress\",\"type\":\"address\"}],\"name\":\"changeAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_nameKey\",\"type\":\"string\"}],\"name\":\"getAddress\",\"outputs\":[{\"name\":\"registryAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_nameKey\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"_oldAddress\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_newAddress\",\"type\":\"address\"}],\"name\":\"ChangeAddress\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"changeAddress(string,address)\":{\"params\":{\"_nameKey\":\"is the key for the contract address mapping\\r\",\"_newAddress\":\"is the new contract address\\r\"}},\"getAddress(string)\":{\"params\":{\"_nameKey\":\"is the key for the contract address mapping\\r\"},\"return\":\"address\\r\"}}},\"userdoc\":{\"methods\":{\"changeAddress(string,address)\":{\"notice\":\"Changes the contract address\\r\"},\"getAddress(string)\":{\"notice\":\"Returns the contract address\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/IPolymathRegistry.sol\":\"IPolymathRegistry\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/IPolymathRegistry.sol\":{\"keccak256\":\"0x6b6fbd0f55c6f2905e308c235a10b121c5779aa8bcfa1f07ccca4d8e19de7bc9\",\"urls\":[\"bzzr://700dab32ed439b1ea8d672742947abc2759093fb0a21144e05de7abc2954ecc1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\ninterface IPolymathRegistry {\r\n\r\n    event ChangeAddress(string _nameKey, address indexed _oldAddress, address indexed _newAddress);\r\n    \r\n    /**\r\n     * @notice Returns the contract address\r\n     * @param _nameKey is the key for the contract address mapping\r\n     * @return address\r\n     */\r\n    function getAddress(string calldata _nameKey) external view returns(address registryAddress);\r\n\r\n    /**\r\n     * @notice Changes the contract address\r\n     * @param _nameKey is the key for the contract address mapping\r\n     * @param _newAddress is the new contract address\r\n     */\r\n    function changeAddress(string calldata _nameKey, address _newAddress) external;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\IPolymathRegistry.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IPolymathRegistry.sol",
+    "exportedSymbols": {
+      "IPolymathRegistry": [
+        14438
+      ]
+    },
+    "id": 14439,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14415,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 14438,
+        "linearizedBaseContracts": [
+          14438
+        ],
+        "name": "IPolymathRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14423,
+            "name": "ChangeAddress",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14422,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14417,
+                  "indexed": false,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "83:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14416,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "83:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14419,
+                  "indexed": true,
+                  "name": "_oldAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "100:27:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14421,
+                  "indexed": true,
+                  "name": "_newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "129:27:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "82:75:23"
+            },
+            "src": "63:95:23"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the contract address\r\n@param _nameKey is the key for the contract address mapping\r\n@return address\r",
+            "id": 14430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14426,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14425,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14430,
+                  "src": "345:24:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14424,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:26:23"
+            },
+            "returnParameters": {
+              "id": 14429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14428,
+                  "name": "registryAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14430,
+                  "src": "393:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14427,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:25:23"
+            },
+            "scope": 14438,
+            "src": "325:93:23",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Changes the contract address\r\n@param _nameKey is the key for the contract address mapping\r\n@param _newAddress is the new contract address\r",
+            "id": 14437,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14432,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14437,
+                  "src": "635:24:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14431,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14434,
+                  "name": "_newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14437,
+                  "src": "661:19:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "661:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:47:23"
+            },
+            "returnParameters": {
+              "id": 14436,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "690:0:23"
+            },
+            "scope": 14438,
+            "src": "612:79:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14439,
+        "src": "26:670:23"
+      }
+    ],
+    "src": "0:698:23"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IPolymathRegistry.sol",
+    "exportedSymbols": {
+      "IPolymathRegistry": [
+        14438
+      ]
+    },
+    "id": 14439,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14415,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 14438,
+        "linearizedBaseContracts": [
+          14438
+        ],
+        "name": "IPolymathRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14423,
+            "name": "ChangeAddress",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14422,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14417,
+                  "indexed": false,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "83:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14416,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "83:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14419,
+                  "indexed": true,
+                  "name": "_oldAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "100:27:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14421,
+                  "indexed": true,
+                  "name": "_newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14423,
+                  "src": "129:27:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "82:75:23"
+            },
+            "src": "63:95:23"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the contract address\r\n@param _nameKey is the key for the contract address mapping\r\n@return address\r",
+            "id": 14430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14426,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14425,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14430,
+                  "src": "345:24:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14424,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:26:23"
+            },
+            "returnParameters": {
+              "id": 14429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14428,
+                  "name": "registryAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14430,
+                  "src": "393:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14427,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:25:23"
+            },
+            "scope": 14438,
+            "src": "325:93:23",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Changes the contract address\r\n@param _nameKey is the key for the contract address mapping\r\n@param _newAddress is the new contract address\r",
+            "id": 14437,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14435,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14432,
+                  "name": "_nameKey",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14437,
+                  "src": "635:24:23",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 14431,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14434,
+                  "name": "_newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14437,
+                  "src": "661:19:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "661:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:47:23"
+            },
+            "returnParameters": {
+              "id": 14436,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "690:0:23"
+            },
+            "scope": 14438,
+            "src": "612:79:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14439,
+        "src": "26:670:23"
+      }
+    ],
+    "src": "0:698:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.576Z",
+  "devdoc": {
+    "methods": {
+      "changeAddress(string,address)": {
+        "params": {
+          "_nameKey": "is the key for the contract address mapping\r",
+          "_newAddress": "is the new contract address\r"
+        }
+      },
+      "getAddress(string)": {
+        "params": {
+          "_nameKey": "is the key for the contract address mapping\r"
+        },
+        "return": "address\r"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "changeAddress(string,address)": {
+        "notice": "Changes the contract address\r"
+      },
+      "getAddress(string)": {
+        "notice": "Returns the contract address\r"
+      }
+    }
+  }
+}

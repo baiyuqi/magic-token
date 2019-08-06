@@ -1,0 +1,238 @@
+{
+  "contractName": "IUpgradableTokenFactory",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_maxModuleType",
+          "type": "uint8"
+        }
+      ],
+      "name": "upgradeToken",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_maxModuleType\",\"type\":\"uint8\"}],\"name\":\"upgradeToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"upgradeToken(uint8)\":{\"params\":{\"_maxModuleType\":\"maximum module type enumeration\\r\"}}},\"title\":\"Interface to be implemented by upgradable token factories\\r\"},\"userdoc\":{\"methods\":{\"upgradeToken(uint8)\":{\"notice\":\"Used to upgrade a token\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/interfaces/IUpgradableTokenFactory.sol\":\"IUpgradableTokenFactory\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/IUpgradableTokenFactory.sol\":{\"keccak256\":\"0xf4202906282556a61eacef6ffa4779a6c3eb4350b31518ac86af3cac657ef948\",\"urls\":[\"bzzr://178b0d0646689366979907d2ed95edb3fda6f5c29ea4644297216dce51427f72\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Interface to be implemented by upgradable token factories\r\n */\r\ninterface IUpgradableTokenFactory {\r\n\r\n  /**\r\n   * @notice Used to upgrade a token\r\n   * @param _maxModuleType maximum module type enumeration\r\n   */\r\n  function upgradeToken(uint8 _maxModuleType) external;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\interfaces\\IUpgradableTokenFactory.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IUpgradableTokenFactory.sol",
+    "exportedSymbols": {
+      "IUpgradableTokenFactory": [
+        16095
+      ]
+    },
+    "id": 16096,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16089,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by upgradable token factories\r",
+        "fullyImplemented": false,
+        "id": 16095,
+        "linearizedBaseContracts": [
+          16095
+        ],
+        "name": "IUpgradableTokenFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Used to upgrade a token\r\n@param _maxModuleType maximum module type enumeration\r",
+            "id": 16094,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16091,
+                  "name": "_maxModuleType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16094,
+                  "src": "280:20:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 16090,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:5:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:22:29"
+            },
+            "returnParameters": {
+              "id": 16093,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:0:29"
+            },
+            "scope": 16095,
+            "src": "258:53:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16096,
+        "src": "105:211:29"
+      }
+    ],
+    "src": "0:318:29"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/IUpgradableTokenFactory.sol",
+    "exportedSymbols": {
+      "IUpgradableTokenFactory": [
+        16095
+      ]
+    },
+    "id": 16096,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16089,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by upgradable token factories\r",
+        "fullyImplemented": false,
+        "id": 16095,
+        "linearizedBaseContracts": [
+          16095
+        ],
+        "name": "IUpgradableTokenFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Used to upgrade a token\r\n@param _maxModuleType maximum module type enumeration\r",
+            "id": 16094,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16091,
+                  "name": "_maxModuleType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16094,
+                  "src": "280:20:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 16090,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:5:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:22:29"
+            },
+            "returnParameters": {
+              "id": 16093,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:0:29"
+            },
+            "scope": 16095,
+            "src": "258:53:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16096,
+        "src": "105:211:29"
+      }
+    ],
+    "src": "0:318:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.607Z",
+  "devdoc": {
+    "methods": {
+      "upgradeToken(uint8)": {
+        "params": {
+          "_maxModuleType": "maximum module type enumeration\r"
+        }
+      }
+    },
+    "title": "Interface to be implemented by upgradable token factories\r"
+  },
+  "userdoc": {
+    "methods": {
+      "upgradeToken(uint8)": {
+        "notice": "Used to upgrade a token\r"
+      }
+    }
+  }
+}

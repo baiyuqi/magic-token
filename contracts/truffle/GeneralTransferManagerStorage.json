@@ -1,0 +1,1396 @@
+{
+  "contractName": "GeneralTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "WHITELIST",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "INVESTORFLAGS",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "nonceMap",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "issuanceAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "INVESTORSKEY",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "transferRequirements",
+      "outputs": [
+        {
+          "name": "fromValidKYC",
+          "type": "bool"
+        },
+        {
+          "name": "toValidKYC",
+          "type": "bool"
+        },
+        {
+          "name": "fromRestricted",
+          "type": "bool"
+        },
+        {
+          "name": "toRestricted",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "defaults",
+      "outputs": [
+        {
+          "name": "canSendAfter",
+          "type": "uint64"
+        },
+        {
+          "name": "canReceiveAfter",
+          "type": "uint64"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"WHITELIST\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INVESTORFLAGS\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"nonceMap\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"issuanceAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INVESTORSKEY\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"name\":\"transferRequirements\",\"outputs\":[{\"name\":\"fromValidKYC\",\"type\":\"bool\"},{\"name\":\"toValidKYC\",\"type\":\"bool\"},{\"name\":\"fromRestricted\",\"type\":\"bool\"},{\"name\":\"toRestricted\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"defaults\",\"outputs\":[{\"name\":\"canSendAfter\",\"type\":\"uint64\"},{\"name\":\"canReceiveAfter\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Transfer Manager module for core transfer validation functionality\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/GTM/GeneralTransferManagerStorage.sol\":\"GeneralTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/GTM/GeneralTransferManagerStorage.sol\":{\"keccak256\":\"0xefeda3a572e5576786e49910c846fe9a8a2e89bc59a59fe661e652a4fdb0736d\",\"urls\":[\"bzzr://015827d955038157c63532c94f9c1dd0052d2ba0dafe7a55ecd7de65d20e3a06\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610290806100206000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b3fac8ce1161005b578063b3fac8ce146100e4578063bc29389714610108578063c449c1d914610110578063edb7a6fa1461015a5761007d565b80631bb7cc991461008257806365022eff1461009c5780639ba0b7c0146100a4575b600080fd5b61008a610189565b60408051918252519081900360200190f35b61008a61019c565b6100d0600480360360408110156100ba57600080fd5b506001600160a01b0381351690602001356101c0565b604080519115158252519081900360200190f35b6100ec6101e0565b604080516001600160a01b039092168252519081900360200190f35b61008a6101ef565b6101306004803603602081101561012657600080fd5b503560ff16610213565b60408051941515855292151560208501529015158383015215156060830152519081900360800190f35b610162610244565b6040805167ffffffffffffffff938416815291909216602082015281519081900390910190f35b600160ba1b6815d2125511531254d50281565b7f494e564553544f52464c4147530000000000000000000000000000000000000081565b600260209081526000928352604080842090915290825290205460ff1681565b6000546001600160a01b031681565b7fdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba9673181565b60036020526000908152604090205460ff808216916101008104821691620100008204811691630100000090041684565b60015467ffffffffffffffff80821691680100000000000000009004168256fea165627a7a72305820690af78b6d2db03e2e1a7908e6ba8a2012d22e85b383077df62683f564c86f530029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b3fac8ce1161005b578063b3fac8ce146100e4578063bc29389714610108578063c449c1d914610110578063edb7a6fa1461015a5761007d565b80631bb7cc991461008257806365022eff1461009c5780639ba0b7c0146100a4575b600080fd5b61008a610189565b60408051918252519081900360200190f35b61008a61019c565b6100d0600480360360408110156100ba57600080fd5b506001600160a01b0381351690602001356101c0565b604080519115158252519081900360200190f35b6100ec6101e0565b604080516001600160a01b039092168252519081900360200190f35b61008a6101ef565b6101306004803603602081101561012657600080fd5b503560ff16610213565b60408051941515855292151560208501529015158383015215156060830152519081900360800190f35b610162610244565b6040805167ffffffffffffffff938416815291909216602082015281519081900390910190f35b600160ba1b6815d2125511531254d50281565b7f494e564553544f52464c4147530000000000000000000000000000000000000081565b600260209081526000928352604080842090915290825290205460ff1681565b6000546001600160a01b031681565b7fdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba9673181565b60036020526000908152604090205460ff808216916101008104821691620100008204811691630100000090041684565b60015467ffffffffffffffff80821691680100000000000000009004168256fea165627a7a72305820690af78b6d2db03e2e1a7908e6ba8a2012d22e85b383077df62683f564c86f530029",
+  "sourceMap": "114:1134:122:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:1134:122;;;;;;;",
+  "deployedSourceMap": "114:1134:122:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:1134:122;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:47;;;:::i;:::-;;;;;;;;;;;;;;;;371:55;;;:::i;903:60::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;903:60:122;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;584:30;;;:::i;:::-;;;;-1:-1:-1;;;;;584:30:122;;;;;;;;;;;;;;216:105;;;:::i;1128:66::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1128:66:122;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;831:24;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:47;-1:-1:-1;;;;;162:47:122;:::o;371:55::-;;;:::o;903:60::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;584:30::-;;;-1:-1:-1;;;;;584:30:122;;:::o;216:105::-;255:66;216:105;:::o;1128:66::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;831:24::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Transfer Manager module for core transfer validation functionality\r\n */\r\ncontract GeneralTransferManagerStorage {\r\n\r\n    bytes32 public constant WHITELIST = \"WHITELIST\";\r\n    bytes32 public constant INVESTORSKEY = 0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731; //keccak256(abi.encodePacked(\"INVESTORS\"))\r\n    bytes32 public constant INVESTORFLAGS = \"INVESTORFLAGS\";\r\n    uint256 internal constant ONE = uint256(1);\r\n\r\n    enum TransferType { GENERAL, ISSUANCE, REDEMPTION }\r\n\r\n    //Address from which issuances come\r\n    address public issuanceAddress;\r\n\r\n    // Allows all TimeRestrictions to be offset\r\n    struct Defaults {\r\n        uint64 canSendAfter;\r\n        uint64 canReceiveAfter;\r\n    }\r\n\r\n    // Offset to be applied to all timings (except KYC expiry)\r\n    Defaults public defaults;\r\n\r\n    // Map of used nonces by customer\r\n    mapping(address => mapping(uint256 => bool)) public nonceMap;\r\n\r\n    struct TransferRequirements {\r\n        bool fromValidKYC;\r\n        bool toValidKYC;\r\n        bool fromRestricted;\r\n        bool toRestricted;\r\n    }\r\n\r\n    mapping(uint8 => TransferRequirements) public transferRequirements;\r\n    // General = 0, Issuance = 1, Redemption = 2\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\GTM\\GeneralTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/GTM/GeneralTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "GeneralTransferManagerStorage": [
+        41324
+      ]
+    },
+    "id": 41325,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 41277,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:122"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Transfer Manager module for core transfer validation functionality\r",
+        "fullyImplemented": true,
+        "id": 41324,
+        "linearizedBaseContracts": [
+          41324
+        ],
+        "name": "GeneralTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 41280,
+            "name": "WHITELIST",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "162:47:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41278,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "162:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "57484954454c495354",
+              "id": 41279,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "198:11:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_0af0c3ebe77999ca20698e1ff25f812bf82409a59d21ca15a41f39e0ce9f2500",
+                "typeString": "literal_string \"WHITELIST\""
+              },
+              "value": "WHITELIST"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41283,
+            "name": "INVESTORSKEY",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "216:105:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41281,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "216:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307864663361386464323461636464303561646466633661656666656637353734643264653366383434353335656339316538653066336534356462613936373331",
+              "id": 41282,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "255:66:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100969221179527024975026890885522870763749117541835841361867616504506818848561_by_1",
+                "typeString": "int_const 1009...(70 digits omitted)...8561"
+              },
+              "value": "0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41286,
+            "name": "INVESTORFLAGS",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "371:55:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41284,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "371:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "494e564553544f52464c414753",
+              "id": 41285,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "411:15:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_f634d3c8400204569018ca96ac8878a0d74eccf5651c31de390b2b8cdab81d30",
+                "typeString": "literal_string \"INVESTORFLAGS\""
+              },
+              "value": "INVESTORFLAGS"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41291,
+            "name": "ONE",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "433:42:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 41287,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "433:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "31",
+                  "id": 41289,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "473:1:122",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  }
+                ],
+                "id": 41288,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "465:7:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_uint256_$",
+                  "typeString": "type(uint256)"
+                },
+                "typeName": "uint256"
+              },
+              "id": 41290,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "465:10:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.TransferType",
+            "id": 41295,
+            "members": [
+              {
+                "id": 41292,
+                "name": "GENERAL",
+                "nodeType": "EnumValue",
+                "src": "504:7:122"
+              },
+              {
+                "id": 41293,
+                "name": "ISSUANCE",
+                "nodeType": "EnumValue",
+                "src": "513:8:122"
+              },
+              {
+                "id": 41294,
+                "name": "REDEMPTION",
+                "nodeType": "EnumValue",
+                "src": "523:10:122"
+              }
+            ],
+            "name": "TransferType",
+            "nodeType": "EnumDefinition",
+            "src": "484:51:122"
+          },
+          {
+            "constant": false,
+            "id": 41297,
+            "name": "issuanceAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "584:30:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 41296,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "584:7:122",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.Defaults",
+            "id": 41302,
+            "members": [
+              {
+                "constant": false,
+                "id": 41299,
+                "name": "canSendAfter",
+                "nodeType": "VariableDeclaration",
+                "scope": 41302,
+                "src": "699:19:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 41298,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "699:6:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41301,
+                "name": "canReceiveAfter",
+                "nodeType": "VariableDeclaration",
+                "scope": 41302,
+                "src": "729:22:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 41300,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "729:6:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Defaults",
+            "nodeType": "StructDefinition",
+            "scope": 41324,
+            "src": "672:87:122",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41304,
+            "name": "defaults",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "831:24:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Defaults_$41302_storage",
+              "typeString": "struct GeneralTransferManagerStorage.Defaults"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 41303,
+              "name": "Defaults",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 41302,
+              "src": "831:8:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Defaults_$41302_storage_ptr",
+                "typeString": "struct GeneralTransferManagerStorage.Defaults"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41310,
+            "name": "nonceMap",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "903:60:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(uint256 => bool))"
+            },
+            "typeName": {
+              "id": 41309,
+              "keyType": {
+                "id": 41305,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "911:7:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "903:44:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(uint256 => bool))"
+              },
+              "valueType": {
+                "id": 41308,
+                "keyType": {
+                  "id": 41306,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "930:7:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "922:24:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                  "typeString": "mapping(uint256 => bool)"
+                },
+                "valueType": {
+                  "id": 41307,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "941:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.TransferRequirements",
+            "id": 41319,
+            "members": [
+              {
+                "constant": false,
+                "id": 41312,
+                "name": "fromValidKYC",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1011:17:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41311,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1011:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41314,
+                "name": "toValidKYC",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1039:15:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41313,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1039:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41316,
+                "name": "fromRestricted",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1065:19:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41315,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1065:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41318,
+                "name": "toRestricted",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1095:17:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41317,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1095:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "TransferRequirements",
+            "nodeType": "StructDefinition",
+            "scope": 41324,
+            "src": "972:148:122",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41323,
+            "name": "transferRequirements",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "1128:66:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_TransferRequirements_$41319_storage_$",
+              "typeString": "mapping(uint8 => struct GeneralTransferManagerStorage.TransferRequirements)"
+            },
+            "typeName": {
+              "id": 41322,
+              "keyType": {
+                "id": 41320,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "1136:5:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1128:38:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_TransferRequirements_$41319_storage_$",
+                "typeString": "mapping(uint8 => struct GeneralTransferManagerStorage.TransferRequirements)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 41321,
+                "name": "TransferRequirements",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 41319,
+                "src": "1145:20:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_TransferRequirements_$41319_storage_ptr",
+                  "typeString": "struct GeneralTransferManagerStorage.TransferRequirements"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 41325,
+        "src": "114:1134:122"
+      }
+    ],
+    "src": "0:1250:122"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/GTM/GeneralTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "GeneralTransferManagerStorage": [
+        41324
+      ]
+    },
+    "id": 41325,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 41277,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:122"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Transfer Manager module for core transfer validation functionality\r",
+        "fullyImplemented": true,
+        "id": 41324,
+        "linearizedBaseContracts": [
+          41324
+        ],
+        "name": "GeneralTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 41280,
+            "name": "WHITELIST",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "162:47:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41278,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "162:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "57484954454c495354",
+              "id": 41279,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "198:11:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_0af0c3ebe77999ca20698e1ff25f812bf82409a59d21ca15a41f39e0ce9f2500",
+                "typeString": "literal_string \"WHITELIST\""
+              },
+              "value": "WHITELIST"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41283,
+            "name": "INVESTORSKEY",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "216:105:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41281,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "216:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307864663361386464323461636464303561646466633661656666656637353734643264653366383434353335656339316538653066336534356462613936373331",
+              "id": 41282,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "255:66:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100969221179527024975026890885522870763749117541835841361867616504506818848561_by_1",
+                "typeString": "int_const 1009...(70 digits omitted)...8561"
+              },
+              "value": "0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41286,
+            "name": "INVESTORFLAGS",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "371:55:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 41284,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "371:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "494e564553544f52464c414753",
+              "id": 41285,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "411:15:122",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_f634d3c8400204569018ca96ac8878a0d74eccf5651c31de390b2b8cdab81d30",
+                "typeString": "literal_string \"INVESTORFLAGS\""
+              },
+              "value": "INVESTORFLAGS"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 41291,
+            "name": "ONE",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "433:42:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 41287,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "433:7:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "31",
+                  "id": 41289,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "473:1:122",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  }
+                ],
+                "id": 41288,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "465:7:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_uint256_$",
+                  "typeString": "type(uint256)"
+                },
+                "typeName": "uint256"
+              },
+              "id": 41290,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "465:10:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.TransferType",
+            "id": 41295,
+            "members": [
+              {
+                "id": 41292,
+                "name": "GENERAL",
+                "nodeType": "EnumValue",
+                "src": "504:7:122"
+              },
+              {
+                "id": 41293,
+                "name": "ISSUANCE",
+                "nodeType": "EnumValue",
+                "src": "513:8:122"
+              },
+              {
+                "id": 41294,
+                "name": "REDEMPTION",
+                "nodeType": "EnumValue",
+                "src": "523:10:122"
+              }
+            ],
+            "name": "TransferType",
+            "nodeType": "EnumDefinition",
+            "src": "484:51:122"
+          },
+          {
+            "constant": false,
+            "id": 41297,
+            "name": "issuanceAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "584:30:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 41296,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "584:7:122",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.Defaults",
+            "id": 41302,
+            "members": [
+              {
+                "constant": false,
+                "id": 41299,
+                "name": "canSendAfter",
+                "nodeType": "VariableDeclaration",
+                "scope": 41302,
+                "src": "699:19:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 41298,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "699:6:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41301,
+                "name": "canReceiveAfter",
+                "nodeType": "VariableDeclaration",
+                "scope": 41302,
+                "src": "729:22:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 41300,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "729:6:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Defaults",
+            "nodeType": "StructDefinition",
+            "scope": 41324,
+            "src": "672:87:122",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41304,
+            "name": "defaults",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "831:24:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Defaults_$41302_storage",
+              "typeString": "struct GeneralTransferManagerStorage.Defaults"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 41303,
+              "name": "Defaults",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 41302,
+              "src": "831:8:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Defaults_$41302_storage_ptr",
+                "typeString": "struct GeneralTransferManagerStorage.Defaults"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41310,
+            "name": "nonceMap",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "903:60:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(uint256 => bool))"
+            },
+            "typeName": {
+              "id": 41309,
+              "keyType": {
+                "id": 41305,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "911:7:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "903:44:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(uint256 => bool))"
+              },
+              "valueType": {
+                "id": 41308,
+                "keyType": {
+                  "id": 41306,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "930:7:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "922:24:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                  "typeString": "mapping(uint256 => bool)"
+                },
+                "valueType": {
+                  "id": 41307,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "941:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "GeneralTransferManagerStorage.TransferRequirements",
+            "id": 41319,
+            "members": [
+              {
+                "constant": false,
+                "id": 41312,
+                "name": "fromValidKYC",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1011:17:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41311,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1011:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41314,
+                "name": "toValidKYC",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1039:15:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41313,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1039:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41316,
+                "name": "fromRestricted",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1065:19:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41315,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1065:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41318,
+                "name": "toRestricted",
+                "nodeType": "VariableDeclaration",
+                "scope": 41319,
+                "src": "1095:17:122",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 41317,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1095:4:122",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "TransferRequirements",
+            "nodeType": "StructDefinition",
+            "scope": 41324,
+            "src": "972:148:122",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41323,
+            "name": "transferRequirements",
+            "nodeType": "VariableDeclaration",
+            "scope": 41324,
+            "src": "1128:66:122",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_TransferRequirements_$41319_storage_$",
+              "typeString": "mapping(uint8 => struct GeneralTransferManagerStorage.TransferRequirements)"
+            },
+            "typeName": {
+              "id": 41322,
+              "keyType": {
+                "id": 41320,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "1136:5:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1128:38:122",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_TransferRequirements_$41319_storage_$",
+                "typeString": "mapping(uint8 => struct GeneralTransferManagerStorage.TransferRequirements)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 41321,
+                "name": "TransferRequirements",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 41319,
+                "src": "1145:20:122",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_TransferRequirements_$41319_storage_ptr",
+                  "typeString": "struct GeneralTransferManagerStorage.TransferRequirements"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 41325,
+        "src": "114:1134:122"
+      }
+    ],
+    "src": "0:1250:122"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.864Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Transfer Manager module for core transfer validation functionality\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

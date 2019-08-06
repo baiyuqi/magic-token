@@ -1,0 +1,2185 @@
+{
+  "contractName": "USDTieredSTOStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tiers",
+      "outputs": [
+        {
+          "name": "rate",
+          "type": "uint256"
+        },
+        {
+          "name": "rateDiscountPoly",
+          "type": "uint256"
+        },
+        {
+          "name": "tokenTotal",
+          "type": "uint256"
+        },
+        {
+          "name": "tokensDiscountPoly",
+          "type": "uint256"
+        },
+        {
+          "name": "mintedTotal",
+          "type": "uint256"
+        },
+        {
+          "name": "mintedDiscountPoly",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "allowBeneficialInvestments",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "treasuryWallet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nonAccreditedLimitUSD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "finalAmountReturned",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "stableCoinsRaised",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "investorInvested",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isFinalized",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "investorInvestedUSD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentTier",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "nonAccreditedLimitUSDOverride",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minimumInvestmentUSD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fundsRaisedUSD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tiers\",\"outputs\":[{\"name\":\"rate\",\"type\":\"uint256\"},{\"name\":\"rateDiscountPoly\",\"type\":\"uint256\"},{\"name\":\"tokenTotal\",\"type\":\"uint256\"},{\"name\":\"tokensDiscountPoly\",\"type\":\"uint256\"},{\"name\":\"mintedTotal\",\"type\":\"uint256\"},{\"name\":\"mintedDiscountPoly\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"allowBeneficialInvestments\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"treasuryWallet\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"nonAccreditedLimitUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"finalAmountReturned\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"stableCoinsRaised\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint8\"}],\"name\":\"investorInvested\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isFinalized\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"investorInvestedUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentTier\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"nonAccreditedLimitUSDOverride\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"minimumInvestmentUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"fundsRaisedUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the USDTieredSTO storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/STO/USDTiered/USDTieredSTOStorage.sol\":\"USDTieredSTOStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/STO/USDTiered/USDTieredSTOStorage.sol\":{\"keccak256\":\"0xa4da6e17d03972e12b8c411212d1916f66a001ae8ed14f3b49d45f24d22cf279\",\"urls\":[\"bzzr://cce2380b02e8ea2053e349b3fd2c49de0da08ce090ca0c3a4aa26e449028d7eb\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzzr://e572c9c4e02e37349702451bf3b5dcbbc86a19da5a51695b5b3e1bfe1e7825dc\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610353806100206000396000f3fe608060405234801561001057600080fd5b50600436106100cf5760003560e01c80638784b1c21161008c578063d679677a11610066578063d679677a14610209578063eaa32c4014610211578063ec47740f14610237578063ff18ead31461023f576100cf565b80638784b1c2146101ac5780638d4e4083146101db578063c5139338146101e3576100cf565b8063039af9eb146100d45780632df413e2146101245780634626402b146101405780634b385a42146101645780636c41027f1461017e57806377de903914610186575b600080fd5b6100f1600480360360208110156100ea57600080fd5b5035610247565b604080519687526020870195909552858501939093526060850191909152608084015260a0830152519081900360c00190f35b61012c61028a565b604080519115158252519081900360200190f35b610148610293565b604080516001600160a01b039092168252519081900360200190f35b61016c6102a8565b60408051918252519081900360200190f35b61016c6102ae565b61016c6004803603602081101561019c57600080fd5b50356001600160a01b03166102b4565b61016c600480360360408110156101c257600080fd5b5080356001600160a01b0316906020013560ff166102c6565b61012c6102e3565b61016c600480360360208110156101f957600080fd5b50356001600160a01b03166102f1565b61016c610303565b61016c6004803603602081101561022757600080fd5b50356001600160a01b0316610309565b61016c61031b565b61016c610321565b600d818154811061025457fe5b60009182526020909120600790910201805460018201546002830154600384015460048501546006909501549395509193909286565b60025460ff1681565b6002546201000090046001600160a01b031681565b600a5481565b600c5481565b60066020526000908152604090205481565b600860209081526000928352604080842090915290825290205481565b600254610100900460ff1681565b60076020526000908152604090205481565b60045481565b60006020819052908152604090205481565b600b5481565b6005548156fea165627a7a723058202509f5e6709d247fb4db9b47e0a2038cf65e21a75c61c27abc8967d8b380a5630029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100cf5760003560e01c80638784b1c21161008c578063d679677a11610066578063d679677a14610209578063eaa32c4014610211578063ec47740f14610237578063ff18ead31461023f576100cf565b80638784b1c2146101ac5780638d4e4083146101db578063c5139338146101e3576100cf565b8063039af9eb146100d45780632df413e2146101245780634626402b146101405780634b385a42146101645780636c41027f1461017e57806377de903914610186575b600080fd5b6100f1600480360360208110156100ea57600080fd5b5035610247565b604080519687526020870195909552858501939093526060850191909152608084015260a0830152519081900360c00190f35b61012c61028a565b604080519115158252519081900360200190f35b610148610293565b604080516001600160a01b039092168252519081900360200190f35b61016c6102a8565b60408051918252519081900360200190f35b61016c6102ae565b61016c6004803603602081101561019c57600080fd5b50356001600160a01b03166102b4565b61016c600480360360408110156101c257600080fd5b5080356001600160a01b0316906020013560ff166102c6565b61012c6102e3565b61016c600480360360208110156101f957600080fd5b50356001600160a01b03166102f1565b61016c610303565b61016c6004803603602081101561022757600080fd5b50356001600160a01b0316610309565b61016c61031b565b61016c610321565b600d818154811061025457fe5b60009182526020909120600790910201805460018201546002830154600384015460048501546006909501549395509193909286565b60025460ff1681565b6002546201000090046001600160a01b031681565b600a5481565b600c5481565b60066020526000908152604090205481565b600860209081526000928352604080842090915290825290205481565b600254610100900460ff1681565b60076020526000908152604090205481565b60045481565b60006020819052908152604090205481565b600b5481565b6005548156fea165627a7a723058202509f5e6709d247fb4db9b47e0a2038cf65e21a75c61c27abc8967d8b380a5630029",
+  "sourceMap": "174:2888:110:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:2888:110;;;;;;;",
+  "deployedSourceMap": "174:2888:110:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:2888:110;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2936:19;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2936:19:110;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1729:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;1918:29;;;:::i;:::-;;;;-1:-1:-1;;;;;1918:29:110;;;;;;;;;;;;;;2690:36;;;:::i;:::-;;;;;;;;;;;;;;;;2870:34;;;:::i;2197:53::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2197:53:110;-1:-1:-1;;;;;2197:53:110;;:::i;2429:69::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2429:69:110;;-1:-1:-1;;;;;2429:69:110;;;;;;;;:::i;1826:23::-;;;:::i;2306:54::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2306:54:110;-1:-1:-1;;;;;2306:54:110;;:::i;2051:26::-;;;:::i;1520:64::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1520:64:110;-1:-1:-1;;;;;1520:64:110;;:::i;2776:35::-;;;:::i;2121:29::-;;;:::i;2936:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2936:19:110;;;;;:::o;1729:38::-;;;;;;:::o;1918:29::-;;;;;;-1:-1:-1;;;;;1918:29:110;;:::o;2690:36::-;;;;:::o;2870:34::-;;;;:::o;2197:53::-;;;;;;;;;;;;;:::o;2429:69::-;;;;;;;;;;;;;;;;;;;;;;;;:::o;1826:23::-;;;;;;;;;:::o;2306:54::-;;;;;;;;;;;;;:::o;2051:26::-;;;;:::o;1520:64::-;;;;;;;;;;;;;;:::o;2776:35::-;;;;:::o;2121:29::-;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\nimport \"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\";\r\n\r\n/**\r\n * @title Contract used to store layout for the USDTieredSTO storage\r\n */\r\ncontract USDTieredSTOStorage {\r\n\r\n    bytes32 internal constant INVESTORSKEY = 0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731; //keccak256(abi.encodePacked(\"INVESTORS\"))\r\n    \r\n    /////////////\r\n    // Storage //\r\n    /////////////\r\n    struct Tier {\r\n        // NB rates mentioned below are actually price and are used like price in the logic.\r\n        // How many token units a buyer gets per USD in this tier (multiplied by 10**18)\r\n        uint256 rate;\r\n        // How many token units a buyer gets per USD in this tier (multiplied by 10**18) when investing in POLY up to tokensDiscountPoly\r\n        uint256 rateDiscountPoly;\r\n        // How many tokens are available in this tier (relative to totalSupply)\r\n        uint256 tokenTotal;\r\n        // How many token units are available in this tier (relative to totalSupply) at the ratePerTierDiscountPoly rate\r\n        uint256 tokensDiscountPoly;\r\n        // How many tokens have been minted in this tier (relative to totalSupply)\r\n        uint256 mintedTotal;\r\n        // How many tokens have been minted in this tier (relative to totalSupply) for each fund raise type\r\n        mapping(uint8 => uint256) minted;\r\n        // How many tokens have been minted in this tier (relative to totalSupply) at discounted POLY rate\r\n        uint256 mintedDiscountPoly;\r\n    }\r\n\r\n    mapping(address => uint256) public nonAccreditedLimitUSDOverride;\r\n\r\n    mapping(bytes32 => mapping(bytes32 => string)) oracleKeys;\r\n\r\n    // Determine whether users can invest on behalf of a beneficiary\r\n    bool public allowBeneficialInvestments;\r\n\r\n    // Whether or not the STO has been finalized\r\n    bool public isFinalized;\r\n\r\n    // Address of issuer treasury wallet for unsold tokens\r\n    address public treasuryWallet;\r\n\r\n    // List of stable coin addresses\r\n    IERC20[] internal usdTokens;\r\n\r\n    // Current tier\r\n    uint256 public currentTier;\r\n\r\n    // Amount of USD funds raised\r\n    uint256 public fundsRaisedUSD;\r\n\r\n    // Amount of stable coins raised\r\n    mapping (address => uint256) public stableCoinsRaised;\r\n\r\n    // Amount in USD invested by each address\r\n    mapping(address => uint256) public investorInvestedUSD;\r\n\r\n    // Amount in fund raise type invested by each investor\r\n    mapping(address => mapping(uint8 => uint256)) public investorInvested;\r\n\r\n    // List of active stable coin addresses\r\n    mapping (address => bool) internal usdTokenEnabled;\r\n\r\n    // Default limit in USD for non-accredited investors multiplied by 10**18\r\n    uint256 public nonAccreditedLimitUSD;\r\n\r\n    // Minimum investable amount in USD\r\n    uint256 public minimumInvestmentUSD;\r\n\r\n    // Final amount of tokens returned to issuer\r\n    uint256 public finalAmountReturned;\r\n\r\n    // Array of Tiers\r\n    Tier[] public tiers;\r\n\r\n    // Optional custom Oracles.\r\n    mapping(bytes32 => mapping(bytes32 => address)) customOracles;\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\STO\\USDTiered\\USDTieredSTOStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/USDTiered/USDTieredSTOStorage.sol",
+    "exportedSymbols": {
+      "USDTieredSTOStorage": [
+        37087
+      ]
+    },
+    "id": 37088,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 37009,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:110"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 37010,
+        "nodeType": "ImportDirective",
+        "scope": 37088,
+        "sourceUnit": 58648,
+        "src": "26:64:110",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the USDTieredSTO storage\r",
+        "fullyImplemented": true,
+        "id": 37087,
+        "linearizedBaseContracts": [
+          37087
+        ],
+        "name": "USDTieredSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 37013,
+            "name": "INVESTORSKEY",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "212:107:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 37011,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "212:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307864663361386464323461636464303561646466633661656666656637353734643264653366383434353335656339316538653066336534356462613936373331",
+              "id": 37012,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "253:66:110",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100969221179527024975026890885522870763749117541835841361867616504506818848561_by_1",
+                "typeString": "int_const 1009...(70 digits omitted)...8561"
+              },
+              "value": "0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731"
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "USDTieredSTOStorage.Tier",
+            "id": 37030,
+            "members": [
+              {
+                "constant": false,
+                "id": 37015,
+                "name": "rate",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "639:12:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37014,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "639:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37017,
+                "name": "rateDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "800:24:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37016,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "800:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37019,
+                "name": "tokenTotal",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "916:18:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37018,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "916:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37021,
+                "name": "tokensDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1067:26:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37020,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1067:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37023,
+                "name": "mintedTotal",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1188:19:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37022,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1188:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37027,
+                "name": "minted",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1327:32:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                  "typeString": "mapping(uint8 => uint256)"
+                },
+                "typeName": {
+                  "id": 37026,
+                  "keyType": {
+                    "id": 37024,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1335:5:110",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "1327:25:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                    "typeString": "mapping(uint8 => uint256)"
+                  },
+                  "valueType": {
+                    "id": 37025,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1344:7:110",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37029,
+                "name": "mintedDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1478:26:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37028,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1478:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tier",
+            "nodeType": "StructDefinition",
+            "scope": 37087,
+            "src": "432:1080:110",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37034,
+            "name": "nonAccreditedLimitUSDOverride",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1520:64:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37033,
+              "keyType": {
+                "id": 37031,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1528:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1520:27:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37032,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1539:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37040,
+            "name": "oracleKeys",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1593:57:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_string_storage_$_$",
+              "typeString": "mapping(bytes32 => mapping(bytes32 => string))"
+            },
+            "typeName": {
+              "id": 37039,
+              "keyType": {
+                "id": 37035,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1601:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1593:46:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_string_storage_$_$",
+                "typeString": "mapping(bytes32 => mapping(bytes32 => string))"
+              },
+              "valueType": {
+                "id": 37038,
+                "keyType": {
+                  "id": 37036,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1620:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1612:26:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_string_storage_$",
+                  "typeString": "mapping(bytes32 => string)"
+                },
+                "valueType": {
+                  "id": 37037,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1631:6:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37042,
+            "name": "allowBeneficialInvestments",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1729:38:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 37041,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1729:4:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37044,
+            "name": "isFinalized",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1826:23:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 37043,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1826:4:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37046,
+            "name": "treasuryWallet",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1918:29:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 37045,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1918:7:110",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37049,
+            "name": "usdTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1994:27:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_contract$_IERC20_$58647_$dyn_storage",
+              "typeString": "contract IERC20[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 37047,
+                "name": "IERC20",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 58647,
+                "src": "1994:6:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$58647",
+                  "typeString": "contract IERC20"
+                }
+              },
+              "id": 37048,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1994:8:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_contract$_IERC20_$58647_$dyn_storage_ptr",
+                "typeString": "contract IERC20[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37051,
+            "name": "currentTier",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2051:26:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37050,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2051:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37053,
+            "name": "fundsRaisedUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2121:29:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37052,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2121:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37057,
+            "name": "stableCoinsRaised",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2197:53:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37056,
+              "keyType": {
+                "id": 37054,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2206:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2197:28:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37055,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "2217:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37061,
+            "name": "investorInvestedUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2306:54:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37060,
+              "keyType": {
+                "id": 37058,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2314:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2306:27:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37059,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "2325:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37067,
+            "name": "investorInvested",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2429:69:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint8_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(uint8 => uint256))"
+            },
+            "typeName": {
+              "id": 37066,
+              "keyType": {
+                "id": 37062,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2437:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2429:45:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint8_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(uint8 => uint256))"
+              },
+              "valueType": {
+                "id": 37065,
+                "keyType": {
+                  "id": 37063,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2456:5:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "2448:25:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                  "typeString": "mapping(uint8 => uint256)"
+                },
+                "valueType": {
+                  "id": 37064,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2465:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37071,
+            "name": "usdTokenEnabled",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2552:50:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 37070,
+              "keyType": {
+                "id": 37068,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2561:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2552:25:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 37069,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2572:4:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37073,
+            "name": "nonAccreditedLimitUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2690:36:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37072,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2690:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37075,
+            "name": "minimumInvestmentUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2776:35:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37074,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2776:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37077,
+            "name": "finalAmountReturned",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2870:34:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37076,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2870:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37080,
+            "name": "tiers",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2936:19:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Tier_$37030_storage_$dyn_storage",
+              "typeString": "struct USDTieredSTOStorage.Tier[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 37078,
+                "name": "Tier",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 37030,
+                "src": "2936:4:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Tier_$37030_storage_ptr",
+                  "typeString": "struct USDTieredSTOStorage.Tier"
+                }
+              },
+              "id": 37079,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2936:6:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Tier_$37030_storage_$dyn_storage_ptr",
+                "typeString": "struct USDTieredSTOStorage.Tier[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37086,
+            "name": "customOracles",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2997:61:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_address_$_$",
+              "typeString": "mapping(bytes32 => mapping(bytes32 => address))"
+            },
+            "typeName": {
+              "id": 37085,
+              "keyType": {
+                "id": 37081,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "3005:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2997:47:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_address_$_$",
+                "typeString": "mapping(bytes32 => mapping(bytes32 => address))"
+              },
+              "valueType": {
+                "id": 37084,
+                "keyType": {
+                  "id": 37082,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3024:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "3016:27:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                  "typeString": "mapping(bytes32 => address)"
+                },
+                "valueType": {
+                  "id": 37083,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3035:7:110",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 37088,
+        "src": "174:2888:110"
+      }
+    ],
+    "src": "0:3064:110"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/USDTiered/USDTieredSTOStorage.sol",
+    "exportedSymbols": {
+      "USDTieredSTOStorage": [
+        37087
+      ]
+    },
+    "id": 37088,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 37009,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:110"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 37010,
+        "nodeType": "ImportDirective",
+        "scope": 37088,
+        "sourceUnit": 58648,
+        "src": "26:64:110",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the USDTieredSTO storage\r",
+        "fullyImplemented": true,
+        "id": 37087,
+        "linearizedBaseContracts": [
+          37087
+        ],
+        "name": "USDTieredSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 37013,
+            "name": "INVESTORSKEY",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "212:107:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 37011,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "212:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307864663361386464323461636464303561646466633661656666656637353734643264653366383434353335656339316538653066336534356462613936373331",
+              "id": 37012,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "253:66:110",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100969221179527024975026890885522870763749117541835841361867616504506818848561_by_1",
+                "typeString": "int_const 1009...(70 digits omitted)...8561"
+              },
+              "value": "0xdf3a8dd24acdd05addfc6aeffef7574d2de3f844535ec91e8e0f3e45dba96731"
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "USDTieredSTOStorage.Tier",
+            "id": 37030,
+            "members": [
+              {
+                "constant": false,
+                "id": 37015,
+                "name": "rate",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "639:12:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37014,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "639:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37017,
+                "name": "rateDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "800:24:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37016,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "800:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37019,
+                "name": "tokenTotal",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "916:18:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37018,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "916:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37021,
+                "name": "tokensDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1067:26:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37020,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1067:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37023,
+                "name": "mintedTotal",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1188:19:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37022,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1188:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37027,
+                "name": "minted",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1327:32:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                  "typeString": "mapping(uint8 => uint256)"
+                },
+                "typeName": {
+                  "id": 37026,
+                  "keyType": {
+                    "id": 37024,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1335:5:110",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "1327:25:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                    "typeString": "mapping(uint8 => uint256)"
+                  },
+                  "valueType": {
+                    "id": 37025,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1344:7:110",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37029,
+                "name": "mintedDiscountPoly",
+                "nodeType": "VariableDeclaration",
+                "scope": 37030,
+                "src": "1478:26:110",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 37028,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1478:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tier",
+            "nodeType": "StructDefinition",
+            "scope": 37087,
+            "src": "432:1080:110",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37034,
+            "name": "nonAccreditedLimitUSDOverride",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1520:64:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37033,
+              "keyType": {
+                "id": 37031,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1528:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1520:27:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37032,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1539:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37040,
+            "name": "oracleKeys",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1593:57:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_string_storage_$_$",
+              "typeString": "mapping(bytes32 => mapping(bytes32 => string))"
+            },
+            "typeName": {
+              "id": 37039,
+              "keyType": {
+                "id": 37035,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1601:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1593:46:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_string_storage_$_$",
+                "typeString": "mapping(bytes32 => mapping(bytes32 => string))"
+              },
+              "valueType": {
+                "id": 37038,
+                "keyType": {
+                  "id": 37036,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1620:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1612:26:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_string_storage_$",
+                  "typeString": "mapping(bytes32 => string)"
+                },
+                "valueType": {
+                  "id": 37037,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1631:6:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37042,
+            "name": "allowBeneficialInvestments",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1729:38:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 37041,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1729:4:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37044,
+            "name": "isFinalized",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1826:23:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 37043,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1826:4:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37046,
+            "name": "treasuryWallet",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1918:29:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 37045,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1918:7:110",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37049,
+            "name": "usdTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "1994:27:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_contract$_IERC20_$58647_$dyn_storage",
+              "typeString": "contract IERC20[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 37047,
+                "name": "IERC20",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 58647,
+                "src": "1994:6:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$58647",
+                  "typeString": "contract IERC20"
+                }
+              },
+              "id": 37048,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1994:8:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_contract$_IERC20_$58647_$dyn_storage_ptr",
+                "typeString": "contract IERC20[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37051,
+            "name": "currentTier",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2051:26:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37050,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2051:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37053,
+            "name": "fundsRaisedUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2121:29:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37052,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2121:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37057,
+            "name": "stableCoinsRaised",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2197:53:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37056,
+              "keyType": {
+                "id": 37054,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2206:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2197:28:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37055,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "2217:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37061,
+            "name": "investorInvestedUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2306:54:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 37060,
+              "keyType": {
+                "id": 37058,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2314:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2306:27:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 37059,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "2325:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37067,
+            "name": "investorInvested",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2429:69:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint8_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(uint8 => uint256))"
+            },
+            "typeName": {
+              "id": 37066,
+              "keyType": {
+                "id": 37062,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2437:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2429:45:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint8_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(uint8 => uint256))"
+              },
+              "valueType": {
+                "id": 37065,
+                "keyType": {
+                  "id": 37063,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2456:5:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "2448:25:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_uint256_$",
+                  "typeString": "mapping(uint8 => uint256)"
+                },
+                "valueType": {
+                  "id": 37064,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2465:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37071,
+            "name": "usdTokenEnabled",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2552:50:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 37070,
+              "keyType": {
+                "id": 37068,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2561:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2552:25:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 37069,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2572:4:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37073,
+            "name": "nonAccreditedLimitUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2690:36:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37072,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2690:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37075,
+            "name": "minimumInvestmentUSD",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2776:35:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37074,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2776:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37077,
+            "name": "finalAmountReturned",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2870:34:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37076,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2870:7:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37080,
+            "name": "tiers",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2936:19:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Tier_$37030_storage_$dyn_storage",
+              "typeString": "struct USDTieredSTOStorage.Tier[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 37078,
+                "name": "Tier",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 37030,
+                "src": "2936:4:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Tier_$37030_storage_ptr",
+                  "typeString": "struct USDTieredSTOStorage.Tier"
+                }
+              },
+              "id": 37079,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2936:6:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Tier_$37030_storage_$dyn_storage_ptr",
+                "typeString": "struct USDTieredSTOStorage.Tier[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 37086,
+            "name": "customOracles",
+            "nodeType": "VariableDeclaration",
+            "scope": 37087,
+            "src": "2997:61:110",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_address_$_$",
+              "typeString": "mapping(bytes32 => mapping(bytes32 => address))"
+            },
+            "typeName": {
+              "id": 37085,
+              "keyType": {
+                "id": 37081,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "3005:7:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2997:47:110",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_bytes32_$_t_address_$_$",
+                "typeString": "mapping(bytes32 => mapping(bytes32 => address))"
+              },
+              "valueType": {
+                "id": 37084,
+                "keyType": {
+                  "id": 37082,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3024:7:110",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "3016:27:110",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                  "typeString": "mapping(bytes32 => address)"
+                },
+                "valueType": {
+                  "id": 37083,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3035:7:110",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 37088,
+        "src": "174:2888:110"
+      }
+    ],
+    "src": "0:3064:110"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.844Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the USDTieredSTO storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

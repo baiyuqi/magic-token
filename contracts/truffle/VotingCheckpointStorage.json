@@ -1,0 +1,268 @@
+{
+  "contractName": "VotingCheckpointStorage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/storage/modules/Checkpoint/Voting/VotingCheckpointStorage.sol\":\"VotingCheckpointStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/storage/modules/Checkpoint/Voting/VotingCheckpointStorage.sol\":{\"keccak256\":\"0x1b9b16d357815b74bc749d065d81cbbc9026b89783200e605da7c3354a90e947\",\"urls\":[\"bzzr://eedd0e983a4ae7b52b1fb600ce79e91e94a499c8a9e94e52300ba99039cebccf\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820157df96a07e53fd95ec8e0d419e3328a28038bc097f4bdf81c93de83baa60d8d0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820157df96a07e53fd95ec8e0d419e3328a28038bc097f4bdf81c93de83baa60d8d0029",
+  "sourceMap": "26:132:156:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:132:156;;;;;;;",
+  "deployedSourceMap": "26:132:156:-;;;;;",
+  "source": "pragma solidity 0.5.8;\r\n\r\ncontract VotingCheckpointStorage {\r\n\r\n    mapping(address => uint256) defaultExemptIndex;\r\n    address[] defaultExemptedVoters;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\storage\\modules\\Checkpoint\\Voting\\VotingCheckpointStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/storage/modules/Checkpoint/Voting/VotingCheckpointStorage.sol",
+    "exportedSymbols": {
+      "VotingCheckpointStorage": [
+        53442
+      ]
+    },
+    "id": 53443,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53434,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:156"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 53442,
+        "linearizedBaseContracts": [
+          53442
+        ],
+        "name": "VotingCheckpointStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 53438,
+            "name": "defaultExemptIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 53442,
+            "src": "68:46:156",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 53437,
+              "keyType": {
+                "id": 53435,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "76:7:156",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "68:27:156",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 53436,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:156",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 53441,
+            "name": "defaultExemptedVoters",
+            "nodeType": "VariableDeclaration",
+            "scope": 53442,
+            "src": "121:31:156",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 53439,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "121:7:156",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 53440,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "121:9:156",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 53443,
+        "src": "26:132:156"
+      }
+    ],
+    "src": "0:160:156"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/storage/modules/Checkpoint/Voting/VotingCheckpointStorage.sol",
+    "exportedSymbols": {
+      "VotingCheckpointStorage": [
+        53442
+      ]
+    },
+    "id": 53443,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53434,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:156"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 53442,
+        "linearizedBaseContracts": [
+          53442
+        ],
+        "name": "VotingCheckpointStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 53438,
+            "name": "defaultExemptIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 53442,
+            "src": "68:46:156",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 53437,
+              "keyType": {
+                "id": 53435,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "76:7:156",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "68:27:156",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 53436,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:156",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 53441,
+            "name": "defaultExemptedVoters",
+            "nodeType": "VariableDeclaration",
+            "scope": 53442,
+            "src": "121:31:156",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 53439,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "121:7:156",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 53440,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "121:9:156",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 53443,
+        "src": "26:132:156"
+      }
+    ],
+    "src": "0:160:156"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.958Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

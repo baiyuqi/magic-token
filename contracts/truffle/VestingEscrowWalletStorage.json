@@ -1,0 +1,1639 @@
+{
+  "contractName": "VestingEscrowWalletStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "treasuryWallet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "unassignedTokens",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "schedules",
+      "outputs": [
+        {
+          "name": "templateName",
+          "type": "bytes32"
+        },
+        {
+          "name": "claimedTokens",
+          "type": "uint256"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "templateNames",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "beneficiaries",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"treasuryWallet\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"unassignedTokens\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"schedules\",\"outputs\":[{\"name\":\"templateName\",\"type\":\"bytes32\"},{\"name\":\"claimedTokens\",\"type\":\"uint256\"},{\"name\":\"startTime\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"templateNames\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"beneficiaries\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Wallet for core vesting escrow functionality\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/Wallet/VestingEscrowWalletStorage.sol\":\"VestingEscrowWalletStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/Wallet/VestingEscrowWalletStorage.sol\":{\"keccak256\":\"0xda4b262ef204e0062dc67f27a58b712d6a77ffe75b62cf6c2a15d17cd78c2719\",\"urls\":[\"bzzr://fe88793a046fbee62e4094799b127264a80cb8632a94aa1a7505faeca2104a76\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101e3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80634626402b1461005c57806347e3fd8714610080578063854e96821461009a578063e842abe8146100e4578063efeb5e5814610101575b600080fd5b61006461011e565b604080516001600160a01b039092168252519081900360200190f35b61008861012d565b60408051918252519081900360200190f35b6100c6600480360360408110156100b057600080fd5b506001600160a01b038135169060200135610133565b60408051938452602084019290925282820152519081900360600190f35b610088600480360360208110156100fa57600080fd5b5035610172565b6100646004803603602081101561011757600080fd5b5035610190565b6001546001600160a01b031681565b60005481565b6004602052816000526040600020818154811061014c57fe5b600091825260209091206003909102018054600182015460029092015490935090915083565b600a818154811061017f57fe5b600091825260209091200154905081565b6002818154811061019d57fe5b6000918252602090912001546001600160a01b031690508156fea165627a7a72305820ba35f51395c2de5e3d0e62fd27ca853cb381333f1fa2ca91552ce76fa4e56b9c0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80634626402b1461005c57806347e3fd8714610080578063854e96821461009a578063e842abe8146100e4578063efeb5e5814610101575b600080fd5b61006461011e565b604080516001600160a01b039092168252519081900360200190f35b61008861012d565b60408051918252519081900360200190f35b6100c6600480360360408110156100b057600080fd5b506001600160a01b038135169060200135610133565b60408051938452602084019290925282820152519081900360600190f35b610088600480360360208110156100fa57600080fd5b5035610172565b6100646004803603602081101561011757600080fd5b5035610190565b6001546001600160a01b031681565b60005481565b6004602052816000526040600020818154811061014c57fe5b600091825260209091206003909102018054600182015460029092015490935090915083565b600a818154811061017f57fe5b600091825260209091200154905081565b6002818154811061019d57fe5b6000918252602090912001546001600160a01b031690508156fea165627a7a72305820ba35f51395c2de5e3d0e62fd27ca853cb381333f1fa2ca91552ce76fa4e56b9c0029",
+  "sourceMap": "92:2200:144:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;92:2200:144;;;;;;;",
+  "deployedSourceMap": "92:2200:144:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;92:2200:144;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;974:29;;;:::i;:::-;;;;-1:-1:-1;;;;;974:29:144;;;;;;;;;;;;;;837:31;;;:::i;:::-;;;;;;;;;;;;;;;;1328:47;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;1328:47:144;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;2258:30;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2258:30:144;;:::i;1093:::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1093:30:144;;:::i;974:29::-;;;-1:-1:-1;;;;;974:29:144;;:::o;837:31::-;;;;:::o;1328:47::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1328:47:144;;-1:-1:-1;1328:47:144;:::o;2258:30::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2258:30:144;:::o;1093:::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;1093:30:144;;-1:-1:-1;1093:30:144;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Wallet for core vesting escrow functionality\r\n */\r\ncontract VestingEscrowWalletStorage {\r\n\r\n    struct Schedule {\r\n        // Name of the template\r\n        bytes32 templateName;\r\n        // Tokens that were already claimed\r\n        uint256 claimedTokens;\r\n        // Start time of the schedule\r\n        uint256 startTime;\r\n    }\r\n\r\n    struct Template {\r\n        // Total amount of tokens\r\n        uint256 numberOfTokens;\r\n        // Schedule duration (How long the schedule will last)\r\n        uint256 duration;\r\n        // Schedule frequency (It is a cliff time period)\r\n        uint256 frequency;\r\n        // Index of the template in an array template names\r\n        uint256 index;\r\n    }\r\n\r\n    // Number of tokens that are hold by the `this` contract but are unassigned to any schedule\r\n    uint256 public unassignedTokens;\r\n    // Address of the Treasury wallet. All of the unassigned token will transfer to that address.\r\n    address public treasuryWallet;\r\n    // List of all beneficiaries who have the schedules running/completed/created\r\n    address[] public beneficiaries;\r\n    // Flag whether beneficiary has been already added or not\r\n    mapping(address => bool) internal beneficiaryAdded;\r\n\r\n    // Holds schedules array corresponds to the affiliate/employee address\r\n    mapping(address => Schedule[]) public schedules;\r\n    // Holds template names array corresponds to the affiliate/employee address\r\n    mapping(address => bytes32[]) internal userToTemplates;\r\n    // Mapping use to store the indexes for different template names for a user.\r\n    // affiliate/employee address => template name => index\r\n    mapping(address => mapping(bytes32 => uint256)) internal userToTemplateIndex;\r\n    // Holds affiliate/employee addresses coressponds to the template name\r\n    mapping(bytes32 => address[]) internal templateToUsers;\r\n    // Mapping use to store the indexes for different users for a template.\r\n    // template name => affiliate/employee address => index\r\n    mapping(bytes32 => mapping(address => uint256)) internal templateToUserIndex;\r\n    // Store the template details corresponds to the template name\r\n    mapping(bytes32 => Template) templates;\r\n\r\n    // List of all template names\r\n    bytes32[] public templateNames;\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\Wallet\\VestingEscrowWalletStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Wallet/VestingEscrowWalletStorage.sol",
+    "exportedSymbols": {
+      "VestingEscrowWalletStorage": [
+        51229
+      ]
+    },
+    "id": 51230,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 51167,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:144"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Wallet for core vesting escrow functionality\r",
+        "fullyImplemented": true,
+        "id": 51229,
+        "linearizedBaseContracts": [
+          51229
+        ],
+        "name": "VestingEscrowWalletStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "VestingEscrowWalletStorage.Schedule",
+            "id": 51174,
+            "members": [
+              {
+                "constant": false,
+                "id": 51169,
+                "name": "templateName",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "197:20:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 51168,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "197:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51171,
+                "name": "claimedTokens",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "273:21:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51170,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "273:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51173,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "344:17:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51172,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "344:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Schedule",
+            "nodeType": "StructDefinition",
+            "scope": 51229,
+            "src": "137:232:144",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "VestingEscrowWalletStorage.Template",
+            "id": 51183,
+            "members": [
+              {
+                "constant": false,
+                "id": 51176,
+                "name": "numberOfTokens",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "439:22:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51175,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "439:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51178,
+                "name": "duration",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "536:16:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51177,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "536:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51180,
+                "name": "frequency",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "622:17:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51179,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "622:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51182,
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "711:13:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51181,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "711:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Template",
+            "nodeType": "StructDefinition",
+            "scope": 51229,
+            "src": "377:355:144",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51185,
+            "name": "unassignedTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "837:31:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 51184,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "837:7:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51187,
+            "name": "treasuryWallet",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "974:29:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 51186,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "974:7:144",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51190,
+            "name": "beneficiaries",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1093:30:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 51188,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1093:7:144",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 51189,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1093:9:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51194,
+            "name": "beneficiaryAdded",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1193:50:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 51193,
+              "keyType": {
+                "id": 51191,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1201:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1193:24:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 51192,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "1212:4:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51199,
+            "name": "schedules",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1328:47:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct VestingEscrowWalletStorage.Schedule[])"
+            },
+            "typeName": {
+              "id": 51198,
+              "keyType": {
+                "id": 51195,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1336:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1328:30:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct VestingEscrowWalletStorage.Schedule[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 51196,
+                  "name": "Schedule",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 51174,
+                  "src": "1347:8:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Schedule_$51174_storage_ptr",
+                    "typeString": "struct VestingEscrowWalletStorage.Schedule"
+                  }
+                },
+                "id": 51197,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1347:10:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_ptr",
+                  "typeString": "struct VestingEscrowWalletStorage.Schedule[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51204,
+            "name": "userToTemplates",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1463:54:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 51203,
+              "keyType": {
+                "id": 51200,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1471:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1463:29:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 51201,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1482:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 51202,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1482:9:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51210,
+            "name": "userToTemplateIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1667:76:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 51209,
+              "keyType": {
+                "id": 51205,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1675:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1667:47:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 51208,
+                "keyType": {
+                  "id": 51206,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1694:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1686:27:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 51207,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1705:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51215,
+            "name": "templateToUsers",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1826:54:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 51214,
+              "keyType": {
+                "id": 51211,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1834:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1826:29:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 51212,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1845:7:144",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 51213,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1845:9:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51221,
+            "name": "templateToUserIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2025:76:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 51220,
+              "keyType": {
+                "id": 51216,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2033:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2025:47:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 51219,
+                "keyType": {
+                  "id": 51217,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2052:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "2044:27:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 51218,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2063:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51225,
+            "name": "templates",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2176:38:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Template_$51183_storage_$",
+              "typeString": "mapping(bytes32 => struct VestingEscrowWalletStorage.Template)"
+            },
+            "typeName": {
+              "id": 51224,
+              "keyType": {
+                "id": 51222,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2184:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2176:28:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Template_$51183_storage_$",
+                "typeString": "mapping(bytes32 => struct VestingEscrowWalletStorage.Template)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 51223,
+                "name": "Template",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 51183,
+                "src": "2195:8:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Template_$51183_storage_ptr",
+                  "typeString": "struct VestingEscrowWalletStorage.Template"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51228,
+            "name": "templateNames",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2258:30:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 51226,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2258:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 51227,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2258:9:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 51230,
+        "src": "92:2200:144"
+      }
+    ],
+    "src": "0:2294:144"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Wallet/VestingEscrowWalletStorage.sol",
+    "exportedSymbols": {
+      "VestingEscrowWalletStorage": [
+        51229
+      ]
+    },
+    "id": 51230,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 51167,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:144"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Wallet for core vesting escrow functionality\r",
+        "fullyImplemented": true,
+        "id": 51229,
+        "linearizedBaseContracts": [
+          51229
+        ],
+        "name": "VestingEscrowWalletStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "VestingEscrowWalletStorage.Schedule",
+            "id": 51174,
+            "members": [
+              {
+                "constant": false,
+                "id": 51169,
+                "name": "templateName",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "197:20:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 51168,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "197:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51171,
+                "name": "claimedTokens",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "273:21:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51170,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "273:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51173,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 51174,
+                "src": "344:17:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51172,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "344:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Schedule",
+            "nodeType": "StructDefinition",
+            "scope": 51229,
+            "src": "137:232:144",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "VestingEscrowWalletStorage.Template",
+            "id": 51183,
+            "members": [
+              {
+                "constant": false,
+                "id": 51176,
+                "name": "numberOfTokens",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "439:22:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51175,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "439:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51178,
+                "name": "duration",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "536:16:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51177,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "536:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51180,
+                "name": "frequency",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "622:17:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51179,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "622:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51182,
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "scope": 51183,
+                "src": "711:13:144",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51181,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "711:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Template",
+            "nodeType": "StructDefinition",
+            "scope": 51229,
+            "src": "377:355:144",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51185,
+            "name": "unassignedTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "837:31:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 51184,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "837:7:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51187,
+            "name": "treasuryWallet",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "974:29:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 51186,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "974:7:144",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51190,
+            "name": "beneficiaries",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1093:30:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 51188,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1093:7:144",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 51189,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1093:9:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51194,
+            "name": "beneficiaryAdded",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1193:50:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 51193,
+              "keyType": {
+                "id": 51191,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1201:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1193:24:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 51192,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "1212:4:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51199,
+            "name": "schedules",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1328:47:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct VestingEscrowWalletStorage.Schedule[])"
+            },
+            "typeName": {
+              "id": 51198,
+              "keyType": {
+                "id": 51195,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1336:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1328:30:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct VestingEscrowWalletStorage.Schedule[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 51196,
+                  "name": "Schedule",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 51174,
+                  "src": "1347:8:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Schedule_$51174_storage_ptr",
+                    "typeString": "struct VestingEscrowWalletStorage.Schedule"
+                  }
+                },
+                "id": 51197,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1347:10:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Schedule_$51174_storage_$dyn_storage_ptr",
+                  "typeString": "struct VestingEscrowWalletStorage.Schedule[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51204,
+            "name": "userToTemplates",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1463:54:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 51203,
+              "keyType": {
+                "id": 51200,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1471:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1463:29:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 51201,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1482:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 51202,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1482:9:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51210,
+            "name": "userToTemplateIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1667:76:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 51209,
+              "keyType": {
+                "id": 51205,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1675:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1667:47:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 51208,
+                "keyType": {
+                  "id": 51206,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1694:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1686:27:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 51207,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1705:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51215,
+            "name": "templateToUsers",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "1826:54:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 51214,
+              "keyType": {
+                "id": 51211,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1834:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1826:29:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 51212,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1845:7:144",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 51213,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1845:9:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51221,
+            "name": "templateToUserIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2025:76:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 51220,
+              "keyType": {
+                "id": 51216,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2033:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2025:47:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 51219,
+                "keyType": {
+                  "id": 51217,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2052:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "2044:27:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 51218,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2063:7:144",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51225,
+            "name": "templates",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2176:38:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Template_$51183_storage_$",
+              "typeString": "mapping(bytes32 => struct VestingEscrowWalletStorage.Template)"
+            },
+            "typeName": {
+              "id": 51224,
+              "keyType": {
+                "id": 51222,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2184:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2176:28:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Template_$51183_storage_$",
+                "typeString": "mapping(bytes32 => struct VestingEscrowWalletStorage.Template)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 51223,
+                "name": "Template",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 51183,
+                "src": "2195:8:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Template_$51183_storage_ptr",
+                  "typeString": "struct VestingEscrowWalletStorage.Template"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 51228,
+            "name": "templateNames",
+            "nodeType": "VariableDeclaration",
+            "scope": 51229,
+            "src": "2258:30:144",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 51226,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2258:7:144",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 51227,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2258:9:144",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 51230,
+        "src": "92:2200:144"
+      }
+    ],
+    "src": "0:2294:144"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.923Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Wallet for core vesting escrow functionality\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

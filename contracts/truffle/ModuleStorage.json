@@ -1,0 +1,1297 @@
+{
+  "contractName": "ModuleStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ADMIN",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "polyToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "OPERATOR",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "securityToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_securityToken",
+          "type": "address"
+        },
+        {
+          "name": "_polyAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ADMIN\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"polyToken\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"OPERATOR\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"securityToken\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_securityToken\",\"type\":\"address\"},{\"name\":\"_polyAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"_polyAddress\":\"Address of the polytoken\\r\",\"_securityToken\":\"Address of the security token\\r\"}}},\"title\":\"Storage for Module contract\\r\"},\"userdoc\":{\"methods\":{\"constructor\":\"Constructor\\r\"},\"notice\":\"Contract is abstract\\r\"}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/storage/modules/ModuleStorage.sol\":\"ModuleStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/interfaces/ISecurityToken.sol\":{\"keccak256\":\"0x3cf35b60d39aa6e45f9fdca61d1f9baeecbf91647dce9df7e61b4f1ae603d684\",\"urls\":[\"bzzr://5b51ef4a80ff96a6c53e29b7e342640faa3268f3679657bd3e28d2bf7f4f2e24\"]},\"/C/mspace/polymath-core/contracts/storage/modules/ModuleStorage.sol\":{\"keccak256\":\"0xd65d5566179b3e69a8cf490312df6eeaab33a985cf04403f82a00e8ce23ab9a7\",\"urls\":[\"bzzr://931c9fd648267e95414b95d7c055a3477131c4815295bd0d37b8af9c2f00ddac\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzzr://e572c9c4e02e37349702451bf3b5dcbbc86a19da5a51695b5b3e1bfe1e7825dc\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160408061019c8339810180604052604081101561003057600080fd5b508051602090910151600180546001600160a01b039384166001600160a01b031991821617909155600080548216331790556002805493909216921691909117905561011b806100816000396000f3fe6080604052348015600f57600080fd5b506004361060505760003560e01c80632a0acc6a1460555780636faa22a514606d578063983d273714608f578063b84dfbd2146095578063c45a015514609b575b600080fd5b605b60a1565b60408051918252519081900360200190f35b607360b0565b604080516001600160a01b039092168252519081900360200190f35b605b60bf565b607360d1565b607360e0565b600160d91b6420a226a4a70281565b6002546001600160a01b031681565b600160c11b6727a822a920aa27a90281565b6001546001600160a01b031681565b6000546001600160a01b03168156fea165627a7a723058207f0eff89c811934a5aa36abf452a2d1e9876ff63281b5a90f4e4411b48c27b760029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060505760003560e01c80632a0acc6a1460555780636faa22a514606d578063983d273714608f578063b84dfbd2146095578063c45a015514609b575b600080fd5b605b60a1565b60408051918252519081900360200190f35b607360b0565b604080516001600160a01b039092168252519081900360200190f35b605b60bf565b607360d1565b607360e0565b600160d91b6420a226a4a70281565b6002546001600160a01b031681565b600160c11b6727a822a920aa27a90281565b6001546001600160a01b031681565b6000546001600160a01b03168156fea165627a7a723058207f0eff89c811934a5aa36abf452a2d1e9876ff63281b5a90f4e4411b48c27b760029",
+  "sourceMap": "221:791:157:-;;;803:204;8:9:-1;5:2;;;30:1;27;20:12;5:2;803:204:157;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;803:204:157;;;;;;;879:13;:46;;-1:-1:-1;;;;;879:46:157;;;-1:-1:-1;;;;;;879:46:157;;;;;;;:13;936:20;;;;946:10;936:20;;;967:9;:32;;;;;;;;;;;;;;221:791;;;;;;",
+  "deployedSourceMap": "221:791:157:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;221:791:157;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;350:39;;;:::i;:::-;;;;;;;;;;;;;;;;612:23;;;:::i;:::-;;;;-1:-1:-1;;;;;612:23:157;;;;;;;;;;;;;;396:45;;;:::i;282:35::-;;;:::i;251:22::-;;;:::i;350:39::-;-1:-1:-1;;;;;350:39:157;:::o;612:23::-;;;-1:-1:-1;;;;;612:23:157;;:::o;396:45::-;-1:-1:-1;;;;;396:45:157;:::o;282:35::-;;;-1:-1:-1;;;;;282:35:157;;:::o;251:22::-;;;-1:-1:-1;;;;;251:22:157;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\nimport \"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\";\r\nimport \"../../interfaces/ISecurityToken.sol\";\r\n/**\r\n * @title Storage for Module contract\r\n * @notice Contract is abstract\r\n */\r\ncontract ModuleStorage {\r\n    address public factory;\r\n\r\n    ISecurityToken public securityToken;\r\n\r\n    // Permission flag\r\n    bytes32 public constant ADMIN = \"ADMIN\";\r\n    bytes32 public constant OPERATOR = \"OPERATOR\";\r\n\r\n    bytes32 internal constant TREASURY = 0xaae8817359f3dcb67d050f44f3e49f982e0359d90ca4b5f18569926304aaece6; // keccak256(abi.encodePacked(\"TREASURY_WALLET\"))\r\n\r\n    IERC20 public polyToken;\r\n\r\n    /**\r\n     * @notice Constructor\r\n     * @param _securityToken Address of the security token\r\n     * @param _polyAddress Address of the polytoken\r\n     */\r\n    constructor(address _securityToken, address _polyAddress) public {\r\n        securityToken = ISecurityToken(_securityToken);\r\n        factory = msg.sender;\r\n        polyToken = IERC20(_polyAddress);\r\n    }\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\storage\\modules\\ModuleStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/storage/modules/ModuleStorage.sol",
+    "exportedSymbols": {
+      "ModuleStorage": [
+        53487
+      ]
+    },
+    "id": 53488,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53444,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:157"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 53445,
+        "nodeType": "ImportDirective",
+        "scope": 53488,
+        "sourceUnit": 58648,
+        "src": "26:64:157",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISecurityToken.sol",
+        "file": "../../interfaces/ISecurityToken.sol",
+        "id": 53446,
+        "nodeType": "ImportDirective",
+        "scope": 53488,
+        "sourceUnit": 15515,
+        "src": "92:45:157",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Storage for Module contract\r\n@notice Contract is abstract\r",
+        "fullyImplemented": true,
+        "id": 53487,
+        "linearizedBaseContracts": [
+          53487
+        ],
+        "name": "ModuleStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 53448,
+            "name": "factory",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "251:22:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 53447,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "251:7:157",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 53450,
+            "name": "securityToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "282:35:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+              "typeString": "contract ISecurityToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 53449,
+              "name": "ISecurityToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15514,
+              "src": "282:14:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                "typeString": "contract ISecurityToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53453,
+            "name": "ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "350:39:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53451,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "350:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "41444d494e",
+              "id": 53452,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "382:7:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_df8b4c520ffe197c5343c6f5aec59570151ef9a492f2c624fd45ddde6135ec42",
+                "typeString": "literal_string \"ADMIN\""
+              },
+              "value": "ADMIN"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53456,
+            "name": "OPERATOR",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "396:45:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53454,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "396:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4f50455241544f52",
+              "id": 53455,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "431:10:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_523a704056dcd17bcf83bed8b68c59416dac1119be77755efe3bde0a64e46e0c",
+                "typeString": "literal_string \"OPERATOR\""
+              },
+              "value": "OPERATOR"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53459,
+            "name": "TREASURY",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "450:103:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53457,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "450:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307861616538383137333539663364636236376430353066343466336534396639383265303335396439306361346235663138353639393236333034616165636536",
+              "id": 53458,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "487:66:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_77303986213329586925207169123658356965492524889659583665723208786120603790566_by_1",
+                "typeString": "int_const 7730...(69 digits omitted)...0566"
+              },
+              "value": "0xaae8817359f3dcb67d050f44f3e49f982e0359d90ca4b5f18569926304aaece6"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 53461,
+            "name": "polyToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "612:23:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$58647",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 53460,
+              "name": "IERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 58647,
+              "src": "612:6:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$58647",
+                "typeString": "contract IERC20"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 53485,
+              "nodeType": "Block",
+              "src": "868:139:157",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53472,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53468,
+                      "name": "securityToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53450,
+                      "src": "879:13:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                        "typeString": "contract ISecurityToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 53470,
+                          "name": "_securityToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 53463,
+                          "src": "910:14:157",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 53469,
+                        "name": "ISecurityToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15514,
+                        "src": "895:14:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ISecurityToken_$15514_$",
+                          "typeString": "type(contract ISecurityToken)"
+                        }
+                      },
+                      "id": 53471,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "895:30:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                        "typeString": "contract ISecurityToken"
+                      }
+                    },
+                    "src": "879:46:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                      "typeString": "contract ISecurityToken"
+                    }
+                  },
+                  "id": 53473,
+                  "nodeType": "ExpressionStatement",
+                  "src": "879:46:157"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53477,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53474,
+                      "name": "factory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53448,
+                      "src": "936:7:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 53475,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58712,
+                        "src": "946:3:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 53476,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "946:10:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "936:20:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 53478,
+                  "nodeType": "ExpressionStatement",
+                  "src": "936:20:157"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53483,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53479,
+                      "name": "polyToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53461,
+                      "src": "967:9:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$58647",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 53481,
+                          "name": "_polyAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 53465,
+                          "src": "986:12:157",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 53480,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58647,
+                        "src": "979:6:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$58647_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 53482,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "979:20:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$58647",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "967:32:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$58647",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 53484,
+                  "nodeType": "ExpressionStatement",
+                  "src": "967:32:157"
+                }
+              ]
+            },
+            "documentation": "@notice Constructor\r\n@param _securityToken Address of the security token\r\n@param _polyAddress Address of the polytoken\r",
+            "id": 53486,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53463,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53486,
+                  "src": "815:22:157",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53462,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "815:7:157",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53465,
+                  "name": "_polyAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53486,
+                  "src": "839:20:157",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53464,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:7:157",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "814:46:157"
+            },
+            "returnParameters": {
+              "id": 53467,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "868:0:157"
+            },
+            "scope": 53487,
+            "src": "803:204:157",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 53488,
+        "src": "221:791:157"
+      }
+    ],
+    "src": "0:1014:157"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/storage/modules/ModuleStorage.sol",
+    "exportedSymbols": {
+      "ModuleStorage": [
+        53487
+      ]
+    },
+    "id": 53488,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53444,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:157"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
+        "id": 53445,
+        "nodeType": "ImportDirective",
+        "scope": 53488,
+        "sourceUnit": 58648,
+        "src": "26:64:157",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/mspace/polymath-core/contracts/interfaces/ISecurityToken.sol",
+        "file": "../../interfaces/ISecurityToken.sol",
+        "id": 53446,
+        "nodeType": "ImportDirective",
+        "scope": 53488,
+        "sourceUnit": 15515,
+        "src": "92:45:157",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Storage for Module contract\r\n@notice Contract is abstract\r",
+        "fullyImplemented": true,
+        "id": 53487,
+        "linearizedBaseContracts": [
+          53487
+        ],
+        "name": "ModuleStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 53448,
+            "name": "factory",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "251:22:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 53447,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "251:7:157",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 53450,
+            "name": "securityToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "282:35:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+              "typeString": "contract ISecurityToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 53449,
+              "name": "ISecurityToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15514,
+              "src": "282:14:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                "typeString": "contract ISecurityToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53453,
+            "name": "ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "350:39:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53451,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "350:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "41444d494e",
+              "id": 53452,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "382:7:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_df8b4c520ffe197c5343c6f5aec59570151ef9a492f2c624fd45ddde6135ec42",
+                "typeString": "literal_string \"ADMIN\""
+              },
+              "value": "ADMIN"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53456,
+            "name": "OPERATOR",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "396:45:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53454,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "396:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4f50455241544f52",
+              "id": 53455,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "431:10:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_523a704056dcd17bcf83bed8b68c59416dac1119be77755efe3bde0a64e46e0c",
+                "typeString": "literal_string \"OPERATOR\""
+              },
+              "value": "OPERATOR"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 53459,
+            "name": "TREASURY",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "450:103:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 53457,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "450:7:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307861616538383137333539663364636236376430353066343466336534396639383265303335396439306361346235663138353639393236333034616165636536",
+              "id": 53458,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "487:66:157",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_77303986213329586925207169123658356965492524889659583665723208786120603790566_by_1",
+                "typeString": "int_const 7730...(69 digits omitted)...0566"
+              },
+              "value": "0xaae8817359f3dcb67d050f44f3e49f982e0359d90ca4b5f18569926304aaece6"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 53461,
+            "name": "polyToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 53487,
+            "src": "612:23:157",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$58647",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 53460,
+              "name": "IERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 58647,
+              "src": "612:6:157",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$58647",
+                "typeString": "contract IERC20"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 53485,
+              "nodeType": "Block",
+              "src": "868:139:157",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53472,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53468,
+                      "name": "securityToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53450,
+                      "src": "879:13:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                        "typeString": "contract ISecurityToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 53470,
+                          "name": "_securityToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 53463,
+                          "src": "910:14:157",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 53469,
+                        "name": "ISecurityToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15514,
+                        "src": "895:14:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ISecurityToken_$15514_$",
+                          "typeString": "type(contract ISecurityToken)"
+                        }
+                      },
+                      "id": 53471,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "895:30:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                        "typeString": "contract ISecurityToken"
+                      }
+                    },
+                    "src": "879:46:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISecurityToken_$15514",
+                      "typeString": "contract ISecurityToken"
+                    }
+                  },
+                  "id": 53473,
+                  "nodeType": "ExpressionStatement",
+                  "src": "879:46:157"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53477,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53474,
+                      "name": "factory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53448,
+                      "src": "936:7:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 53475,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58712,
+                        "src": "946:3:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 53476,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "946:10:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "936:20:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 53478,
+                  "nodeType": "ExpressionStatement",
+                  "src": "936:20:157"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 53483,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 53479,
+                      "name": "polyToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53461,
+                      "src": "967:9:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$58647",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 53481,
+                          "name": "_polyAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 53465,
+                          "src": "986:12:157",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 53480,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58647,
+                        "src": "979:6:157",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$58647_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 53482,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "979:20:157",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$58647",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "967:32:157",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$58647",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 53484,
+                  "nodeType": "ExpressionStatement",
+                  "src": "967:32:157"
+                }
+              ]
+            },
+            "documentation": "@notice Constructor\r\n@param _securityToken Address of the security token\r\n@param _polyAddress Address of the polytoken\r",
+            "id": 53486,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53463,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53486,
+                  "src": "815:22:157",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53462,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "815:7:157",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53465,
+                  "name": "_polyAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53486,
+                  "src": "839:20:157",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53464,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:7:157",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "814:46:157"
+            },
+            "returnParameters": {
+              "id": 53467,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "868:0:157"
+            },
+            "scope": 53487,
+            "src": "803:204:157",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 53488,
+        "src": "221:791:157"
+      }
+    ],
+    "src": "0:1014:157"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.959Z",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "params": {
+          "_polyAddress": "Address of the polytoken\r",
+          "_securityToken": "Address of the security token\r"
+        }
+      }
+    },
+    "title": "Storage for Module contract\r"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Constructor\r"
+    },
+    "notice": "Contract is abstract\r"
+  }
+}

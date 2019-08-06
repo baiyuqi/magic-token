@@ -1,0 +1,215 @@
+{
+  "contractName": "PreSaleSTOStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "investors",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"investors\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the PreSaleSTO storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/STO/PreSale/PreSaleSTOStorage.sol\":\"PreSaleSTOStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/STO/PreSale/PreSaleSTOStorage.sol\":{\"keccak256\":\"0xf944d361fc0a6007e4aa0422d247767d7024289740816ed6e8f3b86a1d2909b0\",\"urls\":[\"bzzr://dd651d4c060f46e966fe8da1d206c5264545fb92a1eabb9e8f85f851f2b98829\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a08061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80636f7bc9be14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b6000602081905290815260409020548156fea165627a7a7230582012edb7a90ee36042f198a75e77ecb9c193bce3ade8b2a6bee984a7c4ebf7822f0029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80636f7bc9be14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b6000602081905290815260409020548156fea165627a7a7230582012edb7a90ee36042f198a75e77ecb9c193bce3ade8b2a6bee984a7c4ebf7822f0029",
+  "sourceMap": "104:87:105:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:87:105;;;;;;;",
+  "deployedSourceMap": "104:87:105:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:87:105;;;;;;;;;;;;;;;;;;;140:45;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;140:45:105;-1:-1:-1;;;;;140:45:105;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the PreSaleSTO storage\r\n */\r\ncontract PreSaleSTOStorage {\r\n\r\n    mapping (address => uint256) public investors;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\STO\\PreSale\\PreSaleSTOStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/PreSale/PreSaleSTOStorage.sol",
+    "exportedSymbols": {
+      "PreSaleSTOStorage": [
+        33945
+      ]
+    },
+    "id": 33946,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33940,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:105"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the PreSaleSTO storage\r",
+        "fullyImplemented": true,
+        "id": 33945,
+        "linearizedBaseContracts": [
+          33945
+        ],
+        "name": "PreSaleSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 33944,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 33945,
+            "src": "140:45:105",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 33943,
+              "keyType": {
+                "id": 33941,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "149:7:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "140:28:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 33942,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "160:7:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33946,
+        "src": "104:87:105"
+      }
+    ],
+    "src": "0:193:105"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/STO/PreSale/PreSaleSTOStorage.sol",
+    "exportedSymbols": {
+      "PreSaleSTOStorage": [
+        33945
+      ]
+    },
+    "id": 33946,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33940,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:105"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the PreSaleSTO storage\r",
+        "fullyImplemented": true,
+        "id": 33945,
+        "linearizedBaseContracts": [
+          33945
+        ],
+        "name": "PreSaleSTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 33944,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 33945,
+            "src": "140:45:105",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 33943,
+              "keyType": {
+                "id": 33941,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "149:7:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "140:28:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 33942,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "160:7:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33946,
+        "src": "104:87:105"
+      }
+    ],
+    "src": "0:193:105"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.832Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the PreSaleSTO storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

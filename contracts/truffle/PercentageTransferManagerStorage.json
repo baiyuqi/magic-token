@@ -1,0 +1,381 @@
+{
+  "contractName": "PercentageTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "allowPrimaryIssuance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxHolderPercentage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "whitelist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"allowPrimaryIssuance\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"maxHolderPercentage\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"whitelist\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the PercentageTransferManager storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/PTM/PercentageTransferManagerStorage.sol\":\"PercentageTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/PTM/PercentageTransferManagerStorage.sol\":{\"keccak256\":\"0x8215d140097767d8cf883a7d0778d497a1700bc4838784b626d0ab70432f469a\",\"urls\":[\"bzzr://1622503a35edecf942b6c933a03cd5809c89512eacc6dc6fae4716111443aeb8\"]}},\"version\":1}",
+  "bytecode": "0x60806040526001805460ff19168117905534801561001c57600080fd5b5060e68061002b6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c806321c4a69c14604157806334dee40f14605b5780639b19251a146073575b600080fd5b60476096565b604080519115158252519081900360200190f35b6061609f565b60408051918252519081900360200190f35b604760048036036020811015608757600080fd5b50356001600160a01b031660a5565b60015460ff1681565b60005481565b60026020526000908152604090205460ff168156fea165627a7a72305820e8c88bfcd11ef4d79b666cac0fdb421fe7e83eabd5477c07a346290713b97ab00029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c806321c4a69c14604157806334dee40f14605b5780639b19251a146073575b600080fd5b60476096565b604080519115158252519081900360200190f35b6061609f565b60408051918252519081900360200190f35b604760048036036020811015608757600080fd5b50356001600160a01b031660a5565b60015460ff1681565b60005481565b60026020526000908152604090205460ff168156fea165627a7a72305820e8c88bfcd11ef4d79b666cac0fdb421fe7e83eabd5477c07a346290713b97ab00029",
+  "sourceMap": "119:429:134:-;;;415:4;380:39;;-1:-1:-1;;380:39:134;;;;;119:429;5:2:-1;;;;30:1;27;20:12;5:2;119:429:134;;;;;;;",
+  "deployedSourceMap": "119:429:134:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;119:429:134;;;;;;;;;;;;;;;;;;;;;;;;;;;;;380:39;;;:::i;:::-;;;;;;;;;;;;;;;;;;270:34;;;:::i;:::-;;;;;;;;;;;;;;;;500:42;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;500:42:134;-1:-1:-1;;;;;500:42:134;;:::i;380:39::-;;;;;;:::o;270:34::-;;;;:::o;500:42::-;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the PercentageTransferManager storage\r\n */\r\ncontract PercentageTransferManagerStorage {\r\n\r\n    // Maximum percentage that any holder can have, multiplied by 10**16 - e.g. 20% is 20 * 10**16\r\n    uint256 public maxHolderPercentage;\r\n\r\n    // Ignore transactions which are part of the primary issuance\r\n    bool public allowPrimaryIssuance = true;\r\n\r\n    // Addresses on this list are always able to send / receive tokens\r\n    mapping (address => bool) public whitelist;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\PTM\\PercentageTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/PTM/PercentageTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "PercentageTransferManagerStorage": [
+        45310
+      ]
+    },
+    "id": 45311,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 45300,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:134"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the PercentageTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 45310,
+        "linearizedBaseContracts": [
+          45310
+        ],
+        "name": "PercentageTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 45302,
+            "name": "maxHolderPercentage",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "270:34:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 45301,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "270:7:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 45305,
+            "name": "allowPrimaryIssuance",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "380:39:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 45303,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "380:4:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 45304,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "415:4:134",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 45309,
+            "name": "whitelist",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "500:42:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 45308,
+              "keyType": {
+                "id": 45306,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "509:7:134",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "500:25:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 45307,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "520:4:134",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 45311,
+        "src": "119:429:134"
+      }
+    ],
+    "src": "0:550:134"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/PTM/PercentageTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "PercentageTransferManagerStorage": [
+        45310
+      ]
+    },
+    "id": 45311,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 45300,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:134"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the PercentageTransferManager storage\r",
+        "fullyImplemented": true,
+        "id": 45310,
+        "linearizedBaseContracts": [
+          45310
+        ],
+        "name": "PercentageTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 45302,
+            "name": "maxHolderPercentage",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "270:34:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 45301,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "270:7:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 45305,
+            "name": "allowPrimaryIssuance",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "380:39:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 45303,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "380:4:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 45304,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "415:4:134",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 45309,
+            "name": "whitelist",
+            "nodeType": "VariableDeclaration",
+            "scope": 45310,
+            "src": "500:42:134",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 45308,
+              "keyType": {
+                "id": 45306,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "509:7:134",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "500:25:134",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 45307,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "520:4:134",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 45311,
+        "src": "119:429:134"
+      }
+    ],
+    "src": "0:550:134"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.905Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the PercentageTransferManager storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

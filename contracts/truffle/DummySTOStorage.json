@@ -1,0 +1,413 @@
+{
+  "contractName": "DummySTOStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cap",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "investors",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "investorCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "someString",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"cap\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"investors\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"investorCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"someString\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Contract used to store layout for the DummySTO storage\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/mocks/Dummy/DummySTOStorage.sol\":\"DummySTOStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/mocks/Dummy/DummySTOStorage.sol\":{\"keccak256\":\"0x122ce524887a5c4bb6b7f9a1ba093cf57cdae6ffd18b30ba7f21a11195334a70\",\"urls\":[\"bzzr://d32c0465511901f4d71b02523a1b5571cc80485144dfd05f43808342ed9c487a\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101eb806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063355274ea146100515780636f7bc9be1461006b578063d7e64c0014610091578063e7a96f6d14610099575b600080fd5b610059610116565b60408051918252519081900360200190f35b6100596004803603602081101561008157600080fd5b50356001600160a01b031661011c565b61005961012e565b6100a1610134565b6040805160208082528351818301528351919283929083019185019080838360005b838110156100db5781810151838201526020016100c3565b50505050905090810190601f1680156101085780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60015481565b60036020526000908152604090205481565b60005481565b6002805460408051602060018416156101000260001901909316849004601f810184900484028201840190925281815292918301828280156101b75780601f1061018c576101008083540402835291602001916101b7565b820191906000526020600020905b81548152906001019060200180831161019a57829003601f168201915b50505050508156fea165627a7a72305820aae11cae8fba05f37cf07721c9d3d8ffc8d9d4215cbfc356237f4f2b54c766230029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063355274ea146100515780636f7bc9be1461006b578063d7e64c0014610091578063e7a96f6d14610099575b600080fd5b610059610116565b60408051918252519081900360200190f35b6100596004803603602081101561008157600080fd5b50356001600160a01b031661011c565b61005961012e565b6100a1610134565b6040805160208082528351818301528351919283929083019185019080838360005b838110156100db5781810151838201526020016100c3565b50505050905090810190601f1680156101085780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60015481565b60036020526000908152604090205481565b60005481565b6002805460408051602060018416156101000260001901909316849004601f810184900484028201840190925281815292918301828280156101b75780601f1061018c576101008083540402835291602001916101b7565b820191906000526020600020905b81548152906001019060200180831161019a57829003601f168201915b50505050508156fea165627a7a72305820aae11cae8fba05f37cf07721c9d3d8ffc8d9d4215cbfc356237f4f2b54c766230029",
+  "sourceMap": "102:180:46:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;102:180:46;;;;;;;",
+  "deployedSourceMap": "102:180:46:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;102:180:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:18;;;:::i;:::-;;;;;;;;;;;;;;;;231:45;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;231:45:46;-1:-1:-1;;;;;231:45:46;;:::i;136:28::-;;;:::i;198:24::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;198:24:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:18;;;;:::o;231:45::-;;;;;;;;;;;;;:::o;136:28::-;;;;:::o;198:24::-;;;;;;;;;;;;;;-1:-1:-1;;198:24:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Contract used to store layout for the DummySTO storage\r\n */\r\ncontract DummySTOStorage {\r\n\r\n    uint256 public investorCount;\r\n\r\n    uint256 public cap;\r\n    string public someString;\r\n\r\n    mapping (address => uint256) public investors;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\mocks\\Dummy\\DummySTOStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/mocks/Dummy/DummySTOStorage.sol",
+    "exportedSymbols": {
+      "DummySTOStorage": [
+        21444
+      ]
+    },
+    "id": 21445,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21433,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:46"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the DummySTO storage\r",
+        "fullyImplemented": true,
+        "id": 21444,
+        "linearizedBaseContracts": [
+          21444
+        ],
+        "name": "DummySTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 21435,
+            "name": "investorCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "136:28:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 21434,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "136:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21437,
+            "name": "cap",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "173:18:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 21436,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21439,
+            "name": "someString",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "198:24:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 21438,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:6:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21443,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "231:45:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 21442,
+              "keyType": {
+                "id": 21440,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "240:7:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "231:28:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 21441,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "251:7:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 21445,
+        "src": "102:180:46"
+      }
+    ],
+    "src": "0:284:46"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/mocks/Dummy/DummySTOStorage.sol",
+    "exportedSymbols": {
+      "DummySTOStorage": [
+        21444
+      ]
+    },
+    "id": 21445,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21433,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:46"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Contract used to store layout for the DummySTO storage\r",
+        "fullyImplemented": true,
+        "id": 21444,
+        "linearizedBaseContracts": [
+          21444
+        ],
+        "name": "DummySTOStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 21435,
+            "name": "investorCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "136:28:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 21434,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "136:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21437,
+            "name": "cap",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "173:18:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 21436,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21439,
+            "name": "someString",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "198:24:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 21438,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:6:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21443,
+            "name": "investors",
+            "nodeType": "VariableDeclaration",
+            "scope": 21444,
+            "src": "231:45:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 21442,
+              "keyType": {
+                "id": 21440,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "240:7:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "231:28:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 21441,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "251:7:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 21445,
+        "src": "102:180:46"
+      }
+    ],
+    "src": "0:284:46"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.712Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Contract used to store layout for the DummySTO storage\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

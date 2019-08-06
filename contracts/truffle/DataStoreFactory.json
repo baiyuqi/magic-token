@@ -1,0 +1,1284 @@
+{
+  "contractName": "DataStoreFactory",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_implementation",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_securityToken",
+          "type": "address"
+        }
+      ],
+      "name": "generateDataStore",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_securityToken\",\"type\":\"address\"}],\"name\":\"generateDataStore\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_implementation\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/datastore/DataStoreFactory.sol\":\"DataStoreFactory\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/datastore/DataStoreFactory.sol\":{\"keccak256\":\"0x1b81b06fd5491d93db9ec03b6992ea5b8064d7d2a1ec713019d1672f5aa22495\",\"urls\":[\"bzzr://563786276a1c7a02ba35a13498865285ad2cbde917e3d2c8d3f1d756f49e6d9f\"]},\"/C/mspace/polymath-core/contracts/datastore/DataStoreProxy.sol\":{\"keccak256\":\"0x6128a988025c1ec1807646fe50a4e09b32249c2283e4e545eb036cb93e36439e\",\"urls\":[\"bzzr://a9a8b860473e94f8614c34d592bf7f84ed419ca7bf181684d2e57ebb65700a44\"]},\"/C/mspace/polymath-core/contracts/datastore/DataStoreStorage.sol\":{\"keccak256\":\"0xbaaec1f28737ad5e9b26435351cdc9f93d12d8d2043c74d396adcdbdc79fc453\",\"urls\":[\"bzzr://927322fe186c59b4fb4f7275fbe043a376ab64200d46a59ee6667912b4585477\"]},\"/C/mspace/polymath-core/contracts/interfaces/ISecurityToken.sol\":{\"keccak256\":\"0x3cf35b60d39aa6e45f9fdca61d1f9baeecbf91647dce9df7e61b4f1ae603d684\",\"urls\":[\"bzzr://5b51ef4a80ff96a6c53e29b7e342640faa3268f3679657bd3e28d2bf7f4f2e24\"]},\"/C/mspace/polymath-core/contracts/proxy/Proxy.sol\":{\"keccak256\":\"0xd9f5cbe44a9d354154b7cf09f00acd21761bfd7f1152658d810cb27c1432897e\",\"urls\":[\"bzzr://63192e45362ec47fa547eb922501636ec393b9f3617fd3ae5fde2ba34953b743\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806103ca8339810180604052602081101561003057600080fd5b50516001600160a01b0381166100a757604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601860248201527f416464726573732073686f756c64206e6f742062652030780000000000000000604482015290519081900360640190fd5b600080546001600160a01b039092166001600160a01b03199092169190911790556102f3806100d76000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80635c60da1b1461003b5780639422866c1461005f575b600080fd5b610043610085565b604080516001600160a01b039092168252519081900360200190f35b6100436004803603602081101561007557600080fd5b50356001600160a01b0316610094565b6000546001600160a01b031681565b60008054604051829184916001600160a01b03909116906100b4906100ef565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156100e7573d6000803e3d6000fd5b509392505050565b6101cb806100fd8339019056fe608060405234801561001057600080fd5b506040516040806101cb8339810180604052604081101561003057600080fd5b5080516020909101516001600160a01b0381161580159061005957506001600160a01b03821615155b6100c457604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601860248201527f416464726573732073686f756c64206e6f742062652030780000000000000000604482015290519081900360640190fd5b600180546001600160a01b039384166001600160a01b0319918216179091556000805492909316911617905560cd806100fe6000396000f3fe608060405260043610601c5760003560e01c8063b84dfbd2146024575b60226052565b005b348015602f57600080fd5b5060366060565b604080516001600160a01b039092168252519081900360200190f35b605e605a606f565b607e565b565b6001546001600160a01b031681565b6000546001600160a01b031690565b3660008037600080366000845af43d6000803e808015609c573d6000f35b3d6000fdfea165627a7a7230582059b065f219c7f530b6015ddab3d9c8324cbd811ddf10cf64550816db06737f1b0029a165627a7a723058202746446b8572436a44a55a4db6ea41fb3397fec065d1e053a1fc775a59e4c60b0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80635c60da1b1461003b5780639422866c1461005f575b600080fd5b610043610085565b604080516001600160a01b039092168252519081900360200190f35b6100436004803603602081101561007557600080fd5b50356001600160a01b0316610094565b6000546001600160a01b031681565b60008054604051829184916001600160a01b03909116906100b4906100ef565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156100e7573d6000803e3d6000fd5b509392505050565b6101cb806100fd8339019056fe608060405234801561001057600080fd5b506040516040806101cb8339810180604052604081101561003057600080fd5b5080516020909101516001600160a01b0381161580159061005957506001600160a01b03821615155b6100c457604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601860248201527f416464726573732073686f756c64206e6f742062652030780000000000000000604482015290519081900360640190fd5b600180546001600160a01b039384166001600160a01b0319918216179091556000805492909316911617905560cd806100fe6000396000f3fe608060405260043610601c5760003560e01c8063b84dfbd2146024575b60226052565b005b348015602f57600080fd5b5060366060565b604080516001600160a01b039092168252519081900360200190f35b605e605a606f565b607e565b565b6001546001600160a01b031681565b6000546001600160a01b031690565b3660008037600080366000845af43d6000803e808015609c573d6000f35b3d6000fdfea165627a7a7230582059b065f219c7f530b6015ddab3d9c8324cbd811ddf10cf64550816db06737f1b0029a165627a7a723058202746446b8572436a44a55a4db6ea41fb3397fec065d1e053a1fc775a59e4c60b0029",
+  "sourceMap": "60:460:9:-;;;133:172;8:9:-1;5:2;;;30:1;27;20:12;5:2;133:172:9;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;133:172:9;-1:-1:-1;;;;;196:29:9;;188:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;265:14;:32;;-1:-1:-1;;;;;265:32:9;;;-1:-1:-1;;;;;;265:32:9;;;;;;;;;60:460;;;;;;",
+  "deployedSourceMap": "60:460:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:460:9;;;;;;;;;;;;;;;;;;;;;;;;95:29;;;:::i;:::-;;;;-1:-1:-1;;;;;95:29:9;;;;;;;;;;;;;;313:204;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;313:204:9;-1:-1:-1;;;;;313:204:9;;:::i;95:29::-;;;-1:-1:-1;;;;;95:29:9;;:::o;313:204::-;380:7;460:14;;425:50;;380:7;;444:14;;-1:-1:-1;;;;;460:14:9;;;;425:50;;;:::i;:::-;-1:-1:-1;;;;;425:50:9;;;;;;;;;;;;;;;;;;;;-1:-1:-1;425:50:9;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;400:75:9;313:204;-1:-1:-1;;;313:204:9:o;60:460::-;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\nimport \"./DataStoreProxy.sol\";\r\n\r\ncontract DataStoreFactory {\r\n\r\n    address public implementation;\r\n\r\n    constructor(address _implementation) public {\r\n        require(_implementation != address(0), \"Address should not be 0x\");\r\n        implementation = _implementation;\r\n    }\r\n\r\n    function generateDataStore(address _securityToken) public returns (address) {\r\n        DataStoreProxy dsProxy = new DataStoreProxy(_securityToken, implementation);\r\n        return address(dsProxy);\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\datastore\\DataStoreFactory.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/datastore/DataStoreFactory.sol",
+    "exportedSymbols": {
+      "DataStoreFactory": [
+        7078
+      ]
+    },
+    "id": 7079,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7035,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:9"
+      },
+      {
+        "absolutePath": "/C/mspace/polymath-core/contracts/datastore/DataStoreProxy.sol",
+        "file": "./DataStoreProxy.sol",
+        "id": 7036,
+        "nodeType": "ImportDirective",
+        "scope": 7079,
+        "sourceUnit": 7129,
+        "src": "26:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          7128
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7078,
+        "linearizedBaseContracts": [
+          7078
+        ],
+        "name": "DataStoreFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7038,
+            "name": "implementation",
+            "nodeType": "VariableDeclaration",
+            "scope": 7078,
+            "src": "95:29:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7037,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "95:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7056,
+              "nodeType": "Block",
+              "src": "177:128:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 7048,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 7044,
+                          "name": "_implementation",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7040,
+                          "src": "196:15:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 7046,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "223:1:9",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 7045,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "215:7:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 7047,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "215:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "196:29:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "416464726573732073686f756c64206e6f74206265203078",
+                        "id": 7049,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "227:26:9",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_12071d18d2aac0dbf900600233f76156a29e8ceeb6b77261e933eb7a426f46ff",
+                          "typeString": "literal_string \"Address should not be 0x\""
+                        },
+                        "value": "Address should not be 0x"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_12071d18d2aac0dbf900600233f76156a29e8ceeb6b77261e933eb7a426f46ff",
+                          "typeString": "literal_string \"Address should not be 0x\""
+                        }
+                      ],
+                      "id": 7043,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        58715,
+                        58716
+                      ],
+                      "referencedDeclaration": 58716,
+                      "src": "188:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7050,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "188:66:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7051,
+                  "nodeType": "ExpressionStatement",
+                  "src": "188:66:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7054,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7052,
+                      "name": "implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7038,
+                      "src": "265:14:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7053,
+                      "name": "_implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7040,
+                      "src": "282:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "265:32:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 7055,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:32:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7057,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7041,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7040,
+                  "name": "_implementation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7057,
+                  "src": "145:23:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7039,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:25:9"
+            },
+            "returnParameters": {
+              "id": 7042,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "177:0:9"
+            },
+            "scope": 7078,
+            "src": "133:172:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7076,
+              "nodeType": "Block",
+              "src": "389:128:9",
+              "statements": [
+                {
+                  "assignments": [
+                    7065
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 7065,
+                      "name": "dsProxy",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 7076,
+                      "src": "400:22:9",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                        "typeString": "contract DataStoreProxy"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 7064,
+                        "name": "DataStoreProxy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 7128,
+                        "src": "400:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 7071,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7068,
+                        "name": "_securityToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7059,
+                        "src": "444:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 7069,
+                        "name": "implementation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7038,
+                        "src": "460:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 7067,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "425:18:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_DataStoreProxy_$7128_$",
+                        "typeString": "function (address,address) returns (contract DataStoreProxy)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 7066,
+                        "name": "DataStoreProxy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 7128,
+                        "src": "429:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      }
+                    },
+                    "id": 7070,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "425:50:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                      "typeString": "contract DataStoreProxy"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "400:75:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7073,
+                        "name": "dsProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7065,
+                        "src": "501:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      ],
+                      "id": 7072,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "493:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 7074,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "493:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7063,
+                  "id": 7075,
+                  "nodeType": "Return",
+                  "src": "486:23:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7077,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateDataStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7059,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7077,
+                  "src": "340:22:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7058,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "340:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "339:24:9"
+            },
+            "returnParameters": {
+              "id": 7063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7062,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7077,
+                  "src": "380:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7061,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "379:9:9"
+            },
+            "scope": 7078,
+            "src": "313:204:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7079,
+        "src": "60:460:9"
+      }
+    ],
+    "src": "0:522:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/datastore/DataStoreFactory.sol",
+    "exportedSymbols": {
+      "DataStoreFactory": [
+        7078
+      ]
+    },
+    "id": 7079,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7035,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:9"
+      },
+      {
+        "absolutePath": "/C/mspace/polymath-core/contracts/datastore/DataStoreProxy.sol",
+        "file": "./DataStoreProxy.sol",
+        "id": 7036,
+        "nodeType": "ImportDirective",
+        "scope": 7079,
+        "sourceUnit": 7129,
+        "src": "26:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          7128
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7078,
+        "linearizedBaseContracts": [
+          7078
+        ],
+        "name": "DataStoreFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7038,
+            "name": "implementation",
+            "nodeType": "VariableDeclaration",
+            "scope": 7078,
+            "src": "95:29:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7037,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "95:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7056,
+              "nodeType": "Block",
+              "src": "177:128:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 7048,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 7044,
+                          "name": "_implementation",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7040,
+                          "src": "196:15:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 7046,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "223:1:9",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 7045,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "215:7:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 7047,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "215:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "196:29:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "416464726573732073686f756c64206e6f74206265203078",
+                        "id": 7049,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "227:26:9",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_12071d18d2aac0dbf900600233f76156a29e8ceeb6b77261e933eb7a426f46ff",
+                          "typeString": "literal_string \"Address should not be 0x\""
+                        },
+                        "value": "Address should not be 0x"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_12071d18d2aac0dbf900600233f76156a29e8ceeb6b77261e933eb7a426f46ff",
+                          "typeString": "literal_string \"Address should not be 0x\""
+                        }
+                      ],
+                      "id": 7043,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        58715,
+                        58716
+                      ],
+                      "referencedDeclaration": 58716,
+                      "src": "188:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7050,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "188:66:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7051,
+                  "nodeType": "ExpressionStatement",
+                  "src": "188:66:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7054,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7052,
+                      "name": "implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7038,
+                      "src": "265:14:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7053,
+                      "name": "_implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7040,
+                      "src": "282:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "265:32:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 7055,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:32:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7057,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7041,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7040,
+                  "name": "_implementation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7057,
+                  "src": "145:23:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7039,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:25:9"
+            },
+            "returnParameters": {
+              "id": 7042,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "177:0:9"
+            },
+            "scope": 7078,
+            "src": "133:172:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7076,
+              "nodeType": "Block",
+              "src": "389:128:9",
+              "statements": [
+                {
+                  "assignments": [
+                    7065
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 7065,
+                      "name": "dsProxy",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 7076,
+                      "src": "400:22:9",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                        "typeString": "contract DataStoreProxy"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 7064,
+                        "name": "DataStoreProxy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 7128,
+                        "src": "400:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 7071,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7068,
+                        "name": "_securityToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7059,
+                        "src": "444:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 7069,
+                        "name": "implementation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7038,
+                        "src": "460:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 7067,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "425:18:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_DataStoreProxy_$7128_$",
+                        "typeString": "function (address,address) returns (contract DataStoreProxy)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 7066,
+                        "name": "DataStoreProxy",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 7128,
+                        "src": "429:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      }
+                    },
+                    "id": 7070,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "425:50:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                      "typeString": "contract DataStoreProxy"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "400:75:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7073,
+                        "name": "dsProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7065,
+                        "src": "501:7:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_DataStoreProxy_$7128",
+                          "typeString": "contract DataStoreProxy"
+                        }
+                      ],
+                      "id": 7072,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "493:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 7074,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "493:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 7063,
+                  "id": 7075,
+                  "nodeType": "Return",
+                  "src": "486:23:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7077,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateDataStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7059,
+                  "name": "_securityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7077,
+                  "src": "340:22:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7058,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "340:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "339:24:9"
+            },
+            "returnParameters": {
+              "id": 7063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7062,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7077,
+                  "src": "380:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7061,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "379:9:9"
+            },
+            "scope": 7078,
+            "src": "313:204:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7079,
+        "src": "60:460:9"
+      }
+    ],
+    "src": "0:522:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xA931DEaD3EEC99c367c3f670F3E1193a0c4063A1",
+      "transactionHash": "0x2cfc5feb4eed2c5dcdfce45aa358219362f01355cad5322d30ffd2f1d828c7d0"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:53:45.044Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

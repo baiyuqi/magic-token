@@ -1,0 +1,782 @@
+{
+  "contractName": "StatusCodes",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/libraries/StatusCodes.sol\":\"StatusCodes\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/libraries/StatusCodes.sol\":{\"keccak256\":\"0x285e166e92cd51c7a5670fd99fceac3a997fc1a360734464bcad89d2cc6052ff\",\"urls\":[\"bzzr://3a1c7483ca7ae51c62d1c6b9653e694fa5e6b7157daf52d14d566037ef66dca9\"]}},\"version\":1}",
+  "bytecode": "0x604c6023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058201d0b9360cdc6e8088fa6b68051e3091280ca3c4365ebbca72a3eefbd9b37b5230029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058201d0b9360cdc6e8088fa6b68051e3091280ca3c4365ebbca72a3eefbd9b37b5230029",
+  "sourceMap": "26:468:38:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "26:468:38:-;;;;;;;;",
+  "source": "pragma solidity 0.5.8;\r\n\r\nlibrary StatusCodes {\r\n\r\n    // ERC1400 status code inspired from ERC1066\r\n    enum Status {\r\n        TransferFailure,\r\n        TransferSuccess,\r\n        InsufficientBalance,\r\n        InsufficientAllowance,\r\n        TransfersHalted,\r\n        FundsLocked,\r\n        InvalidSender,\r\n        InvalidReceiver,\r\n        InvalidOperator\r\n    }\r\n\r\n    function code(Status _status) internal pure returns (byte) {\r\n        return byte(uint8(0x50) + (uint8(_status)));\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\libraries\\StatusCodes.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/libraries/StatusCodes.sol",
+    "exportedSymbols": {
+      "StatusCodes": [
+        18346
+      ]
+    },
+    "id": 18347,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18316,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:38"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18346,
+        "linearizedBaseContracts": [
+          18346
+        ],
+        "name": "StatusCodes",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StatusCodes.Status",
+            "id": 18326,
+            "members": [
+              {
+                "id": 18317,
+                "name": "TransferFailure",
+                "nodeType": "EnumValue",
+                "src": "128:15:38"
+              },
+              {
+                "id": 18318,
+                "name": "TransferSuccess",
+                "nodeType": "EnumValue",
+                "src": "154:15:38"
+              },
+              {
+                "id": 18319,
+                "name": "InsufficientBalance",
+                "nodeType": "EnumValue",
+                "src": "180:19:38"
+              },
+              {
+                "id": 18320,
+                "name": "InsufficientAllowance",
+                "nodeType": "EnumValue",
+                "src": "210:21:38"
+              },
+              {
+                "id": 18321,
+                "name": "TransfersHalted",
+                "nodeType": "EnumValue",
+                "src": "242:15:38"
+              },
+              {
+                "id": 18322,
+                "name": "FundsLocked",
+                "nodeType": "EnumValue",
+                "src": "268:11:38"
+              },
+              {
+                "id": 18323,
+                "name": "InvalidSender",
+                "nodeType": "EnumValue",
+                "src": "290:13:38"
+              },
+              {
+                "id": 18324,
+                "name": "InvalidReceiver",
+                "nodeType": "EnumValue",
+                "src": "314:15:38"
+              },
+              {
+                "id": 18325,
+                "name": "InvalidOperator",
+                "nodeType": "EnumValue",
+                "src": "340:15:38"
+              }
+            ],
+            "name": "Status",
+            "nodeType": "EnumDefinition",
+            "src": "105:257:38"
+          },
+          {
+            "body": {
+              "id": 18344,
+              "nodeType": "Block",
+              "src": "429:62:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "id": 18341,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30783530",
+                              "id": 18335,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "458:4:38",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_80_by_1",
+                                "typeString": "int_const 80"
+                              },
+                              "value": "0x50"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_80_by_1",
+                                "typeString": "int_const 80"
+                              }
+                            ],
+                            "id": 18334,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "452:5:38",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint8_$",
+                              "typeString": "type(uint8)"
+                            },
+                            "typeName": "uint8"
+                          },
+                          "id": 18336,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "452:11:38",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "+",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 18338,
+                                  "name": "_status",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 18328,
+                                  "src": "473:7:38",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_enum$_Status_$18326",
+                                    "typeString": "enum StatusCodes.Status"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_enum$_Status_$18326",
+                                    "typeString": "enum StatusCodes.Status"
+                                  }
+                                ],
+                                "id": 18337,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "467:5:38",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_uint8_$",
+                                  "typeString": "type(uint8)"
+                                },
+                                "typeName": "uint8"
+                              },
+                              "id": 18339,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "467:14:38",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            }
+                          ],
+                          "id": 18340,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "466:16:38",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "src": "452:30:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      ],
+                      "id": 18333,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "447:4:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes1_$",
+                        "typeString": "type(bytes1)"
+                      },
+                      "typeName": "byte"
+                    },
+                    "id": 18342,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "447:36:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes1",
+                      "typeString": "bytes1"
+                    }
+                  },
+                  "functionReturnParameters": 18332,
+                  "id": 18343,
+                  "nodeType": "Return",
+                  "src": "440:43:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18345,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "code",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18329,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18328,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18345,
+                  "src": "384:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$18326",
+                    "typeString": "enum StatusCodes.Status"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18327,
+                    "name": "Status",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 18326,
+                    "src": "384:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$18326",
+                      "typeString": "enum StatusCodes.Status"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:16:38"
+            },
+            "returnParameters": {
+              "id": 18332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18331,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18345,
+                  "src": "423:4:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes1",
+                    "typeString": "bytes1"
+                  },
+                  "typeName": {
+                    "id": 18330,
+                    "name": "byte",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes1",
+                      "typeString": "bytes1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:6:38"
+            },
+            "scope": 18346,
+            "src": "370:121:38",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 18347,
+        "src": "26:468:38"
+      }
+    ],
+    "src": "0:496:38"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/libraries/StatusCodes.sol",
+    "exportedSymbols": {
+      "StatusCodes": [
+        18346
+      ]
+    },
+    "id": 18347,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18316,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:38"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18346,
+        "linearizedBaseContracts": [
+          18346
+        ],
+        "name": "StatusCodes",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StatusCodes.Status",
+            "id": 18326,
+            "members": [
+              {
+                "id": 18317,
+                "name": "TransferFailure",
+                "nodeType": "EnumValue",
+                "src": "128:15:38"
+              },
+              {
+                "id": 18318,
+                "name": "TransferSuccess",
+                "nodeType": "EnumValue",
+                "src": "154:15:38"
+              },
+              {
+                "id": 18319,
+                "name": "InsufficientBalance",
+                "nodeType": "EnumValue",
+                "src": "180:19:38"
+              },
+              {
+                "id": 18320,
+                "name": "InsufficientAllowance",
+                "nodeType": "EnumValue",
+                "src": "210:21:38"
+              },
+              {
+                "id": 18321,
+                "name": "TransfersHalted",
+                "nodeType": "EnumValue",
+                "src": "242:15:38"
+              },
+              {
+                "id": 18322,
+                "name": "FundsLocked",
+                "nodeType": "EnumValue",
+                "src": "268:11:38"
+              },
+              {
+                "id": 18323,
+                "name": "InvalidSender",
+                "nodeType": "EnumValue",
+                "src": "290:13:38"
+              },
+              {
+                "id": 18324,
+                "name": "InvalidReceiver",
+                "nodeType": "EnumValue",
+                "src": "314:15:38"
+              },
+              {
+                "id": 18325,
+                "name": "InvalidOperator",
+                "nodeType": "EnumValue",
+                "src": "340:15:38"
+              }
+            ],
+            "name": "Status",
+            "nodeType": "EnumDefinition",
+            "src": "105:257:38"
+          },
+          {
+            "body": {
+              "id": 18344,
+              "nodeType": "Block",
+              "src": "429:62:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "id": 18341,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30783530",
+                              "id": 18335,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "458:4:38",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_80_by_1",
+                                "typeString": "int_const 80"
+                              },
+                              "value": "0x50"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_80_by_1",
+                                "typeString": "int_const 80"
+                              }
+                            ],
+                            "id": 18334,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "452:5:38",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint8_$",
+                              "typeString": "type(uint8)"
+                            },
+                            "typeName": "uint8"
+                          },
+                          "id": 18336,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "452:11:38",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "+",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 18338,
+                                  "name": "_status",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 18328,
+                                  "src": "473:7:38",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_enum$_Status_$18326",
+                                    "typeString": "enum StatusCodes.Status"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_enum$_Status_$18326",
+                                    "typeString": "enum StatusCodes.Status"
+                                  }
+                                ],
+                                "id": 18337,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "467:5:38",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_uint8_$",
+                                  "typeString": "type(uint8)"
+                                },
+                                "typeName": "uint8"
+                              },
+                              "id": 18339,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "467:14:38",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            }
+                          ],
+                          "id": 18340,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "466:16:38",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "src": "452:30:38",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      ],
+                      "id": 18333,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "447:4:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes1_$",
+                        "typeString": "type(bytes1)"
+                      },
+                      "typeName": "byte"
+                    },
+                    "id": 18342,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "447:36:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes1",
+                      "typeString": "bytes1"
+                    }
+                  },
+                  "functionReturnParameters": 18332,
+                  "id": 18343,
+                  "nodeType": "Return",
+                  "src": "440:43:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18345,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "code",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18329,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18328,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18345,
+                  "src": "384:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$18326",
+                    "typeString": "enum StatusCodes.Status"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18327,
+                    "name": "Status",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 18326,
+                    "src": "384:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$18326",
+                      "typeString": "enum StatusCodes.Status"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:16:38"
+            },
+            "returnParameters": {
+              "id": 18332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18331,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18345,
+                  "src": "423:4:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes1",
+                    "typeString": "bytes1"
+                  },
+                  "typeName": {
+                    "id": 18330,
+                    "name": "byte",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes1",
+                      "typeString": "bytes1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:6:38"
+            },
+            "scope": 18346,
+            "src": "370:121:38",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 18347,
+        "src": "26:468:38"
+      }
+    ],
+    "src": "0:496:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.651Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

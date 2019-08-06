@@ -1,0 +1,103 @@
+{
+  "contractName": "IBurn",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{},\"title\":\"Interface to be implemented by all checkpoint modules\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/Burn/IBurn.sol\":\"IBurn\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/Burn/IBurn.sol\":{\"keccak256\":\"0x978793c0ce193ed8a557918f2049521c2bca36a4a9eb319c03c4e29670ff8bf1\",\"urls\":[\"bzzr://3253a8dcacf3282a803b749dd75171f081ab2d4ce5cc9bad24ca03e094ded941\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a7230582097b9215373ff95e6c05d3a2edabd850e7532ee1ce3e5b19cc00ef85c622cb56c0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a7230582097b9215373ff95e6c05d3a2edabd850e7532ee1ce3e5b19cc00ef85c622cb56c0029",
+  "sourceMap": "147:22:64:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;147:22:64;;;;;;;",
+  "deployedSourceMap": "147:22:64:-;;;;;",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Interface to be implemented by all checkpoint modules\r\n */\r\n/*solium-disable-next-line no-empty-blocks*/\r\ninterface IBurn {\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\Burn\\IBurn.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Burn/IBurn.sol",
+    "exportedSymbols": {
+      "IBurn": [
+        22884
+      ]
+    },
+    "id": 22885,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 22883,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:64"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by all checkpoint modules\r",
+        "fullyImplemented": true,
+        "id": 22884,
+        "linearizedBaseContracts": [
+          22884
+        ],
+        "name": "IBurn",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 22885,
+        "src": "147:22:64"
+      }
+    ],
+    "src": "0:171:64"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Burn/IBurn.sol",
+    "exportedSymbols": {
+      "IBurn": [
+        22884
+      ]
+    },
+    "id": 22885,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 22883,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:64"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface to be implemented by all checkpoint modules\r",
+        "fullyImplemented": true,
+        "id": 22884,
+        "linearizedBaseContracts": [
+          22884
+        ],
+        "name": "IBurn",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 22885,
+        "src": "147:22:64"
+      }
+    ],
+    "src": "0:171:64"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.723Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Interface to be implemented by all checkpoint modules\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

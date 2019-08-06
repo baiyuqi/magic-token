@@ -1,0 +1,217 @@
+{
+  "contractName": "ERC20DividendCheckpointStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "dividendTokens",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"dividendTokens\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"It holds the storage variables related to ERC20DividendCheckpoint module\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/Checkpoint/Dividend/ERC20/ERC20DividendCheckpointStorage.sol\":\"ERC20DividendCheckpointStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/Checkpoint/Dividend/ERC20/ERC20DividendCheckpointStorage.sol\":{\"keccak256\":\"0x573deb9e425c6b655b28c3c10d9e762c50cf7483083609131bfb8e9a2bb72d58\",\"urls\":[\"bzzr://5a6b8fc4908270087b1f7778c71043fe8e481082c2e61827098fa0ba9b97b1bb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060aa8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806395ec5bbe14602d575b600080fd5b604760048036036020811015604157600080fd5b50356063565b604080516001600160a01b039092168252519081900360200190f35b6000602081905290815260409020546001600160a01b03168156fea165627a7a72305820cfe11a6657ca8283914ed3e7c93823cd687cc02b3d9a730b26ea07a5ec543d490029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806395ec5bbe14602d575b600080fd5b604760048036036020811015604157600080fd5b50356063565b604080516001600160a01b039092168252519081900360200190f35b6000602081905290815260409020546001600160a01b03168156fea165627a7a72305820cfe11a6657ca8283914ed3e7c93823cd687cc02b3d9a730b26ea07a5ec543d490029",
+  "sourceMap": "120:153:69:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:153:69;;;;;;;",
+  "deployedSourceMap": "120:153:69:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:153:69;;;;;;;;;;;;;;;;;;;218:49;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;218:49:69;;:::i;:::-;;;;-1:-1:-1;;;;;218:49:69;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;218:49:69;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title It holds the storage variables related to ERC20DividendCheckpoint module\r\n */\r\ncontract ERC20DividendCheckpointStorage {\r\n    // Mapping to token address for each dividend\r\n    mapping(uint256 => address) public dividendTokens;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\Checkpoint\\Dividend\\ERC20\\ERC20DividendCheckpointStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Checkpoint/Dividend/ERC20/ERC20DividendCheckpointStorage.sol",
+    "exportedSymbols": {
+      "ERC20DividendCheckpointStorage": [
+        25144
+      ]
+    },
+    "id": 25145,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25139,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:69"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title It holds the storage variables related to ERC20DividendCheckpoint module\r",
+        "fullyImplemented": true,
+        "id": 25144,
+        "linearizedBaseContracts": [
+          25144
+        ],
+        "name": "ERC20DividendCheckpointStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 25143,
+            "name": "dividendTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 25144,
+            "src": "218:49:69",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 25142,
+              "keyType": {
+                "id": 25140,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "226:7:69",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "218:27:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 25141,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "237:7:69",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 25145,
+        "src": "120:153:69"
+      }
+    ],
+    "src": "0:275:69"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/Checkpoint/Dividend/ERC20/ERC20DividendCheckpointStorage.sol",
+    "exportedSymbols": {
+      "ERC20DividendCheckpointStorage": [
+        25144
+      ]
+    },
+    "id": 25145,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25139,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:69"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title It holds the storage variables related to ERC20DividendCheckpoint module\r",
+        "fullyImplemented": true,
+        "id": 25144,
+        "linearizedBaseContracts": [
+          25144
+        ],
+        "name": "ERC20DividendCheckpointStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 25143,
+            "name": "dividendTokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 25144,
+            "src": "218:49:69",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 25142,
+              "keyType": {
+                "id": 25140,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "226:7:69",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "218:27:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 25141,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "237:7:69",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 25145,
+        "src": "120:153:69"
+      }
+    ],
+    "src": "0:275:69"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.753Z",
+  "devdoc": {
+    "methods": {},
+    "title": "It holds the storage variables related to ERC20DividendCheckpoint module\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

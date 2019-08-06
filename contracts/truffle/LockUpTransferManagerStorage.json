@@ -1,0 +1,1011 @@
+{
+  "contractName": "LockUpTransferManagerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "lockups",
+      "outputs": [
+        {
+          "name": "lockupAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "lockUpPeriodSeconds",
+          "type": "uint256"
+        },
+        {
+          "name": "releaseFrequencySeconds",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"lockups\",\"outputs\":[{\"name\":\"lockupAmount\",\"type\":\"uint256\"},{\"name\":\"startTime\",\"type\":\"uint256\"},{\"name\":\"lockUpPeriodSeconds\",\"type\":\"uint256\"},{\"name\":\"releaseFrequencySeconds\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Wallet for core vesting escrow functionality\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/LTM/LockUpTransferManagerStorage.sol\":\"LockUpTransferManagerStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/modules/TransferManager/LTM/LockUpTransferManagerStorage.sol\":{\"keccak256\":\"0xaed6ed1d1c2fcdc257b7c006da4058826559ec48b82a0c235dc3ef5fddfec458\",\"urls\":[\"bzzr://e10c09688887fcaaeb07f6fc44ec2102f12904cd056957bac8d4ecba2bdf1aca\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060c08061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063346cfccc14602d575b600080fd5b604760048036036020811015604157600080fd5b5035606d565b604080519485526020850193909352838301919091526060830152519081900360800190f35b6000602081905290815260409020805460018201546002830154600390930154919290918456fea165627a7a72305820c953e14df713ad436b8b9cd63aa5f80ad5f406f25fe88ba4280784a32b95b1130029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063346cfccc14602d575b600080fd5b604760048036036020811015604157600080fd5b5035606d565b604080519485526020850193909352838301919091526060830152519081900360800190f35b6000602081905290815260409020805460018201546002830154600390930154919290918456fea165627a7a72305820c953e14df713ad436b8b9cd63aa5f80ad5f406f25fe88ba4280784a32b95b1130029",
+  "sourceMap": "92:1164:126:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;92:1164:126;;;;;;;",
+  "deployedSourceMap": "92:1164:126:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;92:1164:126;;;;;;;;;;;;;;;;;;;559:42;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;559:42:126;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\r\n\r\n/**\r\n * @title Wallet for core vesting escrow functionality\r\n */\r\ncontract LockUpTransferManagerStorage {\r\n\r\n    // a per-user lockup\r\n    struct LockUp {\r\n        uint256 lockupAmount; // Amount to be locked\r\n        uint256 startTime; // when this lockup starts (seconds)\r\n        uint256 lockUpPeriodSeconds; // total period of lockup (seconds)\r\n        uint256 releaseFrequencySeconds; // how often to release a tranche of tokens (seconds)\r\n    }\r\n\r\n    // mapping use to store the lockup details corresponds to lockup name\r\n    mapping (bytes32 => LockUp) public lockups;\r\n    // mapping user addresses to an array of lockups name for that user\r\n    mapping (address => bytes32[]) internal userToLockups;\r\n    // get list of the addresses for a particular lockupName\r\n    mapping (bytes32 => address[]) internal lockupToUsers;\r\n    // holds lockup index corresponds to user address. userAddress => lockupName => lockupIndex\r\n    mapping (address => mapping(bytes32 => uint256)) internal userToLockupIndex;\r\n    // holds the user address index corresponds to the lockup. lockupName => userAddress => userIndex\r\n    mapping (bytes32 => mapping(address => uint256)) internal lockupToUserIndex;\r\n\r\n    bytes32[] lockupArray;\r\n\r\n}\r\n",
+  "sourcePath": "C:\\mspace\\polymath-core\\contracts\\modules\\TransferManager\\LTM\\LockUpTransferManagerStorage.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/LTM/LockUpTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "LockUpTransferManagerStorage": [
+        43292
+      ]
+    },
+    "id": 43293,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 43253,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:126"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Wallet for core vesting escrow functionality\r",
+        "fullyImplemented": true,
+        "id": 43292,
+        "linearizedBaseContracts": [
+          43292
+        ],
+        "name": "LockUpTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LockUpTransferManagerStorage.LockUp",
+            "id": 43262,
+            "members": [
+              {
+                "constant": false,
+                "id": 43255,
+                "name": "lockupAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "190:20:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43254,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "190:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43257,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "244:17:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43256,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "244:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43259,
+                "name": "lockUpPeriodSeconds",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "309:27:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43258,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43261,
+                "name": "releaseFrequencySeconds",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "383:31:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43260,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "383:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "LockUp",
+            "nodeType": "StructDefinition",
+            "scope": 43292,
+            "src": "165:311:126",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43266,
+            "name": "lockups",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "559:42:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_LockUp_$43262_storage_$",
+              "typeString": "mapping(bytes32 => struct LockUpTransferManagerStorage.LockUp)"
+            },
+            "typeName": {
+              "id": 43265,
+              "keyType": {
+                "id": 43263,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "568:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "559:27:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_LockUp_$43262_storage_$",
+                "typeString": "mapping(bytes32 => struct LockUpTransferManagerStorage.LockUp)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 43264,
+                "name": "LockUp",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 43262,
+                "src": "579:6:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_LockUp_$43262_storage_ptr",
+                  "typeString": "struct LockUpTransferManagerStorage.LockUp"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43271,
+            "name": "userToLockups",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "681:53:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 43270,
+              "keyType": {
+                "id": 43267,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "690:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "681:30:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 43268,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "701:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 43269,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "701:9:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43276,
+            "name": "lockupToUsers",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "803:53:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 43275,
+              "keyType": {
+                "id": 43272,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "803:30:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 43273,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "823:7:126",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 43274,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "823:9:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43282,
+            "name": "userToLockupIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "960:75:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 43281,
+              "keyType": {
+                "id": 43277,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "969:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "960:48:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 43280,
+                "keyType": {
+                  "id": 43278,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "988:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "980:27:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 43279,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "999:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43288,
+            "name": "lockupToUserIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "1145:75:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 43287,
+              "keyType": {
+                "id": 43283,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1154:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1145:48:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 43286,
+                "keyType": {
+                  "id": 43284,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1173:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1165:27:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 43285,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1184:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43291,
+            "name": "lockupArray",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "1229:21:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 43289,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1229:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 43290,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1229:9:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 43293,
+        "src": "92:1164:126"
+      }
+    ],
+    "src": "0:1258:126"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/modules/TransferManager/LTM/LockUpTransferManagerStorage.sol",
+    "exportedSymbols": {
+      "LockUpTransferManagerStorage": [
+        43292
+      ]
+    },
+    "id": 43293,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 43253,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:126"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Wallet for core vesting escrow functionality\r",
+        "fullyImplemented": true,
+        "id": 43292,
+        "linearizedBaseContracts": [
+          43292
+        ],
+        "name": "LockUpTransferManagerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LockUpTransferManagerStorage.LockUp",
+            "id": 43262,
+            "members": [
+              {
+                "constant": false,
+                "id": 43255,
+                "name": "lockupAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "190:20:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43254,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "190:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43257,
+                "name": "startTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "244:17:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43256,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "244:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43259,
+                "name": "lockUpPeriodSeconds",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "309:27:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43258,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43261,
+                "name": "releaseFrequencySeconds",
+                "nodeType": "VariableDeclaration",
+                "scope": 43262,
+                "src": "383:31:126",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 43260,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "383:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "LockUp",
+            "nodeType": "StructDefinition",
+            "scope": 43292,
+            "src": "165:311:126",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43266,
+            "name": "lockups",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "559:42:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_LockUp_$43262_storage_$",
+              "typeString": "mapping(bytes32 => struct LockUpTransferManagerStorage.LockUp)"
+            },
+            "typeName": {
+              "id": 43265,
+              "keyType": {
+                "id": 43263,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "568:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "559:27:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_LockUp_$43262_storage_$",
+                "typeString": "mapping(bytes32 => struct LockUpTransferManagerStorage.LockUp)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 43264,
+                "name": "LockUp",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 43262,
+                "src": "579:6:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_LockUp_$43262_storage_ptr",
+                  "typeString": "struct LockUpTransferManagerStorage.LockUp"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43271,
+            "name": "userToLockups",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "681:53:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+              "typeString": "mapping(address => bytes32[])"
+            },
+            "typeName": {
+              "id": 43270,
+              "keyType": {
+                "id": 43267,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "690:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "681:30:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_bytes32_$dyn_storage_$",
+                "typeString": "mapping(address => bytes32[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 43268,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "701:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "id": 43269,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "701:9:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                  "typeString": "bytes32[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43276,
+            "name": "lockupToUsers",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "803:53:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+              "typeString": "mapping(bytes32 => address[])"
+            },
+            "typeName": {
+              "id": 43275,
+              "keyType": {
+                "id": 43272,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "803:30:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_array$_t_address_$dyn_storage_$",
+                "typeString": "mapping(bytes32 => address[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 43273,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "823:7:126",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "id": 43274,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "823:9:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43282,
+            "name": "userToLockupIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "960:75:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 43281,
+              "keyType": {
+                "id": 43277,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "969:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "960:48:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 43280,
+                "keyType": {
+                  "id": 43278,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "988:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "980:27:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 43279,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "999:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43288,
+            "name": "lockupToUserIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "1145:75:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(bytes32 => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 43287,
+              "keyType": {
+                "id": 43283,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1154:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1145:48:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(bytes32 => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 43286,
+                "keyType": {
+                  "id": 43284,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1173:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "1165:27:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 43285,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1184:7:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43291,
+            "name": "lockupArray",
+            "nodeType": "VariableDeclaration",
+            "scope": 43292,
+            "src": "1229:21:126",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 43289,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1229:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 43290,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "1229:9:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 43293,
+        "src": "92:1164:126"
+      }
+    ],
+    "src": "0:1258:126"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T22:52:46.898Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Wallet for core vesting escrow functionality\r"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

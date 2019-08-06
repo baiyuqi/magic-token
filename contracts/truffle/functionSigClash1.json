@@ -1,0 +1,102 @@
+{
+  "contractName": "functionSigClash1",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/mspace/polymath-core/contracts/mocks/FunctionSigClash1.sol\":\"functionSigClash1\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/mspace/polymath-core/contracts/mocks/FunctionSigClash1.sol\":{\"keccak256\":\"0x0e2fb6c61688e615ca22993b8209242d093af2af2cc02d5f07e905ac81f4b74b\",\"urls\":[\"bzzr://832078a5282a892a674e0d1f523ab1addd5f577bce1db99cfc372a808fc4dd49\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058200ea90bcdce9490cc602df3509794d6fed91a179de718a8e9edcb37a8482babad0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058200ea90bcdce9490cc602df3509794d6fed91a179de718a8e9edcb37a8482babad0029",
+  "sourceMap": "26:84:47:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:84:47;;;;;;;",
+  "deployedSourceMap": "26:84:47:-;;;;;",
+  "source": "pragma solidity 0.5.8;\r\n\r\ncontract functionSigClash1 {\r\n    // function clash550254402() public {\r\n    // }\r\n}\r\n",
+  "sourcePath": "C:/mspace/polymath-core/contracts/mocks/FunctionSigClash1.sol",
+  "ast": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/mocks/FunctionSigClash1.sol",
+    "exportedSymbols": {
+      "functionSigClash1": [
+        21447
+      ]
+    },
+    "id": 21448,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21446,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:47"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 21447,
+        "linearizedBaseContracts": [
+          21447
+        ],
+        "name": "functionSigClash1",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 21448,
+        "src": "26:84:47"
+      }
+    ],
+    "src": "0:112:47"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/mspace/polymath-core/contracts/mocks/FunctionSigClash1.sol",
+    "exportedSymbols": {
+      "functionSigClash1": [
+        21447
+      ]
+    },
+    "id": 21448,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21446,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:47"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 21447,
+        "linearizedBaseContracts": [
+          21447
+        ],
+        "name": "functionSigClash1",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 21448,
+        "src": "26:84:47"
+      }
+    ],
+    "src": "0:112:47"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-05T12:37:19.105Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
