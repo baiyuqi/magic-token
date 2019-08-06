@@ -1,2 +1,5 @@
 
 web3j truffle generate  contracts\truffle\IPolymathRegistry.json -o src\main\java -p com.idhub.magic.token.contract
+
+
+obscure debris square slow addict goddess sport winter brief antenna powder hurdle
